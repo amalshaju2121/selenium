@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210323 16:08:30.520" rpa="false">
+<suite id="s1" name="Runner" source="C:\Users\shajuam\Music\.idea\Runner.robot">
+<kw name="Login To website" library="Resource" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:31.866" level="INFO">Opening browser 'gc' to base url 'https://eur03.safelinks.protection.outlook.com/?url=http%3A%2F%2Fdcbs.cluster1.devtestlab2.tecnotree.com%2Fngb-ui%2F&amp;data=04%7C01%7CAmal.Shaju%40tecnotree.com%7C16d57dacc5dc497e7db408d8c7482859%7C176a79e7ee0947d9b51fcadf37972564%7C0%7C0%7C637478460463072885%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=bxudawN6VRWjT4w%2F%2F9Obp%2FL67Ceorn6X6iDPfsdVApo%3D&amp;reserved=0'.</msg>
+<status status="PASS" starttime="20210323 16:08:31.865" endtime="20210323 16:08:41.763"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210323 16:08:41.764" endtime="20210323 16:08:41.765"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210323 16:08:41.765" endtime="20210323 16:08:41.902"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_USERNAME_TEXTBOX}</arg>
+<arg>${USER_ID}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:41.904" level="INFO">Typing text 'collections' into text field 'username'.</msg>
+<status status="PASS" starttime="20210323 16:08:41.903" endtime="20210323 16:08:44.565"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_PASSWORD_TEXTBOX}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:44.566" level="INFO">Typing text 'Tecnotree@123' into text field 'password'.</msg>
+<status status="PASS" starttime="20210323 16:08:44.565" endtime="20210323 16:08:44.657"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_SUBMIT BUTTON}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:44.658" level="INFO">Clicking element '//input[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20210323 16:08:44.657" endtime="20210323 16:08:46.653"></status>
+</kw>
+<status status="PASS" starttime="20210323 16:08:31.865" endtime="20210323 16:08:46.654"></status>
+</kw>
+<test id="s1-t1" name="first test">
+<kw name="New Bill Generation">
+<arguments>
+<arg>tt</arg>
+<arg>biMonthly</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>Personal</arg>
+<arg>edit11</arg>
+<arg>Corporate</arg>
+<arg>Pass</arg>
+<arg>Pass</arg>
+</arguments>
+<kw name="New bill cycle" library="Resource">
+<kw name="Setup" library="Resource">
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210323 16:08:46.655" endtime="20210323 16:08:47.173"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONFIGURATION}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:47.175" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210323 16:08:47.174" endtime="20210323 16:08:48.329"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BILLING_CYCLE}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:48.329" level="INFO">Clicking element '//a[@translate="Billing Cycles"]'.</msg>
+<status status="PASS" starttime="20210323 16:08:48.329" endtime="20210323 16:08:50.775"></status>
+</kw>
+<status status="PASS" starttime="20210323 16:08:46.655" endtime="20210323 16:08:50.776"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEW_BILL_CYCLE}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:50.777" level="INFO">Clicking element '//button[@class="btn btn-primary btn-xs"]'.</msg>
+<status status="PASS" starttime="20210323 16:08:50.776" endtime="20210323 16:08:50.915"></status>
+</kw>
+<status status="PASS" starttime="20210323 16:08:46.654" endtime="20210323 16:08:50.916"></status>
+</kw>
+<kw name="Give input to new bill cycle" library="Resource">
+<arguments>
+<arg>${CYCLE_NAME}</arg>
+<arg>${PERIODICITY}</arg>
+<arg>${START_DATE}</arg>
+<arg>${START_MONTH}</arg>
+<arg>${CUSTOMER_TYPE}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${ret}</var>
+</assign>
+<msg timestamp="20210323 16:08:50.920" level="INFO">${ret} = 01hLzlxztS5u</msg>
+<status status="PASS" starttime="20210323 16:08:50.918" endtime="20210323 16:08:50.920"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_CYCLE_NAME_TEXTBOX}</arg>
+<arg>${CYCLE_NAME}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:50.921" level="INFO">Typing text 'tt' into text field '//input[@name="configname"]'.</msg>
+<status status="PASS" starttime="20210323 16:08:50.920" endtime="20210323 16:08:51.761"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_PERIODICITY_TEXTBOX}</arg>
+<arg>${PERIODICITY}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:51.761" level="INFO">Selecting options from selection list '//select[@ng-change='resetbimonthly()']' by label biMonthly.</msg>
+<status status="PASS" starttime="20210323 16:08:51.761" endtime="20210323 16:08:51.844"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_START_DATE_TEXTBOX}</arg>
+<arg>${START_DATE}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:51.845" level="INFO">Selecting options from selection list '//select[@name='starts']' by label 2.</msg>
+<status status="PASS" starttime="20210323 16:08:51.844" endtime="20210323 16:08:51.925"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_START_MONTH_TEXTBOX}</arg>
+<arg>${START_MONTH}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:51.926" level="INFO">Selecting options from selection list '//select[@name='startsFrom']' by label 3.</msg>
+<status status="PASS" starttime="20210323 16:08:51.926" endtime="20210323 16:08:52.003"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_CUSTOMER_TYPE_TEXTBOX}</arg>
+<arg>${CUSTOMER_TYPE}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:52.004" level="INFO">Selecting options from selection list '//select[@name='customerType']' by label Personal.</msg>
+<status status="PASS" starttime="20210323 16:08:52.003" endtime="20210323 16:08:52.089"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SAVE}</arg>
+</arguments>
+<msg timestamp="20210323 16:08:52.090" level="INFO">Clicking element '//*[text()='Save']'.</msg>
+<status status="PASS" starttime="20210323 16:08:52.089" endtime="20210323 16:08:52.160"></status>
+</kw>
+<status status="PASS" starttime="20210323 16:08:50.916" endtime="20210323 16:08:52.161"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}}</arg>
+</arguments>
+<status status="PASS" starttime="20210323 16:08:52.161" endtime="20210323 16:08:52.837"></status>
+</kw>
+<status status="PASS" starttime="20210323 16:08:46.654" endtime="20210323 16:08:52.838"></status>
+</kw>
+<status status="PASS" starttime="20210323 16:08:46.654" endtime="20210323 16:08:52.839" critical="yes"></status>
+</test>
+<kw name="Close Browsers" library="Resource" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210323 16:08:52.842" endtime="20210323 16:08:54.994"></status>
+</kw>
+<status status="PASS" starttime="20210323 16:08:52.842" endtime="20210323 16:08:54.995"></status>
+</kw>
+<status status="PASS" starttime="20210323 16:08:30.524" endtime="20210323 16:08:54.995"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Runner">Runner</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210323 16:08:30.729" level="ERROR">Error in file 'C:\Users\shajuam\Music\.idea\location.robot' on line 51: Invalid variable name '{hel}'.</msg>
+</errors>
+</robot>

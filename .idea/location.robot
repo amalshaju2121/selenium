@@ -56,38 +56,3 @@ ${XPATH_TO_AUDIT_BUTTON}                //a[@ng-click="showAuditLog(item); $even
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

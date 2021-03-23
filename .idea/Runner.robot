@@ -28,9 +28,9 @@ New Bill Generation
          #Waiting for confirmation
          wait until page contains           ${${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}}
          #Verification of new bill cycle in case of new bill generation
-         Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}'=='Pass'      Verify,Audit and Edit the newly genrated bill        ${CYCLE_NAME}     ${PERIODICITY}     ${START_DATE}      ${CUSTOMER_TYPE}    ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}      ${EXPECTED_TEXT_TO_VERIFY}
-         #verifing the edit bills in case of edit in bill
-         Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY}'=='Pass'               Edit Verification       ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}
-         Audit check of edited_bill    ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}     ${CUSTOMER_TYPE}
-
-
+#         Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}'=='Pass'      Verify,Audit and Edit the newly genrated bill        ${CYCLE_NAME}     ${PERIODICITY}     ${START_DATE}      ${CUSTOMER_TYPE}    ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}      ${EXPECTED_TEXT_TO_VERIFY}
+#         #verifing the edit bills in case of edit in bill
+#         Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY}'=='Pass'               Edit Verification       ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}
+#         Audit check of edited_bill    ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}     ${CUSTOMER_TYPE}
+#
+#

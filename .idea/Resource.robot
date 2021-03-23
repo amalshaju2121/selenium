@@ -20,6 +20,7 @@ Close Browsers
 #Required setup fuctions
 Setup
          Reload Page
+
          click element               ${CONFIGURATION}
          click element               ${BILLING_CYCLE}
 New bill cycle
@@ -49,7 +50,7 @@ Give input to new bill cycle
 Verification
          [Arguments]    ${CYCLE_NAME}     ${PERIODICITY}    ${START_DATE}     ${CUSTOMER_TYPE}
          Setup
-         Element Should Contain           ${XPATH_TO_VERIFY_NAME}                   ${CYCLE_NAME}
+         wait until page contains         ${CYCLE_NAME}
          Element Should Contain           ${XPATH_TO_VERIFY_PERIODICITY}            ${PERIODICITY}
          Element Should Contain           ${XPATH_TO_VERIFY_START_DATE}             ${START_DATE}
          Element Should Contain           ${XPATH_TO_VERIFY_CUSTOMER_TYPE}          ${CUSTOMER_TYPE}
@@ -93,3 +94,6 @@ Audit check of edited bill
          wait until page contains                ${NEW_CUSTOMER_TYPE}
          wait until page contains                ${CYCLE_NAME}
          wait until page contains                ${CUSTOMER_TYPE}
+
+ranton
+${random_string}=    Generate Random String    12    [LOWER]

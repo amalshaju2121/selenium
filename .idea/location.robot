@@ -44,9 +44,8 @@ ${XPATH_TO_VERIFY_START_DATE}           //td[@data-mobile-label="StartsDay"][1]
 ${XPATH_TO_VERIFY_CUSTOMER_TYPE}        //td[@data-mobile-label="Customer Type"][1]
 
 #xpath to Audit section to verify and check the test
-${XPATH_TO_DROPDOWN_BUTTON}             //*[text()='admin'][1]
+${XPATH_TO_DROPDOWN_BUTTON}             //*[text()='DCBS'][1]
 ${XPATH_TO_AUDIT_BUTTON}                //a[@ng-click="showAuditLog(item); $event.stopPropagation()"][1]
-
 
 
 

@@ -3,7 +3,6 @@ Documentation      Suite Description
 Library            Selenium2Library
 Resource           ../Location/Common_Location.robot
 Resource           ../Location/Bill_Cycle_Location.robot
-Library    DataDriver     ../Test_Data/bill.xlsx   sheet_name=Sheet1   #excel file
 
 *** Keywords ***
 #suit setup files & Teardown files

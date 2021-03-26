@@ -9,20 +9,19 @@ Library           String
 Suite Setup       Login To Bill Cycle Website          #suit setup till the bill gernaration page
 Suite Teardown    close browsers
 Test Template     New Bill Generation       #keyword call for test fuction
-Library    DataDriver     ../Test_Data/bill.xlsx   sheet_name=Sheet1   #excel file
+Library    DataDriver     ../Test_Data/Data.xlsx   sheet_name=Sheet1   #excel file
 
 
 
 
 *** Test Cases ***
-Bill_Cycle_Test         ${ALL_ARGUMENTS}
+Bill_Cycle_Test          ${ALL_ARGUMENTS}
 
 
 
 
 *** Keywords ***
 New Bill Generation
-
          [Arguments]      ${CYCLE_NAME}     ${PERIODICITY}    ${START_DATE}     ${START_MONTH}    ${CUSTOMER_TYPE}     ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}     ${EXPECTED_TEXT_TO_VERIFY}      ${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}
          New bill cycle      #reachning  till the new cycle page
          Initialize Random Variables for Bill Cycle      #Re-running the random string fuction for new set of values

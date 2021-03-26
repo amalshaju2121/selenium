@@ -4,7 +4,7 @@ Library            Selenium2Library
 Resource           ../Location/Common_Location.robot
 Resource           ../Location/Bill_Cycle_Location.robot
 Resource           ./Common_Resource.robot
-Library    DataDriver     ../Test_Data/bill.xlsx   sheet_name=Sheet1   #excel file
+Library    DataDriver     ../Test_Data/Data.xlsx   sheet_name=Sheet1   #excel file
 
 
 
@@ -12,7 +12,7 @@ Library    DataDriver     ../Test_Data/bill.xlsx   sheet_name=Sheet1   #excel fi
 
 Login To Bill Cycle Website
          Login To website
-         Initialize Random Variables for Bill Cycle   #Bringing the random name fuction to suit setup
+         Initialize Random Variables for Bill Cycle    #Bringing the random name fuction to suit setup
 
 #Required setup fuctions
 Bill_Cycle_Setup
@@ -98,7 +98,7 @@ Edit Verification and Audit
          Edit verification              ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}
          Audit check of edited bill     ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}     ${CUSTOMER_TYPE}
 
+
+
+#Test case arguments
 ${ALL_ARGUMENTS}=     ${CYCLE_NAME}   ${PERIODICITY}    ${START_DATE}   ${START_MONTH}   ${CUSTOMER_TYPE}   ${NEW_CYCLE_NAME}   ${NEW_CUSTOMER_TYPE}  ${EXPECTED_TEXT_TO_VERIFY}    ${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}
-${NEW_BILL_ARGUMENTS}=      ${CYCLE_NAME}     ${PERIODICITY}     ${START_DATE}    ${START_MONTH}       ${CUSTOMER_TYPE}
-${NEW_BILL_EDIT_ARGUMENTS}=     ${CYCLE_NAME}          ${PERIODICITY}          ${START_DATE}             ${CUSTOMER_TYPE}    ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}      ${EXPECTED_TEXT_TO_VERIFY}
-${NEW_BILL_AUDIT_ARGUMENTS}=     ${NEW_CYCLE_NAME}       ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}       ${CUSTOMER_TYPE}

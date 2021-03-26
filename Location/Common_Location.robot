@@ -26,8 +26,10 @@ ${BILLING_CYCLE}                   //a[@translate="Billing Cycles"]
 ${SAVE}           //*[text()='Save']
 ${CANCEL}         //*[text()='Cancel']
 
-#BUTTON TO EDIT THE BILL
-${EDIT_BUTTON}             //a[@is-allowed="ngb.fe.billingConfigurations.billCycle.edit"]
+
+#The pop up text to verify
+${Pass}     Your Request is Successfully Processed
+${Fail}     Error
 
 
 

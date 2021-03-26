@@ -1,6 +1,6 @@
 *** Variables ***
 #main selection
-${NEW_BILL_CYCLE}                  //button[@class="btn btn-primary btn-xs"]
+${NEW_BILL_CYCLE}                      //button[@class="btn btn-primary btn-xs"]
 
 
 #XPATH TO TEXTBOX TO DROP DATA
@@ -24,8 +24,10 @@ ${XPATH_TO_DROPDOWN_BUTTON}             //*[text()='DCBS'][1]
 ${XPATH_TO_AUDIT_BUTTON}                //a[@ng-click="showAuditLog(item); $event.stopPropagation()"][1]
 
 
-#The pop up text to verify
-${Pass}     Your Request is Successfully Processed
-${Fail}     name,Name needs to be unique
+
+#BUTTON TO EDIT
+${EDIT_BUTTON}             //a[@is-allowed="ngb.fe.billingConfigurations.billCycle.edit"]
+
+
 
 

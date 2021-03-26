@@ -1,4 +1,7 @@
 *** Variables ***
+#main selection
+${NEW_BILL_CYCLE}                  //button[@class="btn btn-primary btn-xs"]
+
 
 #XPATH TO TEXTBOX TO DROP DATA
 ${XPATH_TO_CYCLE_NAME_TEXTBOX}          //input[@name="configname"]

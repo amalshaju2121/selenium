@@ -15,10 +15,10 @@ ${XPATH_TO_USERNAME_TEXTBOX}       username
 ${XPATH_TO_PASSWORD_TEXTBOX}       password
 ${LOGIN_SUBMIT BUTTON}             //input[@class="btn btn-primary"]
 
-# XPATH TO REACH TILL NEW BILL BUTTON
+# XPATH TO REACH TILL NEW BUTTON
 ${CONFIGURATION}                   //a[@class="ng-scope"]
 ${BILLING_CYCLE}                   //a[@translate="Billing Cycles"]
-${NEW_BILL_CYCLE}                  //button[@class="btn btn-primary btn-xs"]
+
 
 
 

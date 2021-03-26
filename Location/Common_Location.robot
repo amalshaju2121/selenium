@@ -1,7 +1,10 @@
+
 *** Variables ***
 #User Details
 ${USER_ID}            collections
 ${PASSWORD}           Tecnotree@123
+
+
 
 #URL ID TO BILL UI
 ${URL}                https://eur03.safelinks.protection.outlook.com/?url=http%3A%2F%2Fdcbs.cluster1.devtestlab2.tecnotree.com%2Fngb-ui%2F&data=04%7C01%7CAmal.Shaju%40tecnotree.com%7C16d57dacc5dc497e7db408d8c7482859%7C176a79e7ee0947d9b51fcadf37972564%7C0%7C0%7C637478460463072885%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=bxudawN6VRWjT4w%2F%2F9Obp%2FL67Ceorn6X6iDPfsdVApo%3D&reserved=0
@@ -17,35 +20,16 @@ ${CONFIGURATION}                   //a[@class="ng-scope"]
 ${BILLING_CYCLE}                   //a[@translate="Billing Cycles"]
 ${NEW_BILL_CYCLE}                  //button[@class="btn btn-primary btn-xs"]
 
-#XPATH TO TEXTBOX TO DROP DATA
-${XPATH_TO_CYCLE_NAME_TEXTBOX}          //input[@name="configname"]
-${XPATH_TO_PERIODICITY_TEXTBOX}         //select[@ng-change='resetbimonthly()']
-${XPATH_TO_START_DATE_TEXTBOX}          //select[@name='starts']
-${XPATH_TO_START_MONTH_TEXTBOX}         //select[@name='startsFrom']
-${XPATH_TO_CUSTOMER_TYPE_TEXTBOX}       //select[@name='customerType']
+
 
 #BUTTON TO SAVE THE BILL
 ${SAVE}           //*[text()='Save']
 ${CANCEL}         //*[text()='Cancel']
 
 #BUTTON TO EDIT THE BILL
-${EDIT_BILL_BUTTON}             //a[@is-allowed="ngb.fe.billingConfigurations.billCycle.edit"]
-
-#The pop up text to verify
-
-${Pass}     Your Request is Successfully Processed
-${Fail}     name,Name needs to be unique
+${EDIT_BUTTON}             //a[@is-allowed="ngb.fe.billingConfigurations.billCycle.edit"]
 
 
-#verification Xpath
-${XPATH_TO_VERIFY_NAME}                 //td[@data-role="name"]
-${XPATH_TO_VERIFY_PERIODICITY}          //td[@data-mobile-label="Periodicity"][1]
-${XPATH_TO_VERIFY_START_DATE}           //td[@data-mobile-label="StartsDay"][1]
-${XPATH_TO_VERIFY_CUSTOMER_TYPE}        //td[@data-mobile-label="Customer Type"][1]
-
-#xpath to Audit section to verify and check the test
-${XPATH_TO_DROPDOWN_BUTTON}             //*[text()='DCBS'][1]
-${XPATH_TO_AUDIT_BUTTON}                //a[@ng-click="showAuditLog(item); $event.stopPropagation()"][1]
 
 
 

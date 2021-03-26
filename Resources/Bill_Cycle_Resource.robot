@@ -1,37 +1,31 @@
 *** Settings ***
 Documentation      Suite Description
 Library            Selenium2Library
-Resource           ./location.robot
-Library    DataDriver     ../TestData/bill.xlsx   sheet_name=Sheet1   #excel file
+Resource           ../Location/Common_Location.robot
+Resource           ../Location/Bill_Cycle_Location.robot
+Resource           ./Common_Resource.robot
+Library    DataDriver     ../Test_Data/bill.xlsx   sheet_name=Sheet1   #excel file
+
+
+
 *** Keywords ***
-#suit setup files & Teardown files
-Login To website
-         open browser                    ${URL}     ${browser}
-         set selenium implicit wait      10s
-         maximize browser window
-         input text                      ${XPATH_TO_USERNAME_TEXTBOX}          ${USER_ID}
-         input text                      ${XPATH_TO_PASSWORD_TEXTBOX}          ${PASSWORD}
-         click element                   ${LOGIN_SUBMIT BUTTON}
-         Initialize Random Variables  #Bringing the random name fuction to suit setup
-Close Browsers
-         close all browsers
 
-
+Login To Bill Cycle Website
+         Login To website
+         Initialize Random Variables for Bill Cycle   #Bringing the random name fuction to suit setup
 
 #Required setup fuctions
-Setup
-         Reload Page
-         set selenium implicit wait         10s
-         click element               ${CONFIGURATION}
+Bill_Cycle_Setup
+         Setup
          click element               ${BILLING_CYCLE}
 New bill cycle
-         Setup
+         Bill_Cycle_Setup
          click element               ${NEW_BILL_CYCLE}
 Edit bill cycle
-         Setup
-         click element               ${EDIT_BILL_BUTTON}
+         Bill_Cycle_Setup
+         click element               ${EDIT_BUTTON}
 Audit click
-         Setup
+         Bill_Cycle_Setup
          click element                         ${XPATH_TO_AUDIT_BUTTON}
          set selenium implicit wait            10s
          click element                         ${XPATH_TO_DROPDOWN_BUTTON}
@@ -39,7 +33,7 @@ Audit click
 
 
 #Fuction for generating random strings
-Initialize Random Variables
+Initialize Random Variables for Bill Cycle
          ${RANDOM_CYCLE_NAME}=   Generate random string        15
          Set global variable     ${RANDOM_CYCLE_NAME}
          ${RANDOM_EDIT_NAME}=   Generate random string         15
@@ -58,7 +52,7 @@ Give input to new bill cycle
          click element                    ${SAVE}
 Verification
          [Arguments]    ${CYCLE_NAME}     ${PERIODICITY}    ${START_DATE}     ${CUSTOMER_TYPE}
-         Setup
+         Bill_Cycle_Setup
          wait until page contains         ${CYCLE_NAME}
          Element Should Contain           ${XPATH_TO_VERIFY_PERIODICITY}            ${PERIODICITY}
          Element Should Contain           ${XPATH_TO_VERIFY_START_DATE}             ${START_DATE}
@@ -80,7 +74,7 @@ Editing section
          Reload Page
 Edit verification
          [Arguments]     ${NEW_CYCLE_NAME}    ${NEW_CUSTOMER_TYPE}
-         Setup
+         Bill_Cycle_Setup
          Element Should Contain               ${XPATH_TO_VERIFY_NAME}                    ${NEW_CYCLE_NAME}
          Element Should Contain               ${XPATH_TO_VERIFY_CUSTOMER_TYPE}           ${NEW_CUSTOMER_TYPE}
 

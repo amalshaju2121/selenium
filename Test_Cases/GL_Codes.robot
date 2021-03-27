@@ -14,23 +14,22 @@ Library    DataDriver     ../Test_Data/Data.xlsx   sheet_name=Sheet2   #excel fi
 
 
 *** Test Cases ***
-GL_Codes_Test           ${ALL_ARGUMENTS}
+GL_Codes_Test       ${ALL_ARGUMENTS}
 
 
 
 *** Keywords ***
 New GL Codes Generation
-        [Arguments]     ${GL_CODE_NAME}     ${GL_CODE}      ${GL_CODE_NEW_NAME}     ${EXPECTED_TEXT_TO_VERIFY_NEW_GL_CODE}     ${EXPECTED_TEXT_TO_VERIFY}
-         #Re-running the random string fuction for new set of values
-        Initialize Random Variables for GL Code cycle
-        #reachning  till the new cycle page
-        New GL Code cycle
-        #inputing new data
-        Give input to GL Code cycle       ${GL_CODE_NAME}     ${GL_CODE}
-        #Waiting for confirmation
-        wait until page contains          ${${EXPECTED_TEXT_TO_VERIFY_NEW_GL_CODE}}
-        #Verification of new bill cycle in case of new bill generation
-        Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY_NEW_GL_CODE}'=='Pass'    Edit Verify &Audit       ${GL_CODE_NAME}     ${GL_CODE}       ${GL_CODE_NEW_NAME}   ${EXPECTED_TEXT_TO_VERIFY}
+      [Arguments]    ${GL_NAME}  ${GL_CODE}  ${EDIT_NAME}  ${NEW_VERIFY}  ${EDIT_VERIFY}
+      #Re-running the random string fuction for new set of values
+      Initialize Random Variables for GL Code cycle        #reachning  till the new cycle page
+      New GL Code cycle
+      #inputing new data
+      Give input to GL Code cycle      ${GL_NAME}     ${GL_CODE}
+      #Waiting for confirmation
+      wait until page contains         ${${NEW_VERIFY}}
+      #Verification of new bill cycle in case of new bill generation
+      Run Keyword If  '${NEW_VERIFY}'=='Pass'   Edit Verify &Audit    ${GL_NAME}  ${GL_CODE}  ${EDIT_NAME}  ${EDIT_VERIFY}
 
 
 

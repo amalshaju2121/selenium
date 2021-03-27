@@ -43,64 +43,65 @@ Initialize Random Variables for Bill Cycle
 
 #Fuctions to give to main test keyword
 Give input to new bill cycle
-         [Arguments]    ${CYCLE_NAME}     ${PERIODICITY}       ${START_DATE}        ${START_MONTH}       ${CUSTOMER_TYPE}
-         input text                       ${XPATH_TO_CYCLE_NAME_TEXTBOX}            ${CYCLE_NAME}
+         [Arguments]      ${NAME}     ${PERIODICITY}     ${DATE}     ${MONTH}       ${TYPE}
+         input text                       ${XPATH_TO_CYCLE_NAME_TEXTBOX}            ${NAME}
          Select From List By Label        ${XPATH_TO_PERIODICITY_TEXTBOX}           ${PERIODICITY}
-         Select From List By Label        ${XPATH_TO_START_DATE_TEXTBOX}            ${START_DATE}
-         Select From List By Label        ${XPATH_TO_START_MONTH_TEXTBOX}           ${START_MONTH}
-         Select From List By Label        ${XPATH_TO_CUSTOMER_TYPE_TEXTBOX}         ${CUSTOMER_TYPE}
+         Select From List By Label        ${XPATH_TO_START_DATE_TEXTBOX}            ${DATE}
+         Select From List By Label        ${XPATH_TO_START_MONTH_TEXTBOX}           ${MONTH}
+         Select From List By Label        ${XPATH_TO_CUSTOMER_TYPE_TEXTBOX}         ${TYPE}
          click element                    ${SAVE}
 Verification
-         [Arguments]    ${CYCLE_NAME}     ${PERIODICITY}    ${START_DATE}     ${CUSTOMER_TYPE}
+         [Arguments]    ${NAME}     ${PERIODICITY}    ${DATE}     ${TYPE}
          Bill_Cycle_Setup
-         wait until page contains         ${CYCLE_NAME}
-         Element Should Contain           ${XPATH_TO_VERIFY_PERIODICITY}            ${PERIODICITY}
-         Element Should Contain           ${XPATH_TO_VERIFY_START_DATE}             ${START_DATE}
-         Element Should Contain           ${XPATH_TO_VERIFY_CUSTOMER_TYPE}          ${CUSTOMER_TYPE}
+         wait until page contains         ${NAME}
+         wait until page contains         ${PERIODICITY}
+         wait until page contains         ${DATE}
+         wait until page contains         ${TYPE}
 Auditing the new bill
-         [Arguments]      ${CYCLE_NAME}          ${CUSTOMER_TYPE}
+         [Arguments]      ${NAME}         ${TYPE}
          Audit click
-         wait until page contains                ${CYCLE_NAME}
-         wait until page contains                ${CUSTOMER_TYPE}
+         wait until page contains                ${NAME}
+         wait until page contains                ${TYPE}
 Editing section
-         [Arguments]      ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${EXPECTED_TEXT_TO_VERIFY}
+         [Arguments]       ${EDIT_NAME}       ${EDIT_TYPE}       ${EDIT_VERIFY}
          Edit bill cycle
          #inputing new edit data
-         input text                           ${XPATH_TO_CYCLE_NAME_TEXTBOX}           ${NEW_CYCLE_NAME}
-         Select From List By Label            ${XPATH_TO_CUSTOMER_TYPE_TEXTBOX}        ${NEW_CUSTOMER_TYPE}
+         input text                           ${XPATH_TO_CYCLE_NAME_TEXTBOX}           ${EDIT_NAME}
+         Select From List By Label            ${XPATH_TO_CUSTOMER_TYPE_TEXTBOX}        ${EDIT_TYPE}
          click element                        ${SAVE}
          #Waiting for edit confirmation
-         wait until page contains             ${${EXPECTED_TEXT_TO_VERIFY}}
+         wait until page contains             ${${EDIT_VERIFY}}
          Reload Page
 Edit verification
-         [Arguments]     ${NEW_CYCLE_NAME}    ${NEW_CUSTOMER_TYPE}
+         [Arguments]        ${EDIT_NAME}      ${EDIT_TYPE}
          Bill_Cycle_Setup
-         Element Should Contain               ${XPATH_TO_VERIFY_NAME}                    ${NEW_CYCLE_NAME}
-         Element Should Contain               ${XPATH_TO_VERIFY_CUSTOMER_TYPE}           ${NEW_CUSTOMER_TYPE}
+         Element Should Contain               ${XPATH_TO_VERIFY_NAME}                    ${EDIT_NAME}
+         Element Should Contain               ${XPATH_TO_VERIFY_CUSTOMER_TYPE}           ${EDIT_TYPE}
 
 Audit check of edited bill
-         [Arguments]      ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}     ${CUSTOMER_TYPE}
+         [Arguments]     ${NAME}     ${TYPE}     ${EDIT_NAME}      ${EDIT_TYPE}
          Audit click
-         wait until page contains                ${NEW_CYCLE_NAME}
-         wait until page contains                ${NEW_CUSTOMER_TYPE}
-         wait until page contains                ${CYCLE_NAME}
-         wait until page contains                ${CUSTOMER_TYPE}
+         wait until page contains                ${NAME}
+         wait until page contains                ${TYPE}
+         wait until page contains                ${EDIT_NAME}
+         wait until page contains                ${EDIT_TYPE}
+
 
 
 #fuctions for If Statements
 Edit Verify &Audit
-         [Arguments]                ${CYCLE_NAME}         ${PERIODICITY}          ${START_DATE}          ${CUSTOMER_TYPE}     ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}     ${EXPECTED_TEXT_TO_VERIFY}
-         Verification               ${CYCLE_NAME}         ${PERIODICITY}          ${START_DATE}          ${CUSTOMER_TYPE}
-         Auditing the new bill      ${CYCLE_NAME}         ${CUSTOMER_TYPE}
-         Editing section            ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}    ${EXPECTED_TEXT_TO_VERIFY}
+         [Arguments]                ${NAME}   ${PERIODICITY}   ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}
+         Verification               ${NAME}   ${PERIODICITY}   ${DATE}  ${TYPE}
+         Auditing the new bill      ${NAME}   ${TYPE}
+         Editing section            ${EDIT_NAME}     ${EDIT_TYPE}     ${EDIT_VERIFY}
          #verifing the edit bills in case of edit in bill
-         Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY}'=='Pass'        Edit Verification and Audit verifiction      ${NEW_CYCLE_NAME}       ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}       ${CUSTOMER_TYPE}
-Edit Verification and Audit verifiction
-         [Arguments]                    ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}     ${CUSTOMER_TYPE}
-         Edit verification              ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}
-         Audit check of edited bill     ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}     ${CUSTOMER_TYPE}
+         Run Keyword If   '${EDIT_VERIFY}'=='Pass'   Edit& Audit verifiction   ${NAME}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}
+Edit& Audit verifiction
+         [Arguments]        ${NAME}     ${TYPE}        ${EDIT_NAME}      ${EDIT_TYPE}
+         Edit verification              ${EDIT_NAME}   ${EDIT_TYPE}
+         Audit check of edited bill     ${NAME}     ${TYPE}     ${EDIT_NAME}    ${EDIT_TYPE}
 
 
 
 #Test case arguments
-${ALL_ARGUMENTS}=     ${CYCLE_NAME}   ${PERIODICITY}    ${START_DATE}   ${START_MONTH}   ${CUSTOMER_TYPE}   ${NEW_CYCLE_NAME}   ${NEW_CUSTOMER_TYPE}  ${EXPECTED_TEXT_TO_VERIFY}    ${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}
+${ALL_ARGUMENTS}=   ${NAME}  ${PERIODICITY}  ${DATE}  ${MONTH}  ${TYPE}  ${NEW_VERIFY}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}

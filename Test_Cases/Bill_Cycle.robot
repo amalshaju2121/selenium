@@ -15,24 +15,25 @@ Library    DataDriver     ../Test_Data/Data.xlsx   sheet_name=Sheet1   #excel fi
 
 
 *** Test Cases ***
-Bill_Cycle_Test          ${ALL_ARGUMENTS}
+Bill_Cycle_Test     ${ALL_ARGUMENTS}
+
 
 
 
 
 *** Keywords ***
 New Bill Generation
-         [Arguments]      ${CYCLE_NAME}     ${PERIODICITY}    ${START_DATE}     ${START_MONTH}    ${CUSTOMER_TYPE}     ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}     ${EXPECTED_TEXT_TO_VERIFY}      ${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}
-          #reachning  till the new cycle page
-         New bill cycle
-          #Re-running the random string fuction for new set of values
-         Initialize Random Variables for Bill Cycle
-         #inputing new data
-         Give input to new bill cycle       ${CYCLE_NAME}     ${PERIODICITY}     ${START_DATE}    ${START_MONTH}       ${CUSTOMER_TYPE}
-         #Waiting for confirmation
-         wait until page contains           ${${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}}
-         #Verification of new bill cycle in case of new bill generation
-         Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY_NEW_BILL}'=='Pass'     Edit Verify &Audit            ${CYCLE_NAME}          ${PERIODICITY}          ${START_DATE}             ${CUSTOMER_TYPE}    ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}      ${EXPECTED_TEXT_TO_VERIFY}
+      [Arguments]    ${NAME}  ${PERIODICITY}  ${DATE}  ${MONTH}  ${TYPE}  ${NEW_VERIFY}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}
+      #reachning  till the new cycle page
+      New bill cycle
+      #Re-running the random string fuction for new set of values
+      Initialize Random Variables for Bill Cycle
+      #inputing new data
+      Give input to new bill cycle       ${NAME}     ${PERIODICITY}     ${DATE}    ${MONTH}       ${TYPE}
+      #Waiting for confirmation
+      wait until page contains           ${${NEW_VERIFY} }
+      #Verification of new bill cycle in case of new bill generation
+      Run Keyword If  '${NEW_VERIFY}'=='Pass'   Edit Verify &Audit  ${NAME}  ${PERIODICITY}  ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}
 
 
 

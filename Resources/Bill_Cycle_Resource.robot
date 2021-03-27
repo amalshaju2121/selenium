@@ -88,12 +88,14 @@ Audit check of edited bill
 
 
 #fuctions for If Statements
-Verify,Audit and Edit the newly genrated bill
+Edit Verify &Audit
          [Arguments]                ${CYCLE_NAME}         ${PERIODICITY}          ${START_DATE}          ${CUSTOMER_TYPE}     ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}     ${EXPECTED_TEXT_TO_VERIFY}
          Verification               ${CYCLE_NAME}         ${PERIODICITY}          ${START_DATE}          ${CUSTOMER_TYPE}
          Auditing the new bill      ${CYCLE_NAME}         ${CUSTOMER_TYPE}
          Editing section            ${NEW_CYCLE_NAME}     ${NEW_CUSTOMER_TYPE}    ${EXPECTED_TEXT_TO_VERIFY}
-Edit Verification and Audit
+         #verifing the edit bills in case of edit in bill
+         Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY}'=='Pass'        Edit Verification and Audit verifiction      ${NEW_CYCLE_NAME}       ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}       ${CUSTOMER_TYPE}
+Edit Verification and Audit verifiction
          [Arguments]                    ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}     ${CUSTOMER_TYPE}
          Edit verification              ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}
          Audit check of edited bill     ${NEW_CYCLE_NAME}      ${NEW_CUSTOMER_TYPE}      ${CYCLE_NAME}     ${CUSTOMER_TYPE}

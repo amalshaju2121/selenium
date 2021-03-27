@@ -12,6 +12,7 @@ Test Template     New GL Codes Generation      #keyword call for test fuction
 Library    DataDriver     ../Test_Data/Data.xlsx   sheet_name=Sheet2   #excel file
 
 
+
 *** Test Cases ***
 GL_Codes_Test           ${ALL_ARGUMENTS}
 
@@ -29,9 +30,7 @@ New GL Codes Generation
         #Waiting for confirmation
         wait until page contains          ${${EXPECTED_TEXT_TO_VERIFY_NEW_GL_CODE}}
         #Verification of new bill cycle in case of new bill generation
-        Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY_NEW_GL_CODE}'=='Pass'    Verify,Audit and Edit          ${GL_CODE_NAME}     ${GL_CODE}      ${GL_CODE_NEW_NAME}     ${EXPECTED_TEXT_TO_VERIFY}
-         #verifing the edit bills in case of edit in bill
-        Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY}'=='Pass'                Edit Verification and Audit    ${GL_CODE_NEW_NAME}
+        Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY_NEW_GL_CODE}'=='Pass'    Edit Verify &Audit       ${GL_CODE_NAME}     ${GL_CODE}       ${GL_CODE_NEW_NAME}   ${EXPECTED_TEXT_TO_VERIFY}
 
 
 

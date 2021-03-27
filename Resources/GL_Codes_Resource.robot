@@ -81,12 +81,14 @@ Audit check of edited GL Codes
 
 
 #fuctions for If Statements
-Verify,Audit and Edit
+Edit Verify &Audit
          [Arguments]                ${GL_CODE_NAME}     ${GL_CODE}   ${GL_CODE_NEW_NAME}      ${EXPECTED_TEXT_TO_VERIFY}
          Verification               ${GL_CODE_NAME}     ${GL_CODE}
          Auditing the GL_Codes      ${GL_CODE_NAME}     ${GL_CODE}
          Editing section            ${GL_CODE_NEW_NAME}              ${EXPECTED_TEXT_TO_VERIFY}
-Edit Verification and Audit
+         #verifing the edit bills in case of edit in bill
+         Run Keyword If      '${EXPECTED_TEXT_TO_VERIFY}'=='Pass'          Edit Verification and Audit verifiction    ${GL_CODE_NEW_NAME}
+Edit Verification and Audit verifiction
          [Arguments]                ${GL_CODE_NEW_NAME}
          Edit verification          ${GL_CODE_NEW_NAME}
          Audit check of edited GL Codes                  ${GL_CODE_NEW_NAME}

@@ -21,15 +21,13 @@ GL_Codes_Test       ${ALL_ARGUMENTS}
 *** Keywords ***
 New GL Codes Generation
       [Arguments]    ${GL_NAME}  ${GL_CODE}  ${EDIT_NAME}  ${NEW_VERIFY}  ${EDIT_VERIFY}
-      #Re-running the random string fuction for new set of values
-      Initialize Random Variables for GL Code cycle        #reachning  till the new cycle page
+      #reachning  till the new cycle page
       New GL Code cycle
+      #Re-running the random string fuction for new set of values
+      Initialize Random Variables for GL Code cycle
       #inputing new data
-      Give input to GL Code cycle      ${GL_NAME}     ${GL_CODE}
-      #Waiting for confirmation
-      wait until page contains         ${${NEW_VERIFY}}
-      #Verification of new bill cycle in case of new bill generation
-      Run Keyword If  '${NEW_VERIFY}'=='Pass'   Edit Verify &Audit    ${GL_NAME}  ${GL_CODE}  ${EDIT_NAME}  ${EDIT_VERIFY}
-
+      Give input to GL Code cycle      ${GL_NAME}     ${GL_CODE}    ${NEW_VERIFY}
+      #Verifiy audit edit
+      Edit Verify &Audit      ${GL_NAME}  ${GL_CODE}  ${NEW_VERIFY}  ${EDIT_NAME}  ${EDIT_VERIFY}
 
 

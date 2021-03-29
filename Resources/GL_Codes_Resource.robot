@@ -15,22 +15,22 @@ Login To GL Codes Website
 #Required setup fuctions
 GL_Codes_Setup
          Setup
-         set selenium implicit wait            10s
+
          click element                         ${XPATH_TO_GL_CODES_BUTTON}
 New GL Code cycle
          GL_Codes_Setup
-         set selenium implicit wait            10s
+
          click element                         ${NEW_GL_CODES}
 Edit GL Code cycle
          GL_Codes_Setup
          click element                         ${XPATH_TO_EDIT_BUTTON}
 Audit click
          GL_Codes_Setup
-         set selenium implicit wait            10s
+
          click element                         ${XPATH_TO AUDIT}
-         set selenium implicit wait            10s
+
          click element                         ${XPATH_TO_DROPDOWN_BUTTON}
-         set selenium implicit wait            10s
+
 
 
 #Fuction for generating random strings
@@ -44,10 +44,11 @@ Initialize Random Variables for GL Code cycle
 
 #Fuctions to give to main test keyword
 Give input to GL Code cycle
-         [Arguments]             ${GL_NAME}                        ${GL_CODE}
+         [Arguments]             ${GL_NAME}       ${GL_CODE}     ${NEW_VERIFY}
          input text              ${XPATH_TO_NAME_TEXTBOX}          ${GL_NAME}
          input text              ${XPATH_TO_CODE_TEXTBOX}          ${GL_CODE}
          click element           ${SAVE}
+         wait until page contains         ${${NEW_VERIFY}}
 Verification
          [Arguments]             ${GL_NAME}        ${GL_CODE}
          GL_Codes_Setup
@@ -81,7 +82,7 @@ Audit check of edited GL Codes
 
 
 #fuctions for If Statements
-Edit Verify &Audit
+Edit Verify &Audit for IF
          [Arguments]                ${GL_NAME}      ${GL_CODE}   ${EDIT_NAME}      ${EDIT_VERIFY}
          Verification               ${GL_NAME}      ${GL_CODE}
          Auditing the GL_Codes      ${GL_NAME}      ${GL_CODE}
@@ -93,6 +94,9 @@ Edit Verification and Audit verifiction
          Edit verification          ${EDIT_NAME}
          Audit check of edited GL Codes            ${EDIT_NAME}
 
+Edit Verify &Audit
+         [Arguments]   ${GL_NAME}  ${GL_CODE}  ${NEW_VERIFY}  ${EDIT_NAME}  ${EDIT_VERIFY}
+         Run Keyword If  '${NEW_VERIFY}'=='Pass'   Edit Verify &Audit for IF   ${GL_NAME}  ${GL_CODE}  ${EDIT_NAME}  ${EDIT_VERIFY}
 
 #Test case arguments
 ${ALL_ARGUMENTS}=   ${GL_NAME}  ${GL_CODE}  ${EDIT_NAME}    ${NEW_VERIFY}    ${EDIT_VERIFY}

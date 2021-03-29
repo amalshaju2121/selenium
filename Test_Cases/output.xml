@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210327 12:52:31.252" rpa="false">
-<suite id="s1" name="GL Codes" source="C:\Users\shajuam\Music\Test_Cases\GL_Codes.robot">
-<kw name="Login To GL Codes Website" library="GL_Codes_Resource" type="setup">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210329 11:59:50.257" rpa="false">
+<suite id="s1" name="Charges" source="C:\Users\shajuam\Music\Test_Cases\Charges.robot">
+<kw name="Login To Charges Website" library="Charges_Resource" type="setup">
 <kw name="Login To website" library="Common_Resource">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -9,19 +9,19 @@
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20210327 12:52:32.061" level="INFO">Opening browser 'gc' to base url 'https://eur03.safelinks.protection.outlook.com/?url=http%3A%2F%2Fdcbs.cluster1.devtestlab2.tecnotree.com%2Fngb-ui%2F&amp;data=04%7C01%7CAmal.Shaju%40tecnotree.com%7C16d57dacc5dc497e7db408d8c7482859%7C176a79e7ee0947d9b51fcadf37972564%7C0%7C0%7C637478460463072885%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=bxudawN6VRWjT4w%2F%2F9Obp%2FL67Ceorn6X6iDPfsdVApo%3D&amp;reserved=0'.</msg>
-<status status="PASS" starttime="20210327 12:52:32.061" endtime="20210327 12:52:40.483"></status>
+<msg timestamp="20210329 11:59:51.603" level="INFO">Opening browser 'gc' to base url 'https://eur03.safelinks.protection.outlook.com/?url=http%3A%2F%2Fdcbs.cluster1.devtestlab2.tecnotree.com%2Fngb-ui%2F&amp;data=04%7C01%7CAmal.Shaju%40tecnotree.com%7C16d57dacc5dc497e7db408d8c7482859%7C176a79e7ee0947d9b51fcadf37972564%7C0%7C0%7C637478460463072885%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=bxudawN6VRWjT4w%2F%2F9Obp%2FL67Ceorn6X6iDPfsdVApo%3D&amp;reserved=0'.</msg>
+<status status="PASS" starttime="20210329 11:59:51.603" endtime="20210329 11:59:59.908"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210327 12:52:40.483" endtime="20210327 12:52:40.484"></status>
+<status status="PASS" starttime="20210329 11:59:59.908" endtime="20210329 11:59:59.911"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210327 12:52:40.485" endtime="20210327 12:52:40.604"></status>
+<status status="PASS" starttime="20210329 11:59:59.911" endtime="20210329 12:00:00.051"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -29,8 +29,8 @@
 <arg>${XPATH_TO_USERNAME_TEXTBOX}</arg>
 <arg>${USER_ID}</arg>
 </arguments>
-<msg timestamp="20210327 12:52:40.604" level="INFO">Typing text 'collections' into text field 'username'.</msg>
-<status status="PASS" starttime="20210327 12:52:40.604" endtime="20210327 12:52:42.756"></status>
+<msg timestamp="20210329 12:00:00.052" level="INFO">Typing text 'collections' into text field 'username'.</msg>
+<status status="PASS" starttime="20210329 12:00:00.052" endtime="20210329 12:00:02.493"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -38,38 +38,38 @@
 <arg>${XPATH_TO_PASSWORD_TEXTBOX}</arg>
 <arg>${PASSWORD}</arg>
 </arguments>
-<msg timestamp="20210327 12:52:42.757" level="INFO">Typing text 'Tecnotree@123' into text field 'password'.</msg>
-<status status="PASS" starttime="20210327 12:52:42.756" endtime="20210327 12:52:42.829"></status>
+<msg timestamp="20210329 12:00:02.494" level="INFO">Typing text 'Tecnotree@123' into text field 'password'.</msg>
+<status status="PASS" starttime="20210329 12:00:02.494" endtime="20210329 12:00:02.638"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${LOGIN_SUBMIT BUTTON}</arg>
 </arguments>
-<msg timestamp="20210327 12:52:42.829" level="INFO">Clicking element '//input[@class="btn btn-primary"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:42.829" endtime="20210327 12:52:44.342"></status>
+<msg timestamp="20210329 12:00:02.639" level="INFO">Clicking element '//input[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20210329 12:00:02.639" endtime="20210329 12:00:11.848"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:52:32.061" endtime="20210327 12:52:44.343"></status>
+<status status="PASS" starttime="20210329 11:59:51.602" endtime="20210329 12:00:11.849"></status>
 </kw>
-<kw name="Initialize Random Variables for GL Code cycle" library="GL_Codes_Resource">
+<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>5</arg>
+<arg>15</arg>
 </arguments>
 <assign>
-<var>${RANDOM_CYCLE_NAME}</var>
+<var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210327 12:52:44.344" level="INFO">${RANDOM_CYCLE_NAME} = WDsUF</msg>
-<status status="PASS" starttime="20210327 12:52:44.343" endtime="20210327 12:52:44.344"></status>
+<msg timestamp="20210329 12:00:11.851" level="INFO">${RANDOM_NAME} = HHmvVUc2edSHgYV</msg>
+<status status="PASS" starttime="20210329 12:00:11.850" endtime="20210329 12:00:11.852"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_CYCLE_NAME}</arg>
+<arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210327 12:52:44.344" level="INFO">${RANDOM_CYCLE_NAME} = WDsUF</msg>
-<status status="PASS" starttime="20210327 12:52:44.344" endtime="20210327 12:52:44.344"></status>
+<msg timestamp="20210329 12:00:11.853" level="INFO">${RANDOM_NAME} = HHmvVUc2edSHgYV</msg>
+<status status="PASS" starttime="20210329 12:00:11.852" endtime="20210329 12:00:11.854"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -80,16 +80,16 @@
 <assign>
 <var>${RANDOM_GL_CODE}</var>
 </assign>
-<msg timestamp="20210327 12:52:44.345" level="INFO">${RANDOM_GL_CODE} = 0963</msg>
-<status status="PASS" starttime="20210327 12:52:44.345" endtime="20210327 12:52:44.345"></status>
+<msg timestamp="20210329 12:00:11.854" level="INFO">${RANDOM_GL_CODE} = 0278</msg>
+<status status="PASS" starttime="20210329 12:00:11.854" endtime="20210329 12:00:11.854"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_GL_CODE}</arg>
 </arguments>
-<msg timestamp="20210327 12:52:44.345" level="INFO">${RANDOM_GL_CODE} = 0963</msg>
-<status status="PASS" starttime="20210327 12:52:44.345" endtime="20210327 12:52:44.346"></status>
+<msg timestamp="20210329 12:00:11.856" level="INFO">${RANDOM_GL_CODE} = 0278</msg>
+<status status="PASS" starttime="20210329 12:00:11.855" endtime="20210329 12:00:11.856"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -99,649 +99,98 @@
 <assign>
 <var>${RANDOM_EDIT_NAME}</var>
 </assign>
-<msg timestamp="20210327 12:52:44.346" level="INFO">${RANDOM_EDIT_NAME} = fTONNJTP4lZR0</msg>
-<status status="PASS" starttime="20210327 12:52:44.346" endtime="20210327 12:52:44.346"></status>
+<msg timestamp="20210329 12:00:11.858" level="INFO">${RANDOM_EDIT_NAME} = pIXqI09rHe8sb</msg>
+<status status="PASS" starttime="20210329 12:00:11.856" endtime="20210329 12:00:11.858"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_EDIT_NAME}</arg>
 </arguments>
-<msg timestamp="20210327 12:52:44.346" level="INFO">${RANDOM_EDIT_NAME} = fTONNJTP4lZR0</msg>
-<status status="PASS" starttime="20210327 12:52:44.346" endtime="20210327 12:52:44.347"></status>
+<msg timestamp="20210329 12:00:11.859" level="INFO">${RANDOM_EDIT_NAME} = pIXqI09rHe8sb</msg>
+<status status="PASS" starttime="20210329 12:00:11.858" endtime="20210329 12:00:11.859"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:52:44.343" endtime="20210327 12:52:44.347"></status>
+<status status="PASS" starttime="20210329 12:00:11.849" endtime="20210329 12:00:11.860"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:52:32.061" endtime="20210327 12:52:44.347"></status>
+<status status="PASS" starttime="20210329 11:59:51.602" endtime="20210329 12:00:11.860"></status>
 </kw>
-<test id="s1-t1" name="GL_Codes_Test">
-<kw name="New GL Codes Generation">
+<test id="s1-t1" name="Charges_Test">
+<kw name="New Charges Generation">
 <arguments>
-<arg>${RANDOM_CYCLE_NAME}</arg>
-<arg>${RANDOM_GL_CODE}</arg>
-<arg>${RANDOM_EDIT_NAME}</arg>
+<arg>${RANDOM_NAME}</arg>
+<arg>Deposit</arg>
+<arg>GL_2124</arg>
+<arg>7 Percent Tax</arg>
 <arg>Pass</arg>
+<arg>${RANDOM_EDIT_NAME}</arg>
+<arg>9 Percent Tax</arg>
+<arg>Deposit</arg>
 <arg>Pass</arg>
+<arg>GL_212427</arg>
 </arguments>
-<kw name="Initialize Random Variables for GL Code cycle" library="GL_Codes_Resource">
+<kw name="New Charges cycle" library="Charges_Resource">
+<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="Setup" library="Common_Resource">
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210329 12:00:11.870" endtime="20210329 12:00:12.297"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210329 12:00:12.297" endtime="20210329 12:00:12.301"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONFIGURATION}</arg>
+</arguments>
+<msg timestamp="20210329 12:00:12.302" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210329 12:00:12.301" endtime="20210329 12:00:13.931"></status>
+</kw>
+<status status="PASS" starttime="20210329 12:00:11.868" endtime="20210329 12:00:13.932"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@ng-click="redirectTo('billing-configurations.charges')"]</arg>
+</arguments>
+<msg timestamp="20210329 12:00:13.934" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
+<status status="PASS" starttime="20210329 12:00:13.933" endtime="20210329 12:00:15.592"></status>
+</kw>
+<status status="PASS" starttime="20210329 12:00:11.866" endtime="20210329 12:00:15.593"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[text()='New Charge']</arg>
+</arguments>
+<msg timestamp="20210329 12:00:15.593" level="INFO">Clicking element '//*[text()='New Charge']'.</msg>
+<status status="PASS" starttime="20210329 12:00:15.593" endtime="20210329 12:00:16.656"></status>
+</kw>
+<status status="PASS" starttime="20210329 12:00:11.865" endtime="20210329 12:00:16.657"></status>
+</kw>
+<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>5</arg>
+<arg>15</arg>
 </arguments>
 <assign>
-<var>${RANDOM_CYCLE_NAME}</var>
+<var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210327 12:52:44.350" level="INFO">${RANDOM_CYCLE_NAME} = swKrW</msg>
-<status status="PASS" starttime="20210327 12:52:44.349" endtime="20210327 12:52:44.350"></status>
+<msg timestamp="20210329 12:00:16.660" level="INFO">${RANDOM_NAME} = FuSVkWZRpnZDoON</msg>
+<status status="PASS" starttime="20210329 12:00:16.659" endtime="20210329 12:00:16.660"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_CYCLE_NAME}</arg>
+<arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210327 12:52:44.350" level="INFO">${RANDOM_CYCLE_NAME} = swKrW</msg>
-<status status="PASS" starttime="20210327 12:52:44.350" endtime="20210327 12:52:44.350"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>4</arg>
-<arg>[NUMBERS]</arg>
-</arguments>
-<assign>
-<var>${RANDOM_GL_CODE}</var>
-</assign>
-<msg timestamp="20210327 12:52:44.351" level="INFO">${RANDOM_GL_CODE} = 1959</msg>
-<status status="PASS" starttime="20210327 12:52:44.350" endtime="20210327 12:52:44.351"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:44.351" level="INFO">${RANDOM_GL_CODE} = 1959</msg>
-<status status="PASS" starttime="20210327 12:52:44.351" endtime="20210327 12:52:44.351"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>13</arg>
-</arguments>
-<assign>
-<var>${RANDOM_EDIT_NAME}</var>
-</assign>
-<msg timestamp="20210327 12:52:44.352" level="INFO">${RANDOM_EDIT_NAME} = Gro985s8unfoE</msg>
-<status status="PASS" starttime="20210327 12:52:44.351" endtime="20210327 12:52:44.352"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_EDIT_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:44.352" level="INFO">${RANDOM_EDIT_NAME} = Gro985s8unfoE</msg>
-<status status="PASS" starttime="20210327 12:52:44.352" endtime="20210327 12:52:44.353"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:44.349" endtime="20210327 12:52:44.353"></status>
-</kw>
-<kw name="New GL Code cycle" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:52:44.354" endtime="20210327 12:52:44.664"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:44.664" endtime="20210327 12:52:44.666"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:44.667" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:44.666" endtime="20210327 12:52:45.793"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:44.353" endtime="20210327 12:52:45.793"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:45.793" endtime="20210327 12:52:45.794"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:45.794" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:52:45.794" endtime="20210327 12:52:47.708"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:44.353" endtime="20210327 12:52:47.708"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:47.708" endtime="20210327 12:52:47.710"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${NEW_GL_CODES}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:47.711" level="INFO">Clicking element '//*[text()='New GL Code']'.</msg>
-<status status="PASS" starttime="20210327 12:52:47.710" endtime="20210327 12:52:48.037"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:44.353" endtime="20210327 12:52:48.037"></status>
-</kw>
-<kw name="Give input to GL Code cycle" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_NAME_TEXTBOX}</arg>
-<arg>${GL_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:48.038" level="INFO">Typing text 'WDsUF' into text field '//input[@ng-model="dialogParams.name"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:48.037" endtime="20210327 12:52:48.602"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CODE_TEXTBOX}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:48.602" level="INFO">Typing text '0963' into text field '//input[@class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:48.602" endtime="20210327 12:52:48.683"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${SAVE}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:48.684" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210327 12:52:48.684" endtime="20210327 12:52:48.720"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:48.037" endtime="20210327 12:52:48.720"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${${NEW_VERIFY}}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:48.720" endtime="20210327 12:52:49.004"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${NEW_VERIFY}'=='Pass'</arg>
-<arg>Edit Verify &amp;Audit</arg>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-</arguments>
-<kw name="Edit Verify &amp;Audit" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-</arguments>
-<kw name="Verification" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:52:49.005" endtime="20210327 12:52:49.015"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:49.015" endtime="20210327 12:52:49.016"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:49.017" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:49.016" endtime="20210327 12:52:50.149"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:49.005" endtime="20210327 12:52:50.149"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:50.149" endtime="20210327 12:52:50.150"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:50.151" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:52:50.151" endtime="20210327 12:52:50.645"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:49.005" endtime="20210327 12:52:50.645"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:50.645" endtime="20210327 12:52:51.005"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:51.005" endtime="20210327 12:52:51.022"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:49.005" endtime="20210327 12:52:51.022"></status>
-</kw>
-<kw name="Auditing the GL_Codes" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<kw name="Audit click" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:52:51.024" endtime="20210327 12:52:51.030"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:51.030" endtime="20210327 12:52:51.031"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:51.031" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:51.031" endtime="20210327 12:52:52.169"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:51.024" endtime="20210327 12:52:52.169"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:52.169" endtime="20210327 12:52:52.170"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:52.171" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:52:52.171" endtime="20210327 12:52:52.868"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:51.024" endtime="20210327 12:52:52.868"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:52.868" endtime="20210327 12:52:52.870"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO AUDIT}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:52.871" level="INFO">Clicking element 'xpath=//td[3]/a[2]'.</msg>
-<status status="PASS" starttime="20210327 12:52:52.870" endtime="20210327 12:52:53.243"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:53.243" endtime="20210327 12:52:53.244"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:53.244" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210327 12:52:53.244" endtime="20210327 12:52:53.564"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:53.564" endtime="20210327 12:52:53.565"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:51.024" endtime="20210327 12:52:53.565"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:53.565" endtime="20210327 12:52:53.575"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:53.576" endtime="20210327 12:52:53.583"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:51.023" endtime="20210327 12:52:53.583"></status>
-</kw>
-<kw name="Editing section" library="GL_Codes_Resource">
-<arguments>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-</arguments>
-<kw name="Edit GL Code cycle" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:52:53.584" endtime="20210327 12:52:53.590"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:53.590" endtime="20210327 12:52:53.593"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:53.593" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:53.593" endtime="20210327 12:52:54.715"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:53.584" endtime="20210327 12:52:54.715"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:54.715" endtime="20210327 12:52:54.716"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:54.717" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:52:54.717" endtime="20210327 12:52:55.221"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:53.584" endtime="20210327 12:52:55.222"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_EDIT_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:55.222" level="INFO">Clicking element 'xpath=//td[3]/a'.</msg>
-<status status="PASS" starttime="20210327 12:52:55.222" endtime="20210327 12:52:55.594"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:53.584" endtime="20210327 12:52:55.594"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_NEW_NAME_TEXTBOX}</arg>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:55.594" level="INFO">Typing text 'fTONNJTP4lZR0' into text field 'xpath=//input[@name='glName']'.</msg>
-<status status="PASS" starttime="20210327 12:52:55.594" endtime="20210327 12:52:56.002"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${SAVE}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:56.003" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210327 12:52:56.002" endtime="20210327 12:52:56.046"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${${EDIT_VERIFY}}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:56.046" endtime="20210327 12:52:56.307"></status>
-</kw>
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:52:56.308" endtime="20210327 12:52:56.627"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:53.583" endtime="20210327 12:52:56.627"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${EDIT_VERIFY}'=='Pass'</arg>
-<arg>Edit Verification and Audit verifiction</arg>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<kw name="Edit Verification and Audit verifiction" library="GL_Codes_Resource">
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<kw name="Edit verification" library="GL_Codes_Resource">
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:52:56.628" endtime="20210327 12:52:57.037"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:57.038" endtime="20210327 12:52:57.039"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:57.039" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:57.039" endtime="20210327 12:52:57.845"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:56.628" endtime="20210327 12:52:57.845"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:57.845" endtime="20210327 12:52:57.847"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:57.848" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:52:57.848" endtime="20210327 12:52:58.534"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:56.627" endtime="20210327 12:52:58.534"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:58.534" endtime="20210327 12:52:58.859"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:56.627" endtime="20210327 12:52:58.859"></status>
-</kw>
-<kw name="Audit check of edited GL Codes" library="GL_Codes_Resource">
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<kw name="Audit click" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:52:58.861" endtime="20210327 12:52:59.180"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:52:59.180" endtime="20210327 12:52:59.182"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:52:59.183" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:52:59.183" endtime="20210327 12:53:00.045"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:58.860" endtime="20210327 12:53:00.045"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:00.046" endtime="20210327 12:53:00.047"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:00.048" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:00.048" endtime="20210327 12:53:00.522"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:58.860" endtime="20210327 12:53:00.522"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:00.523" endtime="20210327 12:53:00.524"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO AUDIT}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:00.524" level="INFO">Clicking element 'xpath=//td[3]/a[2]'.</msg>
-<status status="PASS" starttime="20210327 12:53:00.524" endtime="20210327 12:53:00.904"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:00.905" endtime="20210327 12:53:00.906"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:00.906" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:00.906" endtime="20210327 12:53:01.239"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:01.240" endtime="20210327 12:53:01.241"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:58.860" endtime="20210327 12:53:01.241"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:01.241" endtime="20210327 12:53:01.252"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:58.860" endtime="20210327 12:53:01.252"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:56.627" endtime="20210327 12:53:01.252"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:56.627" endtime="20210327 12:53:01.252"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:49.004" endtime="20210327 12:53:01.253"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:49.004" endtime="20210327 12:53:01.253"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:44.348" endtime="20210327 12:53:01.253"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:52:44.347" endtime="20210327 12:53:01.253" critical="yes"></status>
-</test>
-<test id="s1-t2" name="GL_Codes_Test">
-<kw name="New GL Codes Generation">
-<arguments>
-<arg>${RANDOM_CYCLE_NAME}</arg>
-<arg>7100</arg>
-<arg>Fail</arg>
-</arguments>
-<kw name="Initialize Random Variables for GL Code cycle" library="GL_Codes_Resource">
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<assign>
-<var>${RANDOM_CYCLE_NAME}</var>
-</assign>
-<msg timestamp="20210327 12:53:01.255" level="INFO">${RANDOM_CYCLE_NAME} = CLgsT</msg>
-<status status="PASS" starttime="20210327 12:53:01.255" endtime="20210327 12:53:01.256"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_CYCLE_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:01.256" level="INFO">${RANDOM_CYCLE_NAME} = CLgsT</msg>
-<status status="PASS" starttime="20210327 12:53:01.256" endtime="20210327 12:53:01.256"></status>
+<msg timestamp="20210329 12:00:16.664" level="INFO">${RANDOM_NAME} = FuSVkWZRpnZDoON</msg>
+<status status="PASS" starttime="20210329 12:00:16.661" endtime="20210329 12:00:16.664"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -752,16 +201,16 @@
 <assign>
 <var>${RANDOM_GL_CODE}</var>
 </assign>
-<msg timestamp="20210327 12:53:01.256" level="INFO">${RANDOM_GL_CODE} = 3367</msg>
-<status status="PASS" starttime="20210327 12:53:01.256" endtime="20210327 12:53:01.256"></status>
+<msg timestamp="20210329 12:00:16.665" level="INFO">${RANDOM_GL_CODE} = 1215</msg>
+<status status="PASS" starttime="20210329 12:00:16.664" endtime="20210329 12:00:16.665"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_GL_CODE}</arg>
 </arguments>
-<msg timestamp="20210327 12:53:01.257" level="INFO">${RANDOM_GL_CODE} = 3367</msg>
-<status status="PASS" starttime="20210327 12:53:01.256" endtime="20210327 12:53:01.257"></status>
+<msg timestamp="20210329 12:00:16.667" level="INFO">${RANDOM_GL_CODE} = 1215</msg>
+<status status="PASS" starttime="20210329 12:00:16.666" endtime="20210329 12:00:16.667"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -771,788 +220,167 @@
 <assign>
 <var>${RANDOM_EDIT_NAME}</var>
 </assign>
-<msg timestamp="20210327 12:53:01.257" level="INFO">${RANDOM_EDIT_NAME} = JlsHBHSLATicI</msg>
-<status status="PASS" starttime="20210327 12:53:01.257" endtime="20210327 12:53:01.257"></status>
+<msg timestamp="20210329 12:00:16.669" level="INFO">${RANDOM_EDIT_NAME} = DB9CaoR344jDq</msg>
+<status status="PASS" starttime="20210329 12:00:16.668" endtime="20210329 12:00:16.669"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_EDIT_NAME}</arg>
 </arguments>
-<msg timestamp="20210327 12:53:01.257" level="INFO">${RANDOM_EDIT_NAME} = JlsHBHSLATicI</msg>
-<status status="PASS" starttime="20210327 12:53:01.257" endtime="20210327 12:53:01.257"></status>
+<msg timestamp="20210329 12:00:16.670" level="INFO">${RANDOM_EDIT_NAME} = DB9CaoR344jDq</msg>
+<status status="PASS" starttime="20210329 12:00:16.669" endtime="20210329 12:00:16.671"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:53:01.255" endtime="20210327 12:53:01.257"></status>
+<status status="PASS" starttime="20210329 12:00:16.658" endtime="20210329 12:00:16.671"></status>
 </kw>
-<kw name="New GL Code cycle" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:53:01.258" endtime="20210327 12:53:01.559"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
+<kw name="Give input to Charges cycle" library="Charges_Resource">
 <arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:01.559" endtime="20210327 12:53:01.560"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:01.561" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:01.561" endtime="20210327 12:53:02.368"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:01.258" endtime="20210327 12:53:02.368"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:02.368" endtime="20210327 12:53:02.369"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:02.370" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:02.370" endtime="20210327 12:53:02.903"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:01.258" endtime="20210327 12:53:02.903"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:02.903" endtime="20210327 12:53:02.904"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${NEW_GL_CODES}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:02.904" level="INFO">Clicking element '//*[text()='New GL Code']'.</msg>
-<status status="PASS" starttime="20210327 12:53:02.904" endtime="20210327 12:53:03.290"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:01.257" endtime="20210327 12:53:03.290"></status>
-</kw>
-<kw name="Give input to GL Code cycle" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
+<arg>${NAME}</arg>
+<arg>${TYPE}</arg>
 <arg>${GL_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
+<arg>${NEW_VERIFY}</arg>
 </arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_NAME_TEXTBOX}</arg>
-<arg>${GL_NAME}</arg>
+<arg>//input[@placeholder="type Charge name here"]</arg>
+<arg>${NAME}</arg>
 </arguments>
-<msg timestamp="20210327 12:53:03.291" level="INFO">Typing text 'swKrW' into text field '//input[@ng-model="dialogParams.name"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:03.291" endtime="20210327 12:53:03.383"></status>
+<msg timestamp="20210329 12:00:16.675" level="INFO">Typing text 'HHmvVUc2edSHgYV' into text field '//input[@placeholder="type Charge name here"]'.</msg>
+<status status="PASS" starttime="20210329 12:00:16.674" endtime="20210329 12:00:17.465"></status>
 </kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>${XPATH_TO_CODE_TEXTBOX}</arg>
+<arg>//select[@ng-change="resetcharge(dialogParams.chargeClass)"]</arg>
+<arg>${TYPE}</arg>
+</arguments>
+<msg timestamp="20210329 12:00:17.467" level="INFO">Selecting options from selection list '//select[@ng-change="resetcharge(dialogParams.chargeClass)"]' by label Deposit.</msg>
+<status status="PASS" starttime="20210329 12:00:17.466" endtime="20210329 12:00:17.640"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>//select[@data-role="charge-config-gl-code"]</arg>
 <arg>${GL_CODE}</arg>
 </arguments>
-<msg timestamp="20210327 12:53:03.384" level="INFO">Typing text '7100' into text field '//input[@class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:03.384" endtime="20210327 12:53:03.463"></status>
+<msg timestamp="20210329 12:00:17.640" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_2124.</msg>
+<status status="PASS" starttime="20210329 12:00:17.640" endtime="20210329 12:00:17.788"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TYPE}'!='Deposit'</arg>
+<arg>Tax plan XPATH</arg>
+<arg>${TAX_PLAN}</arg>
+</arguments>
+<status status="PASS" starttime="20210329 12:00:17.788" endtime="20210329 12:00:17.789"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${SAVE}</arg>
 </arguments>
-<msg timestamp="20210327 12:53:03.463" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210327 12:53:03.463" endtime="20210327 12:53:03.502"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:03.290" endtime="20210327 12:53:03.502"></status>
+<msg timestamp="20210329 12:00:17.789" level="INFO">Clicking element '//*[text()='Save']'.</msg>
+<status status="PASS" starttime="20210329 12:00:17.789" endtime="20210329 12:00:17.869"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${${NEW_VERIFY}}</arg>
 </arguments>
-<status status="PASS" starttime="20210327 12:53:03.502" endtime="20210327 12:53:03.801"></status>
+<status status="PASS" starttime="20210329 12:00:17.869" endtime="20210329 12:00:18.201"></status>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210329 12:00:16.672" endtime="20210329 12:00:18.203"></status>
+</kw>
+<kw name="Verification" library="Charges_Resource">
 <arguments>
-<arg>'${NEW_VERIFY}'=='Pass'</arg>
-<arg>Edit Verify &amp;Audit</arg>
-<arg>${GL_NAME}</arg>
+<arg>${NAME}</arg>
+<arg>${TYPE}</arg>
 <arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
 </arguments>
-<status status="PASS" starttime="20210327 12:53:03.802" endtime="20210327 12:53:03.802"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:01.255" endtime="20210327 12:53:03.802"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:01.254" endtime="20210327 12:53:03.803" critical="yes"></status>
-</test>
-<test id="s1-t3" name="GL_Codes_Test">
-<kw name="New GL Codes Generation">
-<arguments>
-<arg>test</arg>
-<arg>100</arg>
-<arg>Fail</arg>
-</arguments>
-<kw name="Initialize Random Variables for GL Code cycle" library="GL_Codes_Resource">
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<assign>
-<var>${RANDOM_CYCLE_NAME}</var>
-</assign>
-<msg timestamp="20210327 12:53:03.806" level="INFO">${RANDOM_CYCLE_NAME} = MPGsH</msg>
-<status status="PASS" starttime="20210327 12:53:03.806" endtime="20210327 12:53:03.806"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_CYCLE_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:03.807" level="INFO">${RANDOM_CYCLE_NAME} = MPGsH</msg>
-<status status="PASS" starttime="20210327 12:53:03.806" endtime="20210327 12:53:03.807"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>4</arg>
-<arg>[NUMBERS]</arg>
-</arguments>
-<assign>
-<var>${RANDOM_GL_CODE}</var>
-</assign>
-<msg timestamp="20210327 12:53:03.807" level="INFO">${RANDOM_GL_CODE} = 1454</msg>
-<status status="PASS" starttime="20210327 12:53:03.807" endtime="20210327 12:53:03.807"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:03.807" level="INFO">${RANDOM_GL_CODE} = 1454</msg>
-<status status="PASS" starttime="20210327 12:53:03.807" endtime="20210327 12:53:03.807"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>13</arg>
-</arguments>
-<assign>
-<var>${RANDOM_EDIT_NAME}</var>
-</assign>
-<msg timestamp="20210327 12:53:03.808" level="INFO">${RANDOM_EDIT_NAME} = V6QaAJKrOUMD1</msg>
-<status status="PASS" starttime="20210327 12:53:03.808" endtime="20210327 12:53:03.808"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_EDIT_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:03.808" level="INFO">${RANDOM_EDIT_NAME} = V6QaAJKrOUMD1</msg>
-<status status="PASS" starttime="20210327 12:53:03.808" endtime="20210327 12:53:03.808"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:03.805" endtime="20210327 12:53:03.808"></status>
-</kw>
-<kw name="New GL Code cycle" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
+<kw name="Charges_Setup" library="Charges_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:53:03.809" endtime="20210327 12:53:04.124"></status>
+<status status="PASS" starttime="20210329 12:00:18.206" endtime="20210329 12:00:18.220"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210327 12:53:04.124" endtime="20210327 12:53:04.126"></status>
+<status status="PASS" starttime="20210329 12:00:18.221" endtime="20210329 12:00:18.225"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210327 12:53:04.126" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:04.126" endtime="20210327 12:53:04.944"></status>
+<msg timestamp="20210329 12:00:18.228" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210329 12:00:18.225" endtime="20210329 12:00:19.723"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:53:03.809" endtime="20210327 12:53:04.944"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:04.944" endtime="20210327 12:53:04.946"></status>
+<status status="PASS" starttime="20210329 12:00:18.205" endtime="20210329 12:00:19.723"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
+<arg>//a[@ng-click="redirectTo('billing-configurations.charges')"]</arg>
 </arguments>
-<msg timestamp="20210327 12:53:04.947" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:04.947" endtime="20210327 12:53:05.842"></status>
+<msg timestamp="20210329 12:00:19.724" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
+<status status="PASS" starttime="20210329 12:00:19.724" endtime="20210329 12:00:20.516"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:53:03.808" endtime="20210327 12:53:05.842"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:05.842" endtime="20210327 12:53:05.843"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${NEW_GL_CODES}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:05.844" level="INFO">Clicking element '//*[text()='New GL Code']'.</msg>
-<status status="PASS" starttime="20210327 12:53:05.843" endtime="20210327 12:53:06.201"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:03.808" endtime="20210327 12:53:06.201"></status>
-</kw>
-<kw name="Give input to GL Code cycle" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_NAME_TEXTBOX}</arg>
-<arg>${GL_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:06.204" level="INFO">Typing text 'test' into text field '//input[@ng-model="dialogParams.name"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:06.203" endtime="20210327 12:53:06.295"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CODE_TEXTBOX}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:06.296" level="INFO">Typing text '100' into text field '//input[@class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:06.295" endtime="20210327 12:53:06.363"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${SAVE}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:06.363" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210327 12:53:06.363" endtime="20210327 12:53:06.407"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:06.202" endtime="20210327 12:53:06.407"></status>
+<status status="PASS" starttime="20210329 12:00:18.205" endtime="20210329 12:00:20.516"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
-<arg>${${NEW_VERIFY}}</arg>
+<arg>${NAME}</arg>
 </arguments>
-<status status="PASS" starttime="20210327 12:53:06.408" endtime="20210327 12:53:06.678"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${NEW_VERIFY}'=='Pass'</arg>
-<arg>Edit Verify &amp;Audit</arg>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:06.679" endtime="20210327 12:53:06.679"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:03.805" endtime="20210327 12:53:06.679"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:03.804" endtime="20210327 12:53:06.680" critical="yes"></status>
-</test>
-<test id="s1-t4" name="GL_Codes_Test">
-<kw name="New GL Codes Generation">
-<arguments>
-<arg>${RANDOM_CYCLE_NAME}</arg>
-<arg>${RANDOM_GL_CODE}</arg>
-<arg>new </arg>
-<arg>Pass</arg>
-<arg>Fail</arg>
-</arguments>
-<kw name="Initialize Random Variables for GL Code cycle" library="GL_Codes_Resource">
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<assign>
-<var>${RANDOM_CYCLE_NAME}</var>
-</assign>
-<msg timestamp="20210327 12:53:06.685" level="INFO">${RANDOM_CYCLE_NAME} = Oq4MJ</msg>
-<status status="PASS" starttime="20210327 12:53:06.684" endtime="20210327 12:53:06.685"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_CYCLE_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:06.686" level="INFO">${RANDOM_CYCLE_NAME} = Oq4MJ</msg>
-<status status="PASS" starttime="20210327 12:53:06.685" endtime="20210327 12:53:06.687"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>4</arg>
-<arg>[NUMBERS]</arg>
-</arguments>
-<assign>
-<var>${RANDOM_GL_CODE}</var>
-</assign>
-<msg timestamp="20210327 12:53:06.688" level="INFO">${RANDOM_GL_CODE} = 7458</msg>
-<status status="PASS" starttime="20210327 12:53:06.688" endtime="20210327 12:53:06.689"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:06.689" level="INFO">${RANDOM_GL_CODE} = 7458</msg>
-<status status="PASS" starttime="20210327 12:53:06.689" endtime="20210327 12:53:06.689"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>13</arg>
-</arguments>
-<assign>
-<var>${RANDOM_EDIT_NAME}</var>
-</assign>
-<msg timestamp="20210327 12:53:06.689" level="INFO">${RANDOM_EDIT_NAME} = VmndZ2ErZo8to</msg>
-<status status="PASS" starttime="20210327 12:53:06.689" endtime="20210327 12:53:06.689"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_EDIT_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:06.690" level="INFO">${RANDOM_EDIT_NAME} = VmndZ2ErZo8to</msg>
-<status status="PASS" starttime="20210327 12:53:06.690" endtime="20210327 12:53:06.690"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:06.684" endtime="20210327 12:53:06.690"></status>
-</kw>
-<kw name="New GL Code cycle" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:53:06.691" endtime="20210327 12:53:06.696"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:06.696" endtime="20210327 12:53:06.697"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:06.698" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:06.698" endtime="20210327 12:53:07.825"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:06.690" endtime="20210327 12:53:07.825"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:07.825" endtime="20210327 12:53:07.827"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:07.827" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:07.827" endtime="20210327 12:53:08.489"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:06.690" endtime="20210327 12:53:08.489"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:08.489" endtime="20210327 12:53:08.490"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${NEW_GL_CODES}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:08.491" level="INFO">Clicking element '//*[text()='New GL Code']'.</msg>
-<status status="PASS" starttime="20210327 12:53:08.491" endtime="20210327 12:53:08.863"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:06.690" endtime="20210327 12:53:08.863"></status>
-</kw>
-<kw name="Give input to GL Code cycle" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_NAME_TEXTBOX}</arg>
-<arg>${GL_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:08.864" level="INFO">Typing text 'MPGsH' into text field '//input[@ng-model="dialogParams.name"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:08.864" endtime="20210327 12:53:08.953"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CODE_TEXTBOX}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:08.954" level="INFO">Typing text '1454' into text field '//input[@class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:08.953" endtime="20210327 12:53:09.027"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${SAVE}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:09.027" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210327 12:53:09.027" endtime="20210327 12:53:09.066"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:08.863" endtime="20210327 12:53:09.067"></status>
+<status status="PASS" starttime="20210329 12:00:20.516" endtime="20210329 12:00:20.862"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
-<arg>${${NEW_VERIFY}}</arg>
+<arg>${TYPE}</arg>
 </arguments>
-<status status="PASS" starttime="20210327 12:53:09.067" endtime="20210327 12:53:09.362"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${NEW_VERIFY}'=='Pass'</arg>
-<arg>Edit Verify &amp;Audit</arg>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-</arguments>
-<kw name="Edit Verify &amp;Audit" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-</arguments>
-<kw name="Verification" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:53:09.369" endtime="20210327 12:53:09.689"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:09.689" endtime="20210327 12:53:09.691"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:09.691" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:09.691" endtime="20210327 12:53:10.536"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:09.368" endtime="20210327 12:53:10.536"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:10.536" endtime="20210327 12:53:10.537"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:10.538" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:10.538" endtime="20210327 12:53:11.518"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:09.367" endtime="20210327 12:53:11.518"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:11.518" endtime="20210327 12:53:11.843"></status>
+<status status="PASS" starttime="20210329 12:00:20.863" endtime="20210329 12:00:20.881"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${GL_CODE}</arg>
 </arguments>
-<status status="PASS" starttime="20210327 12:53:11.843" endtime="20210327 12:53:11.857"></status>
+<status status="PASS" starttime="20210329 12:00:20.881" endtime="20210329 12:00:20.909"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:53:09.365" endtime="20210327 12:53:11.857"></status>
+<status status="PASS" starttime="20210329 12:00:18.203" endtime="20210329 12:00:20.909"></status>
 </kw>
-<kw name="Auditing the GL_Codes" library="GL_Codes_Resource">
-<arguments>
-<arg>${GL_NAME}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<kw name="Audit click" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:53:11.859" endtime="20210327 12:53:11.866"></status>
+<status status="PASS" starttime="20210329 12:00:11.863" endtime="20210329 12:00:20.909"></status>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:11.866" endtime="20210327 12:53:11.868"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:11.868" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:11.868" endtime="20210327 12:53:13.005"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:11.858" endtime="20210327 12:53:13.005"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:13.005" endtime="20210327 12:53:13.007"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:13.007" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:13.007" endtime="20210327 12:53:13.488"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:11.858" endtime="20210327 12:53:13.488"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:13.489" endtime="20210327 12:53:13.490"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO AUDIT}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:13.490" level="INFO">Clicking element 'xpath=//td[3]/a[2]'.</msg>
-<status status="PASS" starttime="20210327 12:53:13.490" endtime="20210327 12:53:13.867"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:13.867" endtime="20210327 12:53:13.868"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:13.868" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:13.868" endtime="20210327 12:53:14.172"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:14.173" endtime="20210327 12:53:14.173"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:11.858" endtime="20210327 12:53:14.174"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:14.174" endtime="20210327 12:53:14.183"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:14.183" endtime="20210327 12:53:14.189"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:11.857" endtime="20210327 12:53:14.189"></status>
-</kw>
-<kw name="Editing section" library="GL_Codes_Resource">
-<arguments>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-</arguments>
-<kw name="Edit GL Code cycle" library="GL_Codes_Resource">
-<kw name="GL_Codes_Setup" library="GL_Codes_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:53:14.190" endtime="20210327 12:53:14.496"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:14.496" endtime="20210327 12:53:14.497"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:14.498" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210327 12:53:14.498" endtime="20210327 12:53:15.296"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:14.190" endtime="20210327 12:53:15.296"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:15.296" endtime="20210327 12:53:15.298"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODES_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:15.299" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.gl-codes')"][1]'.</msg>
-<status status="PASS" starttime="20210327 12:53:15.299" endtime="20210327 12:53:15.767"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:14.190" endtime="20210327 12:53:15.768"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_EDIT_BUTTON}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:15.768" level="INFO">Clicking element 'xpath=//td[3]/a'.</msg>
-<status status="PASS" starttime="20210327 12:53:15.768" endtime="20210327 12:53:16.138"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:14.190" endtime="20210327 12:53:16.139"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_NEW_NAME_TEXTBOX}</arg>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:16.140" level="INFO">Typing text 'new ' into text field 'xpath=//input[@name='glName']'.</msg>
-<status status="PASS" starttime="20210327 12:53:16.139" endtime="20210327 12:53:16.252"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${SAVE}</arg>
-</arguments>
-<msg timestamp="20210327 12:53:16.252" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210327 12:53:16.252" endtime="20210327 12:53:16.297"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${${EDIT_VERIFY}}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:16.297" endtime="20210327 12:53:16.568"></status>
-</kw>
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210327 12:53:16.568" endtime="20210327 12:53:17.363"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:14.189" endtime="20210327 12:53:17.363"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${EDIT_VERIFY}'=='Pass'</arg>
-<arg>Edit Verification and Audit verifiction</arg>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210327 12:53:17.363" endtime="20210327 12:53:17.363"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:09.363" endtime="20210327 12:53:17.364"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:09.363" endtime="20210327 12:53:17.364"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:06.684" endtime="20210327 12:53:17.364"></status>
-</kw>
-<status status="PASS" starttime="20210327 12:53:06.683" endtime="20210327 12:53:17.364" critical="yes"></status>
+<status status="PASS" starttime="20210329 12:00:11.861" endtime="20210329 12:00:20.910" critical="yes"></status>
 </test>
 <kw name="Close Browsers" library="Common_Resource" type="teardown">
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20210327 12:53:17.366" endtime="20210327 12:53:19.527"></status>
+<status status="PASS" starttime="20210329 12:00:20.913" endtime="20210329 12:00:23.162"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:53:17.365" endtime="20210327 12:53:19.527"></status>
+<status status="PASS" starttime="20210329 12:00:20.913" endtime="20210329 12:00:23.162"></status>
 </kw>
-<status status="PASS" starttime="20210327 12:52:31.253" endtime="20210327 12:53:19.528"></status>
+<status status="PASS" starttime="20210329 11:59:50.260" endtime="20210329 12:00:23.162"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="GL Codes">GL Codes</stat>
+<stat pass="1" fail="0" id="s1" name="Charges">Charges</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210327 12:53:01.254" level="WARN">Multiple test cases with name 'GL_Codes_Test' executed in test suite 'GL Codes'.</msg>
-<msg timestamp="20210327 12:53:03.804" level="WARN">Multiple test cases with name 'GL_Codes_Test' executed in test suite 'GL Codes'.</msg>
-<msg timestamp="20210327 12:53:06.682" level="WARN">Multiple test cases with name 'GL_Codes_Test' executed in test suite 'GL Codes'.</msg>
+<msg timestamp="20210329 11:59:50.474" level="WARN">Imported resource file 'C:\Users\shajuam\Music\Location\Charges_Location.robot' is empty.</msg>
 </errors>
 </robot>

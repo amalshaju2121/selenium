@@ -27,9 +27,7 @@ Edit bill cycle
 Audit click
          Bill_Cycle_Setup
          click element                         ${XPATH_TO_AUDIT_BUTTON}
-         set selenium implicit wait            10s
          click element                         ${XPATH_TO_DROPDOWN_BUTTON}
-         set selenium implicit wait            10s
 
 
 #Fuction for generating random strings
@@ -43,13 +41,15 @@ Initialize Random Variables for Bill Cycle
 
 #Fuctions to give to main test keyword
 Give input to new bill cycle
-         [Arguments]      ${NAME}     ${PERIODICITY}     ${DATE}     ${MONTH}       ${TYPE}
+         [Arguments]      ${NAME}     ${PERIODICITY}     ${DATE}     ${MONTH}       ${TYPE}       ${NEW_VERIFY}
          input text                       ${XPATH_TO_CYCLE_NAME_TEXTBOX}            ${NAME}
          Select From List By Label        ${XPATH_TO_PERIODICITY_TEXTBOX}           ${PERIODICITY}
          Select From List By Label        ${XPATH_TO_START_DATE_TEXTBOX}            ${DATE}
          Select From List By Label        ${XPATH_TO_START_MONTH_TEXTBOX}           ${MONTH}
          Select From List By Label        ${XPATH_TO_CUSTOMER_TYPE_TEXTBOX}         ${TYPE}
          click element                    ${SAVE}
+         #Waiting for confirmation
+         wait until page contains         ${${NEW_VERIFY}}
 Verification
          [Arguments]    ${NAME}     ${PERIODICITY}    ${DATE}     ${TYPE}
          Bill_Cycle_Setup
@@ -60,8 +60,8 @@ Verification
 Auditing the new bill
          [Arguments]      ${NAME}         ${TYPE}
          Audit click
-         wait until page contains                ${NAME}
-         wait until page contains                ${TYPE}
+         wait until page contains             ${NAME}
+         wait until page contains             ${TYPE}
 Editing section
          [Arguments]       ${EDIT_NAME}       ${EDIT_TYPE}       ${EDIT_VERIFY}
          Edit bill cycle
@@ -71,7 +71,7 @@ Editing section
          click element                        ${SAVE}
          #Waiting for edit confirmation
          wait until page contains             ${${EDIT_VERIFY}}
-         Reload Page
+
 Edit verification
          [Arguments]        ${EDIT_NAME}      ${EDIT_TYPE}
          Bill_Cycle_Setup
@@ -89,7 +89,7 @@ Audit check of edited bill
 
 
 #fuctions for If Statements
-Edit Verify &Audit
+Edit Verify &Audit for IF
          [Arguments]                ${NAME}   ${PERIODICITY}   ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}
          Verification               ${NAME}   ${PERIODICITY}   ${DATE}  ${TYPE}
          Auditing the new bill      ${NAME}   ${TYPE}
@@ -101,6 +101,10 @@ Edit& Audit verifiction
          Edit verification              ${EDIT_NAME}   ${EDIT_TYPE}
          Audit check of edited bill     ${NAME}     ${TYPE}     ${EDIT_NAME}    ${EDIT_TYPE}
 
+#main IF statement
+Edit Verify &Audit
+         [Arguments]   ${NAME}  ${PERIODICITY}  ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}  ${NEW_VERIFY}
+         Run Keyword If  '${NEW_VERIFY}'=='Pass'  Edit Verify &Audit for IF   ${NAME}  ${PERIODICITY}  ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}
 
 
 #Test case arguments

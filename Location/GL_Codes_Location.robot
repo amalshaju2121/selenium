@@ -6,6 +6,7 @@ ${NEW_GL_CODES}                     //*[text()='New GL Code']
 #edit and audit button
 ${XPATH_TO_EDIT_BUTTON}             xpath=//td[3]/a
 ${XPATH_TO AUDIT}                   xpath=//td[3]/a[2]
+${XPATH_TO_DROPDOWN_BUTTON}             //*[text()='DCBS'][1]
 
 #input Xpaths
 ${XPATH_TO_NAME_TEXTBOX}           //input[@ng-model="dialogParams.name"]

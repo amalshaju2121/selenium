@@ -5,7 +5,6 @@ ${USER_ID}            collections
 ${PASSWORD}           Tecnotree@123
 
 
-
 #URL ID TO BILL UI
 #${URL}            https://mtng.cluster1.devtestlab2.tecnotree.com/ngb-ui/#/billing-operations/billrun-monitoring/
 ${URL}          http://dcbs.cluster1.devtestlab2.tecnotree.com/ngb-ui/#/system-configurations/billing-configurations/billing-cycles/
@@ -21,17 +20,9 @@ ${CONFIGURATION}                   //a[@class="ng-scope"]
 ${BILLING_CYCLE}                   //a[@translate="Billing Cycles"]
 
 
-
-
 #BUTTON TO SAVE THE BILL
 ${SAVE}           //*[text()='Save']
 ${CANCEL}         //*[text()='Cancel']
-
-
-#The pop up text to verify
-${Pass}     Your Request is Successfully Processed
-${Fail}     Error
-
 
 
 

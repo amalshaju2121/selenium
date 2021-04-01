@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210401 14:39:50.263" rpa="false">
-<suite id="s1" name="Charges" source="C:\Users\shajuam\Music\Test_Cases\Charges.robot">
-<kw name="Login To Charges Website" library="Charges_Resource" type="setup">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210401 20:14:46.415" rpa="false">
+<suite id="s1" name="Tax Formula" source="C:\Users\shajuam\Music\Test_Cases\Tax_Formula.robot">
+<kw name="Login To Tax Formula Website" library="Tax_Formula_Resource" type="setup">
 <kw name="Login To website" library="Common_Resource">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -9,19 +9,19 @@
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20210401 14:39:51.330" level="INFO">Opening browser 'gc' to base url 'http://dcbs.cluster1.devtestlab2.tecnotree.com/ngb-ui/#/system-configurations/billing-configurations/billing-cycles/'.</msg>
-<status status="PASS" starttime="20210401 14:39:51.329" endtime="20210401 14:40:00.193"></status>
+<msg timestamp="20210401 20:14:47.282" level="INFO">Opening browser 'gc' to base url 'http://dcbs.cluster1.devtestlab2.tecnotree.com/ngb-ui/#/system-configurations/billing-configurations/billing-cycles/'.</msg>
+<status status="PASS" starttime="20210401 20:14:47.282" endtime="20210401 20:14:52.270"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:00.193" endtime="20210401 14:40:00.195"></status>
+<status status="PASS" starttime="20210401 20:14:52.271" endtime="20210401 20:14:52.272"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210401 14:40:00.196" endtime="20210401 14:40:00.321"></status>
+<status status="PASS" starttime="20210401 20:14:52.273" endtime="20210401 20:14:52.396"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -29,8 +29,8 @@
 <arg>${XPATH_TO_USERNAME_TEXTBOX}</arg>
 <arg>${USER_ID}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:00.322" level="INFO">Typing text 'collections' into text field 'username'.</msg>
-<status status="PASS" starttime="20210401 14:40:00.321" endtime="20210401 14:40:02.642"></status>
+<msg timestamp="20210401 20:14:52.396" level="INFO">Typing text 'collections' into text field 'username'.</msg>
+<status status="PASS" starttime="20210401 20:14:52.396" endtime="20210401 20:14:54.654"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -38,2517 +38,1354 @@
 <arg>${XPATH_TO_PASSWORD_TEXTBOX}</arg>
 <arg>${PASSWORD}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:02.643" level="INFO">Typing text 'Tecnotree@123' into text field 'password'.</msg>
-<status status="PASS" starttime="20210401 14:40:02.642" endtime="20210401 14:40:02.726"></status>
+<msg timestamp="20210401 20:14:54.655" level="INFO">Typing text 'Tecnotree@123' into text field 'password'.</msg>
+<status status="PASS" starttime="20210401 20:14:54.654" endtime="20210401 20:14:54.758"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${LOGIN_SUBMIT BUTTON}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:02.727" level="INFO">Clicking element '//input[@class="btn btn-primary"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:02.727" endtime="20210401 14:40:04.415"></status>
+<msg timestamp="20210401 20:14:54.758" level="INFO">Clicking element '//input[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20210401 20:14:54.758" endtime="20210401 20:14:56.319"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:39:51.329" endtime="20210401 14:40:04.415"></status>
+<status status="PASS" starttime="20210401 20:14:47.282" endtime="20210401 20:14:56.319"></status>
 </kw>
-<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
+<kw name="Initialize Random Variables for Tax Formula cycle" library="Tax_Formula_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>12</arg>
+<arg>6</arg>
 </arguments>
 <assign>
 <var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210401 14:40:04.416" level="INFO">${RANDOM_NAME} = ADM7xf7VtDvV</msg>
-<status status="PASS" starttime="20210401 14:40:04.416" endtime="20210401 14:40:04.416"></status>
+<msg timestamp="20210401 20:14:56.320" level="INFO">${RANDOM_NAME} = rUQyKy</msg>
+<status status="PASS" starttime="20210401 20:14:56.320" endtime="20210401 20:14:56.320"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:04.418" level="INFO">${RANDOM_NAME} = ADM7xf7VtDvV</msg>
-<status status="PASS" starttime="20210401 14:40:04.416" endtime="20210401 14:40:04.418"></status>
+<msg timestamp="20210401 20:14:56.320" level="INFO">${RANDOM_NAME} = rUQyKy</msg>
+<status status="PASS" starttime="20210401 20:14:56.320" endtime="20210401 20:14:56.321"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>7</arg>
+<arg>4</arg>
 </arguments>
 <assign>
-<var>${RANDOM_APP_CODE}</var>
+<var>${RANDOM_CODE}</var>
 </assign>
-<msg timestamp="20210401 14:40:04.418" level="INFO">${RANDOM_APP_CODE} = WbdWiwf</msg>
-<status status="PASS" starttime="20210401 14:40:04.418" endtime="20210401 14:40:04.418"></status>
+<msg timestamp="20210401 20:14:56.321" level="INFO">${RANDOM_CODE} = UVx2</msg>
+<status status="PASS" starttime="20210401 20:14:56.321" endtime="20210401 20:14:56.321"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_APP_CODE}</arg>
+<arg>${RANDOM_CODE}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:04.419" level="INFO">${RANDOM_APP_CODE} = WbdWiwf</msg>
-<status status="PASS" starttime="20210401 14:40:04.419" endtime="20210401 14:40:04.419"></status>
+<msg timestamp="20210401 20:14:56.321" level="INFO">${RANDOM_CODE} = UVx2</msg>
+<status status="PASS" starttime="20210401 20:14:56.321" endtime="20210401 20:14:56.321"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>13</arg>
+<arg>8</arg>
 </arguments>
 <assign>
 <var>${RANDOM_EDIT_NAME}</var>
 </assign>
-<msg timestamp="20210401 14:40:04.420" level="INFO">${RANDOM_EDIT_NAME} = sVErSqkLknLn4</msg>
-<status status="PASS" starttime="20210401 14:40:04.420" endtime="20210401 14:40:04.420"></status>
+<msg timestamp="20210401 20:14:56.322" level="INFO">${RANDOM_EDIT_NAME} = bzOKEfQJ</msg>
+<status status="PASS" starttime="20210401 20:14:56.322" endtime="20210401 20:14:56.322"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_EDIT_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:04.421" level="INFO">${RANDOM_EDIT_NAME} = sVErSqkLknLn4</msg>
-<status status="PASS" starttime="20210401 14:40:04.420" endtime="20210401 14:40:04.421"></status>
+<msg timestamp="20210401 20:14:56.323" level="INFO">${RANDOM_EDIT_NAME} = bzOKEfQJ</msg>
+<status status="PASS" starttime="20210401 20:14:56.322" endtime="20210401 20:14:56.323"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:04.415" endtime="20210401 14:40:04.422"></status>
+<status status="PASS" starttime="20210401 20:14:56.319" endtime="20210401 20:14:56.323"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:39:51.329" endtime="20210401 14:40:04.422"></status>
+<status status="PASS" starttime="20210401 20:14:47.282" endtime="20210401 20:14:56.323"></status>
 </kw>
-<test id="s1-t1" name="Charges_Test">
-<kw name="New Charges Generation">
+<test id="s1-t1" name="Tax Formula Test">
+<kw name="New Tax Formula Generation">
 <arguments>
 <arg>${RANDOM_NAME}</arg>
+<arg>${RANDOM_NAME}</arg>
+<arg>x*0.23</arg>
 <arg>GL_2124</arg>
-<arg>Deposit</arg>
 <arg>Pass</arg>
-<arg>GL_212427</arg>
-<arg>${RANDOM_APP_CODE}</arg>
 <arg>${RANDOM_EDIT_NAME}</arg>
+<arg>x*0.223</arg>
 <arg>Pass</arg>
-<arg>GL_212427</arg>
 </arguments>
-<kw name="New Charges cycle" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="New Tax Formula cycle" library="Tax_Formula_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:04.427" endtime="20210401 14:40:04.784"></status>
+<status status="PASS" starttime="20210401 20:14:56.326" endtime="20210401 20:14:56.617"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:04.784" endtime="20210401 14:40:04.785"></status>
+<status status="PASS" starttime="20210401 20:14:56.618" endtime="20210401 20:14:56.619"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:04.786" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:04.785" endtime="20210401 14:40:06.270"></status>
+<msg timestamp="20210401 20:14:56.619" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:14:56.619" endtime="20210401 20:14:57.647"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:04.426" endtime="20210401 14:40:06.270"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:06.271" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:06.270" endtime="20210401 14:40:07.693"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:04.426" endtime="20210401 14:40:07.693"></status>
+<status status="PASS" starttime="20210401 20:14:56.326" endtime="20210401 20:14:57.647"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${NEW_BILL_BUTTON_CHARGER}</arg>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:07.693" level="INFO">Clicking element '//*[text()='New Charge']'.</msg>
-<status status="PASS" starttime="20210401 14:40:07.693" endtime="20210401 14:40:08.242"></status>
+<msg timestamp="20210401 20:14:57.647" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:14:57.647" endtime="20210401 20:14:58.856"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:04.425" endtime="20210401 14:40:08.243"></status>
+<status status="PASS" starttime="20210401 20:14:56.325" endtime="20210401 20:14:58.857"></status>
 </kw>
-<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEW_BILL_TAX_FORMULA}</arg>
+</arguments>
+<msg timestamp="20210401 20:14:58.857" level="INFO">Clicking element '//*[text()='New Tax Formula']'.</msg>
+<status status="PASS" starttime="20210401 20:14:58.857" endtime="20210401 20:14:59.497"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:14:56.325" endtime="20210401 20:14:59.497"></status>
+</kw>
+<kw name="Initialize Random Variables for Tax Formula cycle" library="Tax_Formula_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>12</arg>
+<arg>6</arg>
 </arguments>
 <assign>
 <var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210401 14:40:08.245" level="INFO">${RANDOM_NAME} = h8iiwy4kQy8k</msg>
-<status status="PASS" starttime="20210401 14:40:08.245" endtime="20210401 14:40:08.246"></status>
+<msg timestamp="20210401 20:14:59.498" level="INFO">${RANDOM_NAME} = f9JjR5</msg>
+<status status="PASS" starttime="20210401 20:14:59.498" endtime="20210401 20:14:59.498"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:08.247" level="INFO">${RANDOM_NAME} = h8iiwy4kQy8k</msg>
-<status status="PASS" starttime="20210401 14:40:08.246" endtime="20210401 14:40:08.247"></status>
+<msg timestamp="20210401 20:14:59.498" level="INFO">${RANDOM_NAME} = f9JjR5</msg>
+<status status="PASS" starttime="20210401 20:14:59.498" endtime="20210401 20:14:59.498"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>7</arg>
+<arg>4</arg>
 </arguments>
 <assign>
-<var>${RANDOM_APP_CODE}</var>
+<var>${RANDOM_CODE}</var>
 </assign>
-<msg timestamp="20210401 14:40:08.248" level="INFO">${RANDOM_APP_CODE} = D9FzZD2</msg>
-<status status="PASS" starttime="20210401 14:40:08.248" endtime="20210401 14:40:08.248"></status>
+<msg timestamp="20210401 20:14:59.499" level="INFO">${RANDOM_CODE} = xiu7</msg>
+<status status="PASS" starttime="20210401 20:14:59.499" endtime="20210401 20:14:59.499"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_APP_CODE}</arg>
+<arg>${RANDOM_CODE}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:08.249" level="INFO">${RANDOM_APP_CODE} = D9FzZD2</msg>
-<status status="PASS" starttime="20210401 14:40:08.248" endtime="20210401 14:40:08.249"></status>
+<msg timestamp="20210401 20:14:59.499" level="INFO">${RANDOM_CODE} = xiu7</msg>
+<status status="PASS" starttime="20210401 20:14:59.499" endtime="20210401 20:14:59.499"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>13</arg>
+<arg>8</arg>
 </arguments>
 <assign>
 <var>${RANDOM_EDIT_NAME}</var>
 </assign>
-<msg timestamp="20210401 14:40:08.250" level="INFO">${RANDOM_EDIT_NAME} = 8vw1RdpU7g6hb</msg>
-<status status="PASS" starttime="20210401 14:40:08.250" endtime="20210401 14:40:08.250"></status>
+<msg timestamp="20210401 20:14:59.499" level="INFO">${RANDOM_EDIT_NAME} = LbGWB4JT</msg>
+<status status="PASS" starttime="20210401 20:14:59.499" endtime="20210401 20:14:59.499"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_EDIT_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:08.251" level="INFO">${RANDOM_EDIT_NAME} = 8vw1RdpU7g6hb</msg>
-<status status="PASS" starttime="20210401 14:40:08.250" endtime="20210401 14:40:08.251"></status>
+<msg timestamp="20210401 20:14:59.500" level="INFO">${RANDOM_EDIT_NAME} = LbGWB4JT</msg>
+<status status="PASS" starttime="20210401 20:14:59.500" endtime="20210401 20:14:59.500"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:08.243" endtime="20210401 14:40:08.252"></status>
+<status status="PASS" starttime="20210401 20:14:59.497" endtime="20210401 20:14:59.500"></status>
 </kw>
-<kw name="Give input to Charges cycle" library="Charges_Resource">
+<kw name="Give input to Tax Formula cycle" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
 <arg>${TAX_PLAN}</arg>
+<arg>${GL_CODE}</arg>
 <arg>${NEW_VERIFY}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
 </arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
+<arg>${XPATH_TO_CODE_TAX_FORMULA}</arg>
+<arg>${CODE}</arg>
+</arguments>
+<msg timestamp="20210401 20:14:59.501" level="INFO">Typing text 'rUQyKy' into text field '//input[@ng-model="dialogParams.formulaCode"]'.</msg>
+<status status="PASS" starttime="20210401 20:14:59.501" endtime="20210401 20:15:00.004"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_NAME_TAX_FORMULA}</arg>
 <arg>${NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:08.254" level="INFO">Typing text 'ADM7xf7VtDvV' into text field '//input[@placeholder="type Charge name here"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:08.253" endtime="20210401 14:40:08.900"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_TYPE_TEXTBOX}</arg>
-<arg>${TYPE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:08.900" level="INFO">Selecting options from selection list '//select[@ng-change="resetcharge(dialogParams.chargeClass)"]' by label Deposit.</msg>
-<status status="PASS" starttime="20210401 14:40:08.900" endtime="20210401 14:40:08.991"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:08.992" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_2124.</msg>
-<status status="PASS" starttime="20210401 14:40:08.991" endtime="20210401 14:40:09.075"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${TYPE}'!='Deposit'</arg>
-<arg>Tax plan IF</arg>
-<arg>${TAX_PLAN}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:09.076" endtime="20210401 14:40:09.076"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_DISCOUNT_GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:09.076" level="INFO">Selecting options from selection list '//select[@ng-model="dialogParams.discountApportionGlCode"]' by label GL_212427.</msg>
-<status status="PASS" starttime="20210401 14:40:09.076" endtime="20210401 14:40:09.213"></status>
+<msg timestamp="20210401 20:15:00.006" level="INFO">Typing text 'rUQyKy' into text field '//input[@placeholder="type Formula name here"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:00.005" endtime="20210401 20:15:00.116"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DIS_APP_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${XPATH_TO_TAX_PLAN_FORMULA}</arg>
+<arg>${TAX_PLAN}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:09.214" level="INFO">Typing text 'WbdWiwf' into text field '//input[@ng-model="dialogParams.discountApportionChargeId"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:09.213" endtime="20210401 14:40:09.328"></status>
+<msg timestamp="20210401 20:15:00.117" level="INFO">Typing text 'x*0.23' into text field '//input[@placeholder="type Tax Plan formula here"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:00.116" endtime="20210401 20:15:00.210"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_GL_CODE_PLAN_FORMULA}</arg>
+<arg>${GL_CODE}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:00.211" level="INFO">Selecting options from selection list '//select[@ng-options="glCode.code as glCode.name for glCode in glCodes"]' by label GL_2124.</msg>
+<status status="PASS" starttime="20210401 20:15:00.210" endtime="20210401 20:15:00.288"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${SAVE}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:09.329" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210401 14:40:09.329" endtime="20210401 14:40:09.408"></status>
+<msg timestamp="20210401 20:15:00.288" level="INFO">Clicking element '//*[text()='Save']'.</msg>
+<status status="PASS" starttime="20210401 20:15:00.288" endtime="20210401 20:15:00.334"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${${NEW_VERIFY}}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:09.408" endtime="20210401 14:40:09.691"></status>
+<status status="PASS" starttime="20210401 20:15:00.334" endtime="20210401 20:15:00.593"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:08.252" endtime="20210401 14:40:09.691"></status>
+<status status="PASS" starttime="20210401 20:14:59.500" endtime="20210401 20:15:00.593"></status>
 </kw>
-<kw name="Edit Verify &amp; Audit" library="Charges_Resource">
+<kw name="Edit Verify &amp;Audit" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
 <arg>${NEW_VERIFY}</arg>
 <arg>${EDIT_NAME}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <arguments>
 <arg>'${NEW_VERIFY}'=='Pass'</arg>
-<arg>Edit Verify &amp;Audit for IF</arg>
+<arg>Edit Verify &amp;Audit for IF for tax formula</arg>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
 <arg>${EDIT_NAME}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
-<kw name="Edit Verify &amp;Audit for IF" library="Charges_Resource">
+<kw name="Edit Verify &amp;Audit for IF for tax formula" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
 <arg>${EDIT_NAME}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
-<kw name="Verification" library="Charges_Resource">
+<kw name="Verification for Tax Formula" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
 </arguments>
-<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:09.697" endtime="20210401 14:40:10.059"></status>
+<status status="PASS" starttime="20210401 20:15:00.596" endtime="20210401 20:15:00.606"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:10.059" endtime="20210401 14:40:10.061"></status>
+<status status="PASS" starttime="20210401 20:15:00.606" endtime="20210401 20:15:00.608"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:10.061" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:10.061" endtime="20210401 14:40:10.892"></status>
+<msg timestamp="20210401 20:15:00.608" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:00.608" endtime="20210401 20:15:01.597"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:09.696" endtime="20210401 14:40:10.892"></status>
+<status status="PASS" starttime="20210401 20:15:00.596" endtime="20210401 20:15:01.597"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:10.893" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:10.892" endtime="20210401 14:40:11.429"></status>
+<msg timestamp="20210401 20:15:01.597" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:01.597" endtime="20210401 20:15:02.191"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:09.696" endtime="20210401 14:40:11.429"></status>
+<status status="PASS" starttime="20210401 20:15:00.596" endtime="20210401 20:15:02.191"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${CODE}</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:02.191" endtime="20210401 20:15:03.154"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${NAME}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:11.430" endtime="20210401 14:40:12.457"></status>
+<status status="PASS" starttime="20210401 20:15:03.154" endtime="20210401 20:15:03.161"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210401 20:15:00.596" endtime="20210401 20:15:03.161"></status>
+</kw>
+<kw name="Auditing the Tax Formula" library="Tax_Formula_Resource">
 <arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:12.457" endtime="20210401 14:40:12.482"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:12.483" endtime="20210401 14:40:12.505"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:12.505" endtime="20210401 14:40:12.521"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:12.521" endtime="20210401 14:40:12.548"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:09.695" endtime="20210401 14:40:12.549"></status>
-</kw>
-<kw name="Auditing the new bill" library="Charges_Resource">
-<arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
 </arguments>
-<kw name="Audit click" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="Audit click" library="Tax_Formula_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:12.552" endtime="20210401 14:40:12.917"></status>
+<status status="PASS" starttime="20210401 20:15:03.163" endtime="20210401 20:15:03.437"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:12.918" endtime="20210401 14:40:12.919"></status>
+<status status="PASS" starttime="20210401 20:15:03.437" endtime="20210401 20:15:03.439"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:12.919" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:12.919" endtime="20210401 14:40:13.710"></status>
+<msg timestamp="20210401 20:15:03.439" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:03.439" endtime="20210401 20:15:04.157"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:12.551" endtime="20210401 14:40:13.710"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:13.710" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:13.710" endtime="20210401 14:40:14.525"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:12.551" endtime="20210401 14:40:14.525"></status>
+<status status="PASS" starttime="20210401 20:15:03.162" endtime="20210401 20:15:04.157"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_AUDIT_BUTTON_CHARGER}</arg>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:14.525" level="INFO">Clicking element 'xpath=//td[7]/a[2]'.</msg>
-<status status="PASS" starttime="20210401 14:40:14.525" endtime="20210401 14:40:15.521"></status>
+<msg timestamp="20210401 20:15:04.158" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:04.158" endtime="20210401 20:15:04.792"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:03.162" endtime="20210401 20:15:04.793"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON_CHARGER}</arg>
+<arg>${XPATH_TO_AUDIT_TAX}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:15.521" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210401 14:40:15.521" endtime="20210401 14:40:15.938"></status>
+<msg timestamp="20210401 20:15:04.793" level="INFO">Clicking element 'xpath=//td[3]/a'.</msg>
+<status status="PASS" starttime="20210401 20:15:04.793" endtime="20210401 20:15:05.770"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:12.550" endtime="20210401 14:40:15.938"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_DROPDOWN_TAX}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:05.771" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
+<status status="PASS" starttime="20210401 20:15:05.770" endtime="20210401 20:15:06.083"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:03.162" endtime="20210401 20:15:06.083"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${NAME}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:15.938" endtime="20210401 14:40:15.951"></status>
+<status status="PASS" starttime="20210401 20:15:06.083" endtime="20210401 20:15:06.093"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
-<arg>${TYPE}</arg>
+<arg>${CODE}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:15.951" endtime="20210401 14:40:15.971"></status>
+<status status="PASS" starttime="20210401 20:15:06.093" endtime="20210401 20:15:06.103"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:15.971" endtime="20210401 14:40:15.993"></status>
+<status status="PASS" starttime="20210401 20:15:03.162" endtime="20210401 20:15:06.104"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:15.994" endtime="20210401 14:40:16.014"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:16.014" endtime="20210401 14:40:16.034"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:12.549" endtime="20210401 14:40:16.034"></status>
-</kw>
-<kw name="Edit section" library="Charges_Resource">
+<kw name="Edit Section for tax formula" library="Tax_Formula_Resource">
 <arguments>
 <arg>${EDIT_NAME}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
-<kw name="Edit Charges cycle" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="Edit Tax Formula cycle" library="Tax_Formula_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:16.037" endtime="20210401 14:40:16.050"></status>
+<status status="PASS" starttime="20210401 20:15:06.106" endtime="20210401 20:15:06.110"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:16.050" endtime="20210401 14:40:16.052"></status>
+<status status="PASS" starttime="20210401 20:15:06.110" endtime="20210401 20:15:06.112"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:16.053" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:16.053" endtime="20210401 14:40:17.352"></status>
+<msg timestamp="20210401 20:15:06.113" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:06.112" endtime="20210401 20:15:07.138"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:16.037" endtime="20210401 14:40:17.353"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:17.354" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:17.353" endtime="20210401 14:40:17.853"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:16.036" endtime="20210401 14:40:17.854"></status>
+<status status="PASS" starttime="20210401 20:15:06.105" endtime="20210401 20:15:07.138"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${EDIT_BUTTON_CHARGER}</arg>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:17.854" level="INFO">Clicking element 'xpath=//td[7]/a'.</msg>
-<status status="PASS" starttime="20210401 14:40:17.854" endtime="20210401 14:40:18.567"></status>
+<msg timestamp="20210401 20:15:07.139" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:07.138" endtime="20210401 20:15:07.538"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:16.035" endtime="20210401 14:40:18.569"></status>
+<status status="PASS" starttime="20210401 20:15:06.105" endtime="20210401 20:15:07.538"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_FOR_EDIT}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:07.539" level="INFO">Clicking element '//a[@ng-class="{'rotate-right':item._meta.expanded}"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:07.539" endtime="20210401 20:15:08.646"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TAX_EDIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:08.647" level="INFO">Clicking element '//*[text()='Edit']'.</msg>
+<status status="PASS" starttime="20210401 20:15:08.647" endtime="20210401 20:15:08.924"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:06.104" endtime="20210401 20:15:08.924"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
+<arg>${XPATH_TO_EDIT_NAME_TAX_FORMULA}</arg>
 <arg>${EDIT_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:18.569" level="INFO">Typing text 'sVErSqkLknLn4' into text field '//input[@placeholder="type Charge name here"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:18.569" endtime="20210401 14:40:19.119"></status>
+<msg timestamp="20210401 20:15:08.925" level="INFO">Typing text 'bzOKEfQJ' into text field '//input[@ng-model="dialogParams.uuid.name"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:08.924" endtime="20210401 20:15:09.306"></status>
 </kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
-<arg>${EDIT_GL_CODE}</arg>
+<arg>${XPATH_TO_EDIT_TAX_FORMULA}</arg>
+<arg>${EDIT_TAX}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:19.120" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_212427.</msg>
-<status status="PASS" starttime="20210401 14:40:19.120" endtime="20210401 14:40:19.224"></status>
+<msg timestamp="20210401 20:15:09.307" level="INFO">Typing text 'x*0.223' into text field '//input[@placeholder="type Tax Plan formula here"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:09.306" endtime="20210401 20:15:09.446"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${SAVE}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:19.224" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210401 14:40:19.224" endtime="20210401 14:40:19.277"></status>
+<msg timestamp="20210401 20:15:09.446" level="INFO">Clicking element '//*[text()='Save']'.</msg>
+<status status="PASS" starttime="20210401 20:15:09.446" endtime="20210401 20:15:09.502"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${${EDIT_VERIFY}}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:19.277" endtime="20210401 14:40:19.548"></status>
+<status status="PASS" starttime="20210401 20:15:09.502" endtime="20210401 20:15:09.773"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:16.034" endtime="20210401 14:40:19.548"></status>
+<status status="PASS" starttime="20210401 20:15:06.104" endtime="20210401 20:15:09.774"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <arguments>
 <arg>'${EDIT_VERIFY}'=='Pass'</arg>
-<arg>Edit &amp;Audit Verification</arg>
+<arg>Edit Verification and Audit verifiction</arg>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
-<kw name="Edit &amp;Audit Verification" library="Charges_Resource">
+<kw name="Edit Verification and Audit verifiction" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
-<kw name="Edit verification" library="Charges_Resource">
+<kw name="Edit verification tax formula" library="Tax_Formula_Resource">
 <arguments>
-<arg>${TYPE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
+<arg>${CODE}</arg>
 </arguments>
-<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:19.552" endtime="20210401 14:40:20.032"></status>
+<status status="PASS" starttime="20210401 20:15:09.777" endtime="20210401 20:15:10.102"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:20.032" endtime="20210401 14:40:20.035"></status>
+<status status="PASS" starttime="20210401 20:15:10.102" endtime="20210401 20:15:10.103"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:20.035" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:20.035" endtime="20210401 14:40:20.847"></status>
+<msg timestamp="20210401 20:15:10.104" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:10.104" endtime="20210401 20:15:10.851"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:19.552" endtime="20210401 14:40:20.848"></status>
+<status status="PASS" starttime="20210401 20:15:09.776" endtime="20210401 20:15:10.852"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:20.850" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:20.849" endtime="20210401 14:40:21.731"></status>
+<msg timestamp="20210401 20:15:10.852" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:10.852" endtime="20210401 20:15:11.640"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:19.551" endtime="20210401 14:40:21.732"></status>
+<status status="PASS" starttime="20210401 20:15:09.775" endtime="20210401 20:15:11.641"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
-<arg>${TYPE}</arg>
+<arg>${CODE}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:21.732" endtime="20210401 14:40:22.279"></status>
+<status status="PASS" starttime="20210401 20:15:11.641" endtime="20210401 20:15:12.347"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:22.280" endtime="20210401 14:40:22.290"></status>
+<status status="PASS" starttime="20210401 20:15:09.775" endtime="20210401 20:15:12.347"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:22.290" endtime="20210401 14:40:22.306"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:22.307" endtime="20210401 14:40:22.327"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:22.328" endtime="20210401 14:40:22.353"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:19.550" endtime="20210401 14:40:22.354"></status>
-</kw>
-<kw name="Audit verification" library="Charges_Resource">
+<kw name="Audit Verification for edited tax formula" library="Tax_Formula_Resource">
 <arguments>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
 <arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
+<arg>${EDIT_TAX}</arg>
 </arguments>
-<kw name="Audit click" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="Audit click" library="Tax_Formula_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:22.358" endtime="20210401 14:40:22.928"></status>
+<status status="PASS" starttime="20210401 20:15:12.348" endtime="20210401 20:15:12.645"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:22.929" endtime="20210401 14:40:22.931"></status>
+<status status="PASS" starttime="20210401 20:15:12.646" endtime="20210401 20:15:12.647"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:22.932" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:22.932" endtime="20210401 14:40:23.889"></status>
+<msg timestamp="20210401 20:15:12.648" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:12.647" endtime="20210401 20:15:13.395"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:22.357" endtime="20210401 14:40:23.890"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:23.890" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:23.890" endtime="20210401 14:40:24.369"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:22.356" endtime="20210401 14:40:24.369"></status>
+<status status="PASS" starttime="20210401 20:15:12.348" endtime="20210401 20:15:13.395"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_AUDIT_BUTTON_CHARGER}</arg>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:24.370" level="INFO">Clicking element 'xpath=//td[7]/a[2]'.</msg>
-<status status="PASS" starttime="20210401 14:40:24.369" endtime="20210401 14:40:25.043"></status>
+<msg timestamp="20210401 20:15:13.396" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:13.395" endtime="20210401 20:15:13.799"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:12.348" endtime="20210401 20:15:13.799"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON_CHARGER}</arg>
+<arg>${XPATH_TO_AUDIT_TAX}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:25.045" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210401 14:40:25.044" endtime="20210401 14:40:25.503"></status>
+<msg timestamp="20210401 20:15:13.799" level="INFO">Clicking element 'xpath=//td[3]/a'.</msg>
+<status status="PASS" starttime="20210401 20:15:13.799" endtime="20210401 20:15:14.695"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:22.356" endtime="20210401 14:40:25.503"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_DROPDOWN_TAX}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:14.696" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
+<status status="PASS" starttime="20210401 20:15:14.696" endtime="20210401 20:15:15.086"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:12.348" endtime="20210401 20:15:15.086"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${NAME}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:25.503" endtime="20210401 14:40:25.520"></status>
+<status status="PASS" starttime="20210401 20:15:15.086" endtime="20210401 20:15:15.096"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
-<arg>${TYPE}</arg>
+<arg>${TAX_PLAN}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:25.520" endtime="20210401 14:40:25.535"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:25.535" endtime="20210401 14:40:25.554"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:25.554" endtime="20210401 14:40:25.576"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:25.577" endtime="20210401 14:40:25.610"></status>
+<status status="PASS" starttime="20210401 20:15:15.096" endtime="20210401 20:15:15.112"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${EDIT_NAME}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:25.610" endtime="20210401 14:40:25.637"></status>
+<status status="PASS" starttime="20210401 20:15:15.112" endtime="20210401 20:15:15.125"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
-<arg>${EDIT_GL_CODE}</arg>
+<arg>${EDIT_TAX}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:25.639" endtime="20210401 14:40:25.663"></status>
+<status status="PASS" starttime="20210401 20:15:15.125" endtime="20210401 20:15:15.139"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:22.355" endtime="20210401 14:40:25.663"></status>
+<status status="PASS" starttime="20210401 20:15:12.347" endtime="20210401 20:15:15.139"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:19.549" endtime="20210401 14:40:25.663"></status>
+<status status="PASS" starttime="20210401 20:15:09.774" endtime="20210401 20:15:15.139"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:19.548" endtime="20210401 14:40:25.663"></status>
+<status status="PASS" starttime="20210401 20:15:09.774" endtime="20210401 20:15:15.139"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:09.694" endtime="20210401 14:40:25.664"></status>
+<status status="PASS" starttime="20210401 20:15:00.594" endtime="20210401 20:15:15.140"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:09.693" endtime="20210401 14:40:25.664"></status>
+<status status="PASS" starttime="20210401 20:15:00.594" endtime="20210401 20:15:15.140"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:09.692" endtime="20210401 14:40:25.665"></status>
+<status status="PASS" starttime="20210401 20:15:00.593" endtime="20210401 20:15:15.140"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:04.423" endtime="20210401 14:40:25.665"></status>
+<status status="PASS" starttime="20210401 20:14:56.324" endtime="20210401 20:15:15.140"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:04.422" endtime="20210401 14:40:25.667" critical="yes"></status>
+<status status="PASS" starttime="20210401 20:14:56.324" endtime="20210401 20:15:15.140" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Charges_Test">
-<kw name="New Charges Generation">
+<test id="s1-t2" name="Tax Formula Test">
+<kw name="New Tax Formula Generation">
 <arguments>
+<arg>QWERTY</arg>
 <arg>${RANDOM_NAME}</arg>
+<arg>x*0.23</arg>
 <arg>GL_2124</arg>
-<arg>OneTime</arg>
-<arg>7 Percent Tax</arg>
-<arg>Pass</arg>
-<arg>GL_212427</arg>
-<arg>${RANDOM_APP_CODE}</arg>
-<arg>${RANDOM_EDIT_NAME}</arg>
-<arg>Pass</arg>
-<arg>GL_212427</arg>
+<arg>Failed</arg>
 </arguments>
-<kw name="New Charges cycle" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="New Tax Formula cycle" library="Tax_Formula_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:25.677" endtime="20210401 14:40:25.693"></status>
+<status status="PASS" starttime="20210401 20:15:15.144" endtime="20210401 20:15:15.150"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:25.694" endtime="20210401 14:40:25.697"></status>
+<status status="PASS" starttime="20210401 20:15:15.151" endtime="20210401 20:15:15.153"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:25.698" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:25.698" endtime="20210401 14:40:27.142"></status>
+<msg timestamp="20210401 20:15:15.154" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:15.154" endtime="20210401 20:15:16.220"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:25.675" endtime="20210401 14:40:27.142"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:27.143" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:27.143" endtime="20210401 14:40:28.005"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:25.675" endtime="20210401 14:40:28.005"></status>
+<status status="PASS" starttime="20210401 20:15:15.144" endtime="20210401 20:15:16.221"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${NEW_BILL_BUTTON_CHARGER}</arg>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:28.006" level="INFO">Clicking element '//*[text()='New Charge']'.</msg>
-<status status="PASS" starttime="20210401 14:40:28.006" endtime="20210401 14:40:28.671"></status>
+<msg timestamp="20210401 20:15:16.221" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:16.221" endtime="20210401 20:15:16.780"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:25.674" endtime="20210401 14:40:28.671"></status>
+<status status="PASS" starttime="20210401 20:15:15.144" endtime="20210401 20:15:16.781"></status>
 </kw>
-<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEW_BILL_TAX_FORMULA}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:16.781" level="INFO">Clicking element '//*[text()='New Tax Formula']'.</msg>
+<status status="PASS" starttime="20210401 20:15:16.781" endtime="20210401 20:15:17.723"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:15.144" endtime="20210401 20:15:17.723"></status>
+</kw>
+<kw name="Initialize Random Variables for Tax Formula cycle" library="Tax_Formula_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>12</arg>
+<arg>6</arg>
 </arguments>
 <assign>
 <var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210401 14:40:28.673" level="INFO">${RANDOM_NAME} = vKdUtVD1A1b8</msg>
-<status status="PASS" starttime="20210401 14:40:28.673" endtime="20210401 14:40:28.673"></status>
+<msg timestamp="20210401 20:15:17.724" level="INFO">${RANDOM_NAME} = qP4lzh</msg>
+<status status="PASS" starttime="20210401 20:15:17.724" endtime="20210401 20:15:17.724"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:28.674" level="INFO">${RANDOM_NAME} = vKdUtVD1A1b8</msg>
-<status status="PASS" starttime="20210401 14:40:28.674" endtime="20210401 14:40:28.675"></status>
+<msg timestamp="20210401 20:15:17.725" level="INFO">${RANDOM_NAME} = qP4lzh</msg>
+<status status="PASS" starttime="20210401 20:15:17.724" endtime="20210401 20:15:17.725"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>7</arg>
+<arg>4</arg>
 </arguments>
 <assign>
-<var>${RANDOM_APP_CODE}</var>
+<var>${RANDOM_CODE}</var>
 </assign>
-<msg timestamp="20210401 14:40:28.676" level="INFO">${RANDOM_APP_CODE} = Ite8AYI</msg>
-<status status="PASS" starttime="20210401 14:40:28.675" endtime="20210401 14:40:28.676"></status>
+<msg timestamp="20210401 20:15:17.727" level="INFO">${RANDOM_CODE} = aEY1</msg>
+<status status="PASS" starttime="20210401 20:15:17.726" endtime="20210401 20:15:17.727"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_APP_CODE}</arg>
+<arg>${RANDOM_CODE}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:28.678" level="INFO">${RANDOM_APP_CODE} = Ite8AYI</msg>
-<status status="PASS" starttime="20210401 14:40:28.676" endtime="20210401 14:40:28.678"></status>
+<msg timestamp="20210401 20:15:17.728" level="INFO">${RANDOM_CODE} = aEY1</msg>
+<status status="PASS" starttime="20210401 20:15:17.727" endtime="20210401 20:15:17.729"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>13</arg>
+<arg>8</arg>
 </arguments>
 <assign>
 <var>${RANDOM_EDIT_NAME}</var>
 </assign>
-<msg timestamp="20210401 14:40:28.680" level="INFO">${RANDOM_EDIT_NAME} = r7dXUwPoAXWoG</msg>
-<status status="PASS" starttime="20210401 14:40:28.679" endtime="20210401 14:40:28.680"></status>
+<msg timestamp="20210401 20:15:17.729" level="INFO">${RANDOM_EDIT_NAME} = qWianCxY</msg>
+<status status="PASS" starttime="20210401 20:15:17.729" endtime="20210401 20:15:17.730"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_EDIT_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:28.682" level="INFO">${RANDOM_EDIT_NAME} = r7dXUwPoAXWoG</msg>
-<status status="PASS" starttime="20210401 14:40:28.681" endtime="20210401 14:40:28.683"></status>
+<msg timestamp="20210401 20:15:17.731" level="INFO">${RANDOM_EDIT_NAME} = qWianCxY</msg>
+<status status="PASS" starttime="20210401 20:15:17.730" endtime="20210401 20:15:17.732"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:28.672" endtime="20210401 14:40:28.683"></status>
+<status status="PASS" starttime="20210401 20:15:17.723" endtime="20210401 20:15:17.732"></status>
 </kw>
-<kw name="Give input to Charges cycle" library="Charges_Resource">
+<kw name="Give input to Tax Formula cycle" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
 <arg>${TAX_PLAN}</arg>
+<arg>${GL_CODE}</arg>
 <arg>${NEW_VERIFY}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
 </arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
+<arg>${XPATH_TO_CODE_TAX_FORMULA}</arg>
+<arg>${CODE}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:17.735" level="INFO">Typing text 'QWERTY' into text field '//input[@ng-model="dialogParams.formulaCode"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:17.734" endtime="20210401 20:15:17.889"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_NAME_TAX_FORMULA}</arg>
 <arg>${NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:28.686" level="INFO">Typing text 'h8iiwy4kQy8k' into text field '//input[@placeholder="type Charge name here"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:28.685" endtime="20210401 14:40:29.080"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_TYPE_TEXTBOX}</arg>
-<arg>${TYPE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:29.081" level="INFO">Selecting options from selection list '//select[@ng-change="resetcharge(dialogParams.chargeClass)"]' by label OneTime.</msg>
-<status status="PASS" starttime="20210401 14:40:29.081" endtime="20210401 14:40:29.181"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:29.181" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_2124.</msg>
-<status status="PASS" starttime="20210401 14:40:29.181" endtime="20210401 14:40:29.267"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${TYPE}'!='Deposit'</arg>
-<arg>Tax plan IF</arg>
-<arg>${TAX_PLAN}</arg>
-</arguments>
-<kw name="Tax plan IF" library="Charges_Resource">
-<arguments>
-<arg>${TAX_PLAN}</arg>
-</arguments>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_TAX_PLAN_TEXTBOX}</arg>
-<arg>${TAX_PLAN}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:29.269" level="INFO">Selecting options from selection list '//select[@ng-options="taxPlan.id as taxPlan.name for taxPlan in dialogParams.taxPlans"]' by label 7 Percent Tax.</msg>
-<status status="PASS" starttime="20210401 14:40:29.268" endtime="20210401 14:40:29.398"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:29.268" endtime="20210401 14:40:29.399"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:29.267" endtime="20210401 14:40:29.399"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_DISCOUNT_GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:29.400" level="INFO">Selecting options from selection list '//select[@ng-model="dialogParams.discountApportionGlCode"]' by label GL_212427.</msg>
-<status status="PASS" starttime="20210401 14:40:29.399" endtime="20210401 14:40:29.554"></status>
+<msg timestamp="20210401 20:15:17.890" level="INFO">Typing text 'f9JjR5' into text field '//input[@placeholder="type Formula name here"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:17.889" endtime="20210401 20:15:18.017"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DIS_APP_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${XPATH_TO_TAX_PLAN_FORMULA}</arg>
+<arg>${TAX_PLAN}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:29.555" level="INFO">Typing text 'D9FzZD2' into text field '//input[@ng-model="dialogParams.discountApportionChargeId"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:29.554" endtime="20210401 14:40:29.699"></status>
+<msg timestamp="20210401 20:15:18.017" level="INFO">Typing text 'x*0.23' into text field '//input[@placeholder="type Tax Plan formula here"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:18.017" endtime="20210401 20:15:18.137"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_GL_CODE_PLAN_FORMULA}</arg>
+<arg>${GL_CODE}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:18.137" level="INFO">Selecting options from selection list '//select[@ng-options="glCode.code as glCode.name for glCode in glCodes"]' by label GL_2124.</msg>
+<status status="PASS" starttime="20210401 20:15:18.137" endtime="20210401 20:15:18.208"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${SAVE}</arg>
 </arguments>
-<msg timestamp="20210401 14:40:29.699" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210401 14:40:29.699" endtime="20210401 14:40:29.775"></status>
+<msg timestamp="20210401 20:15:18.209" level="INFO">Clicking element '//*[text()='Save']'.</msg>
+<status status="PASS" starttime="20210401 20:15:18.209" endtime="20210401 20:15:18.256"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${${NEW_VERIFY}}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:40:29.775" endtime="20210401 14:40:30.056"></status>
+<status status="PASS" starttime="20210401 20:15:18.257" endtime="20210401 20:15:18.269"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:28.683" endtime="20210401 14:40:30.056"></status>
+<status status="PASS" starttime="20210401 20:15:17.732" endtime="20210401 20:15:18.270"></status>
 </kw>
-<kw name="Edit Verify &amp; Audit" library="Charges_Resource">
+<kw name="Edit Verify &amp;Audit" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
 <arg>${NEW_VERIFY}</arg>
 <arg>${EDIT_NAME}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <arguments>
 <arg>'${NEW_VERIFY}'=='Pass'</arg>
-<arg>Edit Verify &amp;Audit for IF</arg>
+<arg>Edit Verify &amp;Audit for IF for tax formula</arg>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
 <arg>${EDIT_NAME}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
-<kw name="Edit Verify &amp;Audit for IF" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Verification" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:30.066" endtime="20210401 14:40:30.082"></status>
+<status status="PASS" starttime="20210401 20:15:18.270" endtime="20210401 20:15:18.271"></status>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:30.082" endtime="20210401 14:40:30.086"></status>
+<status status="PASS" starttime="20210401 20:15:18.270" endtime="20210401 20:15:18.271"></status>
 </kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:30.087" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:30.086" endtime="20210401 14:40:31.210"></status>
+<status status="PASS" starttime="20210401 20:15:15.143" endtime="20210401 20:15:18.271"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:40:30.066" endtime="20210401 14:40:31.211"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:31.211" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:31.211" endtime="20210401 14:40:31.860"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:30.065" endtime="20210401 14:40:31.860"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:31.860" endtime="20210401 14:40:33.396"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:33.396" endtime="20210401 14:40:33.411"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:33.411" endtime="20210401 14:40:33.426"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:33.427" endtime="20210401 14:40:33.445"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:33.446" endtime="20210401 14:40:33.469"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:30.064" endtime="20210401 14:40:33.469"></status>
-</kw>
-<kw name="Auditing the new bill" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<kw name="Audit click" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:33.473" endtime="20210401 14:40:33.817"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:33.817" endtime="20210401 14:40:33.819"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:33.819" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:33.819" endtime="20210401 14:40:34.682"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:33.473" endtime="20210401 14:40:34.682"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:34.683" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:34.682" endtime="20210401 14:40:35.629"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:33.472" endtime="20210401 14:40:35.629"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_AUDIT_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:35.629" level="INFO">Clicking element 'xpath=//td[7]/a[2]'.</msg>
-<status status="PASS" starttime="20210401 14:40:35.629" endtime="20210401 14:40:36.799"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:36.800" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210401 14:40:36.799" endtime="20210401 14:40:37.243"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:33.471" endtime="20210401 14:40:37.243"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:37.244" endtime="20210401 14:40:37.257"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:37.258" endtime="20210401 14:40:37.268"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:37.268" endtime="20210401 14:40:37.278"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:37.279" endtime="20210401 14:40:37.292"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:37.292" endtime="20210401 14:40:37.308"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:33.470" endtime="20210401 14:40:37.308"></status>
-</kw>
-<kw name="Edit section" library="Charges_Resource">
-<arguments>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Edit Charges cycle" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:37.309" endtime="20210401 14:40:37.702"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:37.702" endtime="20210401 14:40:37.704"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:37.705" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:37.704" endtime="20210401 14:40:38.733"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:37.309" endtime="20210401 14:40:38.733"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:38.734" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:38.733" endtime="20210401 14:40:39.358"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:37.308" endtime="20210401 14:40:39.358"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${EDIT_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:39.359" level="INFO">Clicking element 'xpath=//td[7]/a'.</msg>
-<status status="PASS" starttime="20210401 14:40:39.359" endtime="20210401 14:40:40.051"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:37.308" endtime="20210401 14:40:40.052"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:40.052" level="INFO">Typing text '8vw1RdpU7g6hb' into text field '//input[@placeholder="type Charge name here"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:40.052" endtime="20210401 14:40:40.329"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:40.331" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_212427.</msg>
-<status status="PASS" starttime="20210401 14:40:40.329" endtime="20210401 14:40:40.473"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${SAVE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:40.474" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210401 14:40:40.473" endtime="20210401 14:40:40.558"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${${EDIT_VERIFY}}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:40.558" endtime="20210401 14:40:40.944"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:37.308" endtime="20210401 14:40:40.944"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${EDIT_VERIFY}'=='Pass'</arg>
-<arg>Edit &amp;Audit Verification</arg>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Edit &amp;Audit Verification" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Edit verification" library="Charges_Resource">
-<arguments>
-<arg>${TYPE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:40.950" endtime="20210401 14:40:41.486"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:41.487" endtime="20210401 14:40:41.488"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:41.489" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:41.488" endtime="20210401 14:40:42.336"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:40.949" endtime="20210401 14:40:42.336"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:42.336" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:42.336" endtime="20210401 14:40:43.227"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:40.948" endtime="20210401 14:40:43.227"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:43.227" endtime="20210401 14:40:43.821"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:43.821" endtime="20210401 14:40:43.843"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:43.844" endtime="20210401 14:40:43.859"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:43.859" endtime="20210401 14:40:43.882"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:43.882" endtime="20210401 14:40:43.904"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:40.947" endtime="20210401 14:40:43.904"></status>
-</kw>
-<kw name="Audit verification" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Audit click" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:43.908" endtime="20210401 14:40:44.249"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:44.249" endtime="20210401 14:40:44.250"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:44.251" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:44.250" endtime="20210401 14:40:45.127"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:43.907" endtime="20210401 14:40:45.127"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:45.128" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:45.128" endtime="20210401 14:40:45.565"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:43.907" endtime="20210401 14:40:45.566"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_AUDIT_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:45.567" level="INFO">Clicking element 'xpath=//td[7]/a[2]'.</msg>
-<status status="PASS" starttime="20210401 14:40:45.566" endtime="20210401 14:40:46.181"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:46.182" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210401 14:40:46.182" endtime="20210401 14:40:46.670"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:43.906" endtime="20210401 14:40:46.670"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:46.670" endtime="20210401 14:40:46.690"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:46.691" endtime="20210401 14:40:46.702"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:46.702" endtime="20210401 14:40:46.718"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:46.718" endtime="20210401 14:40:46.728"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:46.729" endtime="20210401 14:40:46.739"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:46.739" endtime="20210401 14:40:46.749"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:46.749" endtime="20210401 14:40:46.760"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:43.904" endtime="20210401 14:40:46.760"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:40.946" endtime="20210401 14:40:46.760"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:40.945" endtime="20210401 14:40:46.761"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:30.061" endtime="20210401 14:40:46.761"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:30.061" endtime="20210401 14:40:46.762"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:30.056" endtime="20210401 14:40:46.762"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:25.672" endtime="20210401 14:40:46.762"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:25.670" endtime="20210401 14:40:46.762" critical="yes"></status>
+<status status="PASS" starttime="20210401 20:15:15.143" endtime="20210401 20:15:18.271" critical="yes"></status>
 </test>
-<test id="s1-t3" name="Charges_Test">
-<kw name="New Charges Generation">
+<test id="s1-t3" name="Tax Formula Test">
+<kw name="New Tax Formula Generation">
 <arguments>
 <arg>${RANDOM_NAME}</arg>
-<arg>GL_2124</arg>
-<arg>Deposit</arg>
-<arg>Pass</arg>
-<arg>GL_212427</arg>
-<arg>hello</arg>
-<arg>${RANDOM_EDIT_NAME}</arg>
-<arg>Pass</arg>
-<arg>GL_212427</arg>
-</arguments>
-<kw name="New Charges cycle" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:46.767" endtime="20210401 14:40:47.138"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:47.139" endtime="20210401 14:40:47.141"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:47.141" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:47.141" endtime="20210401 14:40:48.043"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:46.766" endtime="20210401 14:40:48.044"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:48.044" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:48.044" endtime="20210401 14:40:48.777"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:46.766" endtime="20210401 14:40:48.777"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${NEW_BILL_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:48.778" level="INFO">Clicking element '//*[text()='New Charge']'.</msg>
-<status status="PASS" starttime="20210401 14:40:48.778" endtime="20210401 14:40:49.311"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:46.766" endtime="20210401 14:40:49.312"></status>
-</kw>
-<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>12</arg>
-</arguments>
-<assign>
-<var>${RANDOM_NAME}</var>
-</assign>
-<msg timestamp="20210401 14:40:49.313" level="INFO">${RANDOM_NAME} = himyz6C0G4yy</msg>
-<status status="PASS" starttime="20210401 14:40:49.313" endtime="20210401 14:40:49.313"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
 <arg>${RANDOM_NAME}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:49.314" level="INFO">${RANDOM_NAME} = himyz6C0G4yy</msg>
-<status status="PASS" starttime="20210401 14:40:49.313" endtime="20210401 14:40:49.314"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>7</arg>
-</arguments>
-<assign>
-<var>${RANDOM_APP_CODE}</var>
-</assign>
-<msg timestamp="20210401 14:40:49.315" level="INFO">${RANDOM_APP_CODE} = rsSDfWK</msg>
-<status status="PASS" starttime="20210401 14:40:49.314" endtime="20210401 14:40:49.315"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_APP_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:49.316" level="INFO">${RANDOM_APP_CODE} = rsSDfWK</msg>
-<status status="PASS" starttime="20210401 14:40:49.315" endtime="20210401 14:40:49.316"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>13</arg>
-</arguments>
-<assign>
-<var>${RANDOM_EDIT_NAME}</var>
-</assign>
-<msg timestamp="20210401 14:40:49.317" level="INFO">${RANDOM_EDIT_NAME} = chWVTntTfbQHJ</msg>
-<status status="PASS" starttime="20210401 14:40:49.316" endtime="20210401 14:40:49.317"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_EDIT_NAME}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:49.317" level="INFO">${RANDOM_EDIT_NAME} = chWVTntTfbQHJ</msg>
-<status status="PASS" starttime="20210401 14:40:49.317" endtime="20210401 14:40:49.317"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:49.312" endtime="20210401 14:40:49.318"></status>
-</kw>
-<kw name="Give input to Charges cycle" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${TAX_PLAN}</arg>
-<arg>${NEW_VERIFY}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
-<arg>${NAME}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:49.320" level="INFO">Typing text 'vKdUtVD1A1b8' into text field '//input[@placeholder="type Charge name here"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:49.319" endtime="20210401 14:40:49.506"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_TYPE_TEXTBOX}</arg>
-<arg>${TYPE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:49.506" level="INFO">Selecting options from selection list '//select[@ng-change="resetcharge(dialogParams.chargeClass)"]' by label Deposit.</msg>
-<status status="PASS" starttime="20210401 14:40:49.506" endtime="20210401 14:40:49.619"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:49.621" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_2124.</msg>
-<status status="PASS" starttime="20210401 14:40:49.620" endtime="20210401 14:40:49.741"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${TYPE}'!='Deposit'</arg>
-<arg>Tax plan IF</arg>
-<arg>${TAX_PLAN}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:49.741" endtime="20210401 14:40:49.742"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_DISCOUNT_GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:49.743" level="INFO">Selecting options from selection list '//select[@ng-model="dialogParams.discountApportionGlCode"]' by label GL_212427.</msg>
-<status status="PASS" starttime="20210401 14:40:49.742" endtime="20210401 14:40:49.884"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_DIS_APP_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:49.885" level="INFO">Typing text 'hello' into text field '//input[@ng-model="dialogParams.discountApportionChargeId"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:49.884" endtime="20210401 14:40:50.064"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${SAVE}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:50.064" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210401 14:40:50.064" endtime="20210401 14:40:50.130"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${${NEW_VERIFY}}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:50.131" endtime="20210401 14:40:50.468"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:49.318" endtime="20210401 14:40:50.468"></status>
-</kw>
-<kw name="Edit Verify &amp; Audit" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${NEW_VERIFY}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${NEW_VERIFY}'=='Pass'</arg>
-<arg>Edit Verify &amp;Audit for IF</arg>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Edit Verify &amp;Audit for IF" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Verification" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:50.474" endtime="20210401 14:40:50.880"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:50.880" endtime="20210401 14:40:50.881"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:50.882" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:50.881" endtime="20210401 14:40:52.185"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:50.473" endtime="20210401 14:40:52.185"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:52.185" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:52.185" endtime="20210401 14:40:52.824"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:50.473" endtime="20210401 14:40:52.824"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:52.824" endtime="20210401 14:40:53.723"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:53.723" endtime="20210401 14:40:53.749"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:53.750" endtime="20210401 14:40:53.775"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:53.775" endtime="20210401 14:40:53.799"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:53.799" endtime="20210401 14:40:53.822"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:50.472" endtime="20210401 14:40:53.822"></status>
-</kw>
-<kw name="Auditing the new bill" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<kw name="Audit click" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:53.826" endtime="20210401 14:40:54.194"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:54.194" endtime="20210401 14:40:54.196"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:54.196" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:54.196" endtime="20210401 14:40:54.976"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:53.826" endtime="20210401 14:40:54.976"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:54.977" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:54.977" endtime="20210401 14:40:55.708"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:53.826" endtime="20210401 14:40:55.708"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_AUDIT_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:55.708" level="INFO">Clicking element 'xpath=//td[7]/a[2]'.</msg>
-<status status="PASS" starttime="20210401 14:40:55.708" endtime="20210401 14:40:56.346"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:56.347" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210401 14:40:56.346" endtime="20210401 14:40:56.784"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:53.824" endtime="20210401 14:40:56.784"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:56.784" endtime="20210401 14:40:56.804"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:56.804" endtime="20210401 14:40:56.829"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:56.829" endtime="20210401 14:40:56.852"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:56.852" endtime="20210401 14:40:56.878"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:56.878" endtime="20210401 14:40:56.896"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:53.823" endtime="20210401 14:40:56.896"></status>
-</kw>
-<kw name="Edit section" library="Charges_Resource">
-<arguments>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Edit Charges cycle" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:40:56.899" endtime="20210401 14:40:56.912"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:40:56.912" endtime="20210401 14:40:56.915"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:56.916" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:56.916" endtime="20210401 14:40:58.517"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:56.899" endtime="20210401 14:40:58.517"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:58.518" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:40:58.517" endtime="20210401 14:40:59.934"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:56.898" endtime="20210401 14:40:59.934"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${EDIT_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:40:59.935" level="INFO">Clicking element 'xpath=//td[7]/a'.</msg>
-<status status="PASS" starttime="20210401 14:40:59.934" endtime="20210401 14:41:00.616"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:56.898" endtime="20210401 14:41:00.616"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:00.619" level="INFO">Typing text 'r7dXUwPoAXWoG' into text field '//input[@placeholder="type Charge name here"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:00.617" endtime="20210401 14:41:00.857"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:00.858" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_212427.</msg>
-<status status="PASS" starttime="20210401 14:41:00.857" endtime="20210401 14:41:00.969"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${SAVE}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:00.970" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210401 14:41:00.970" endtime="20210401 14:41:01.027"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${${EDIT_VERIFY}}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:01.028" endtime="20210401 14:41:01.332"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:56.897" endtime="20210401 14:41:01.332"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${EDIT_VERIFY}'=='Pass'</arg>
-<arg>Edit &amp;Audit Verification</arg>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Edit &amp;Audit Verification" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Edit verification" library="Charges_Resource">
-<arguments>
-<arg>${TYPE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:41:01.338" endtime="20210401 14:41:02.035"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:02.035" endtime="20210401 14:41:02.036"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:02.036" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:02.036" endtime="20210401 14:41:03.104"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:01.337" endtime="20210401 14:41:03.104"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:03.105" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:03.105" endtime="20210401 14:41:04.339"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:01.337" endtime="20210401 14:41:04.340"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:04.340" endtime="20210401 14:41:05.108"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:05.109" endtime="20210401 14:41:05.118"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:05.118" endtime="20210401 14:41:05.137"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:05.138" endtime="20210401 14:41:05.155"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:05.155" endtime="20210401 14:41:05.167"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:01.335" endtime="20210401 14:41:05.167"></status>
-</kw>
-<kw name="Audit verification" library="Charges_Resource">
-<arguments>
-<arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
-<arg>${EDIT_NAME}</arg>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<kw name="Audit click" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
-<kw name="Setup" library="Common_Resource">
-<kw name="Reload Page" library="Selenium2Library">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:41:05.171" endtime="20210401 14:41:05.617"></status>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:05.617" endtime="20210401 14:41:05.619"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${CONFIGURATION}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:05.619" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:05.619" endtime="20210401 14:41:06.468"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:05.170" endtime="20210401 14:41:06.469"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:06.469" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:06.469" endtime="20210401 14:41:07.098"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:05.170" endtime="20210401 14:41:07.098"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_AUDIT_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:07.099" level="INFO">Clicking element 'xpath=//td[7]/a[2]'.</msg>
-<status status="PASS" starttime="20210401 14:41:07.098" endtime="20210401 14:41:07.777"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_DROPDOWN_BUTTON_CHARGER}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:07.779" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
-<status status="PASS" starttime="20210401 14:41:07.778" endtime="20210401 14:41:08.208"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:05.169" endtime="20210401 14:41:08.208"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:08.208" endtime="20210401 14:41:08.222"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${TYPE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:08.222" endtime="20210401 14:41:08.235"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:08.235" endtime="20210401 14:41:08.267"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:08.268" endtime="20210401 14:41:08.286"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${DIS_APP_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:08.286" endtime="20210401 14:41:08.300"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:08.300" endtime="20210401 14:41:08.321"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>${EDIT_GL_CODE}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:08.321" endtime="20210401 14:41:08.338"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:05.168" endtime="20210401 14:41:08.338"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:01.334" endtime="20210401 14:41:08.338"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:01.333" endtime="20210401 14:41:08.338"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:50.470" endtime="20210401 14:41:08.339"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:50.469" endtime="20210401 14:41:08.339"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:50.468" endtime="20210401 14:41:08.339"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:46.765" endtime="20210401 14:41:08.339"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:40:46.765" endtime="20210401 14:41:08.340" critical="yes"></status>
-</test>
-<test id="s1-t4" name="Charges_Test">
-<kw name="New Charges Generation">
-<arguments>
-<arg>hello</arg>
+<arg>x*0.23</arg>
 <arg>GL_2124</arg>
-<arg>Deposit</arg>
+<arg>Pass</arg>
+<arg>${RANDOM_NAME}</arg>
+<arg>x*0.23</arg>
 <arg>Fail</arg>
-<arg>GL_212427</arg>
 </arguments>
-<kw name="New Charges cycle" library="Charges_Resource">
-<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="New Tax Formula cycle" library="Tax_Formula_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210401 14:41:08.346" endtime="20210401 14:41:08.809"></status>
+<status status="PASS" starttime="20210401 20:15:18.276" endtime="20210401 20:15:18.280"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:41:08.809" endtime="20210401 14:41:08.811"></status>
+<status status="PASS" starttime="20210401 20:15:18.281" endtime="20210401 20:15:18.284"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210401 14:41:08.811" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:08.811" endtime="20210401 14:41:09.796"></status>
+<msg timestamp="20210401 20:15:18.285" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:18.285" endtime="20210401 20:15:19.289"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:41:08.345" endtime="20210401 14:41:09.797"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${XPATH_TO_CHARGERS}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:09.799" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:09.797" endtime="20210401 14:41:10.457"></status>
-</kw>
-<status status="PASS" starttime="20210401 14:41:08.345" endtime="20210401 14:41:10.458"></status>
+<status status="PASS" starttime="20210401 20:15:18.276" endtime="20210401 20:15:19.289"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${NEW_BILL_BUTTON_CHARGER}</arg>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
 </arguments>
-<msg timestamp="20210401 14:41:10.458" level="INFO">Clicking element '//*[text()='New Charge']'.</msg>
-<status status="PASS" starttime="20210401 14:41:10.458" endtime="20210401 14:41:11.150"></status>
+<msg timestamp="20210401 20:15:19.289" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:19.289" endtime="20210401 20:15:19.871"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:41:08.345" endtime="20210401 14:41:11.150"></status>
+<status status="PASS" starttime="20210401 20:15:18.276" endtime="20210401 20:15:19.871"></status>
 </kw>
-<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEW_BILL_TAX_FORMULA}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:19.871" level="INFO">Clicking element '//*[text()='New Tax Formula']'.</msg>
+<status status="PASS" starttime="20210401 20:15:19.871" endtime="20210401 20:15:20.652"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:18.275" endtime="20210401 20:15:20.653"></status>
+</kw>
+<kw name="Initialize Random Variables for Tax Formula cycle" library="Tax_Formula_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>12</arg>
+<arg>6</arg>
 </arguments>
 <assign>
 <var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210401 14:41:11.152" level="INFO">${RANDOM_NAME} = gP5tYCAE3TcT</msg>
-<status status="PASS" starttime="20210401 14:41:11.151" endtime="20210401 14:41:11.152"></status>
+<msg timestamp="20210401 20:15:20.654" level="INFO">${RANDOM_NAME} = Kt99gF</msg>
+<status status="PASS" starttime="20210401 20:15:20.654" endtime="20210401 20:15:20.654"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:41:11.153" level="INFO">${RANDOM_NAME} = gP5tYCAE3TcT</msg>
-<status status="PASS" starttime="20210401 14:41:11.152" endtime="20210401 14:41:11.153"></status>
+<msg timestamp="20210401 20:15:20.655" level="INFO">${RANDOM_NAME} = Kt99gF</msg>
+<status status="PASS" starttime="20210401 20:15:20.654" endtime="20210401 20:15:20.655"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>7</arg>
+<arg>4</arg>
 </arguments>
 <assign>
-<var>${RANDOM_APP_CODE}</var>
+<var>${RANDOM_CODE}</var>
 </assign>
-<msg timestamp="20210401 14:41:11.153" level="INFO">${RANDOM_APP_CODE} = 3ijcCHU</msg>
-<status status="PASS" starttime="20210401 14:41:11.153" endtime="20210401 14:41:11.154"></status>
+<msg timestamp="20210401 20:15:20.655" level="INFO">${RANDOM_CODE} = jbi9</msg>
+<status status="PASS" starttime="20210401 20:15:20.655" endtime="20210401 20:15:20.655"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_APP_CODE}</arg>
+<arg>${RANDOM_CODE}</arg>
 </arguments>
-<msg timestamp="20210401 14:41:11.154" level="INFO">${RANDOM_APP_CODE} = 3ijcCHU</msg>
-<status status="PASS" starttime="20210401 14:41:11.154" endtime="20210401 14:41:11.155"></status>
+<msg timestamp="20210401 20:15:20.656" level="INFO">${RANDOM_CODE} = jbi9</msg>
+<status status="PASS" starttime="20210401 20:15:20.655" endtime="20210401 20:15:20.656"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>13</arg>
+<arg>8</arg>
 </arguments>
 <assign>
 <var>${RANDOM_EDIT_NAME}</var>
 </assign>
-<msg timestamp="20210401 14:41:11.156" level="INFO">${RANDOM_EDIT_NAME} = gYWU8viuj9KFs</msg>
-<status status="PASS" starttime="20210401 14:41:11.155" endtime="20210401 14:41:11.156"></status>
+<msg timestamp="20210401 20:15:20.656" level="INFO">${RANDOM_EDIT_NAME} = f98eJMdK</msg>
+<status status="PASS" starttime="20210401 20:15:20.656" endtime="20210401 20:15:20.656"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${RANDOM_EDIT_NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:41:11.157" level="INFO">${RANDOM_EDIT_NAME} = gYWU8viuj9KFs</msg>
-<status status="PASS" starttime="20210401 14:41:11.156" endtime="20210401 14:41:11.157"></status>
+<msg timestamp="20210401 20:15:20.656" level="INFO">${RANDOM_EDIT_NAME} = f98eJMdK</msg>
+<status status="PASS" starttime="20210401 20:15:20.656" endtime="20210401 20:15:20.656"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:41:11.151" endtime="20210401 14:41:11.158"></status>
+<status status="PASS" starttime="20210401 20:15:20.653" endtime="20210401 20:15:20.656"></status>
 </kw>
-<kw name="Give input to Charges cycle" library="Charges_Resource">
+<kw name="Give input to Tax Formula cycle" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
 <arg>${TAX_PLAN}</arg>
+<arg>${GL_CODE}</arg>
 <arg>${NEW_VERIFY}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
 </arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
+<arg>${XPATH_TO_CODE_TAX_FORMULA}</arg>
+<arg>${CODE}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:20.658" level="INFO">Typing text 'qP4lzh' into text field '//input[@ng-model="dialogParams.formulaCode"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:20.657" endtime="20210401 20:15:20.777"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_NAME_TAX_FORMULA}</arg>
 <arg>${NAME}</arg>
 </arguments>
-<msg timestamp="20210401 14:41:11.160" level="INFO">Typing text 'hello' into text field '//input[@placeholder="type Charge name here"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:11.159" endtime="20210401 14:41:11.381"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_TYPE_TEXTBOX}</arg>
-<arg>${TYPE}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:11.382" level="INFO">Selecting options from selection list '//select[@ng-change="resetcharge(dialogParams.chargeClass)"]' by label Deposit.</msg>
-<status status="PASS" starttime="20210401 14:41:11.381" endtime="20210401 14:41:11.482"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
-<arg>${GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:11.483" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_2124.</msg>
-<status status="PASS" starttime="20210401 14:41:11.483" endtime="20210401 14:41:11.576"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${TYPE}'!='Deposit'</arg>
-<arg>Tax plan IF</arg>
-<arg>${TAX_PLAN}</arg>
-</arguments>
-<status status="PASS" starttime="20210401 14:41:11.576" endtime="20210401 14:41:11.576"></status>
-</kw>
-<kw name="Select From List By Label" library="Selenium2Library">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>${XPATH_TO_DISCOUNT_GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-</arguments>
-<msg timestamp="20210401 14:41:11.576" level="INFO">Selecting options from selection list '//select[@ng-model="dialogParams.discountApportionGlCode"]' by label GL_212427.</msg>
-<status status="PASS" starttime="20210401 14:41:11.576" endtime="20210401 14:41:11.701"></status>
+<msg timestamp="20210401 20:15:20.778" level="INFO">Typing text 'qP4lzh' into text field '//input[@placeholder="type Formula name here"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:20.778" endtime="20210401 20:15:20.874"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DIS_APP_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${XPATH_TO_TAX_PLAN_FORMULA}</arg>
+<arg>${TAX_PLAN}</arg>
 </arguments>
-<msg timestamp="20210401 14:41:11.702" level="INFO">Typing text '' into text field '//input[@ng-model="dialogParams.discountApportionChargeId"]'.</msg>
-<status status="PASS" starttime="20210401 14:41:11.701" endtime="20210401 14:41:11.803"></status>
+<msg timestamp="20210401 20:15:20.875" level="INFO">Typing text 'x*0.23' into text field '//input[@placeholder="type Tax Plan formula here"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:20.874" endtime="20210401 20:15:20.975"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_GL_CODE_PLAN_FORMULA}</arg>
+<arg>${GL_CODE}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:20.975" level="INFO">Selecting options from selection list '//select[@ng-options="glCode.code as glCode.name for glCode in glCodes"]' by label GL_2124.</msg>
+<status status="PASS" starttime="20210401 20:15:20.975" endtime="20210401 20:15:21.053"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${SAVE}</arg>
 </arguments>
-<msg timestamp="20210401 14:41:11.804" level="INFO">Clicking element '//*[text()='Save']'.</msg>
-<status status="PASS" starttime="20210401 14:41:11.803" endtime="20210401 14:41:11.908"></status>
+<msg timestamp="20210401 20:15:21.054" level="INFO">Clicking element '//*[text()='Save']'.</msg>
+<status status="PASS" starttime="20210401 20:15:21.054" endtime="20210401 20:15:21.104"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>${${NEW_VERIFY}}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:41:11.908" endtime="20210401 14:41:11.935"></status>
+<status status="PASS" starttime="20210401 20:15:21.104" endtime="20210401 20:15:21.370"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:41:11.158" endtime="20210401 14:41:11.935"></status>
+<status status="PASS" starttime="20210401 20:15:20.656" endtime="20210401 20:15:21.370"></status>
 </kw>
-<kw name="Edit Verify &amp; Audit" library="Charges_Resource">
+<kw name="Edit Verify &amp;Audit" library="Tax_Formula_Resource">
 <arguments>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
 <arg>${NEW_VERIFY}</arg>
 <arg>${EDIT_NAME}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <arguments>
 <arg>'${NEW_VERIFY}'=='Pass'</arg>
-<arg>Edit Verify &amp;Audit for IF</arg>
+<arg>Edit Verify &amp;Audit for IF for tax formula</arg>
+<arg>${CODE}</arg>
 <arg>${NAME}</arg>
-<arg>${TYPE}</arg>
-<arg>${GL_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
 <arg>${EDIT_NAME}</arg>
-<arg>${DIS_GL_CODE}</arg>
-<arg>${DIS_APP_CODE}</arg>
+<arg>${EDIT_TAX}</arg>
 <arg>${EDIT_VERIFY}</arg>
-<arg>${EDIT_GL_CODE}</arg>
 </arguments>
-<status status="PASS" starttime="20210401 14:41:11.937" endtime="20210401 14:41:11.938"></status>
+<kw name="Edit Verify &amp;Audit for IF for tax formula" library="Tax_Formula_Resource">
+<arguments>
+<arg>${CODE}</arg>
+<arg>${NAME}</arg>
+<arg>${TAX_PLAN}</arg>
+<arg>${EDIT_NAME}</arg>
+<arg>${EDIT_TAX}</arg>
+<arg>${EDIT_VERIFY}</arg>
+</arguments>
+<kw name="Verification for Tax Formula" library="Tax_Formula_Resource">
+<arguments>
+<arg>${CODE}</arg>
+<arg>${NAME}</arg>
+</arguments>
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
+<kw name="Setup" library="Common_Resource">
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210401 20:15:21.372" endtime="20210401 20:15:21.703"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:41:11.935" endtime="20210401 14:41:11.939"></status>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:21.704" endtime="20210401 20:15:21.705"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:41:08.344" endtime="20210401 14:41:11.939"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONFIGURATION}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:21.705" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:21.705" endtime="20210401 20:15:22.484"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:41:08.343" endtime="20210401 14:41:11.940" critical="yes"></status>
+<status status="PASS" starttime="20210401 20:15:21.372" endtime="20210401 20:15:22.484"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:22.484" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:22.484" endtime="20210401 20:15:23.070"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:21.372" endtime="20210401 20:15:23.071"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${CODE}</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:23.071" endtime="20210401 20:15:24.360"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:24.361" endtime="20210401 20:15:24.369"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:21.371" endtime="20210401 20:15:24.369"></status>
+</kw>
+<kw name="Auditing the Tax Formula" library="Tax_Formula_Resource">
+<arguments>
+<arg>${CODE}</arg>
+<arg>${NAME}</arg>
+</arguments>
+<kw name="Audit click" library="Tax_Formula_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
+<kw name="Setup" library="Common_Resource">
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210401 20:15:24.371" endtime="20210401 20:15:24.377"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:24.377" endtime="20210401 20:15:24.379"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONFIGURATION}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:24.380" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:24.379" endtime="20210401 20:15:25.497"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:24.370" endtime="20210401 20:15:25.498"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:25.499" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:25.498" endtime="20210401 20:15:26.069"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:24.370" endtime="20210401 20:15:26.070"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_AUDIT_TAX}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:26.071" level="INFO">Clicking element 'xpath=//td[3]/a'.</msg>
+<status status="PASS" starttime="20210401 20:15:26.070" endtime="20210401 20:15:26.847"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_DROPDOWN_TAX}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:26.847" level="INFO">Clicking element '//*[text()='DCBS'][1]'.</msg>
+<status status="PASS" starttime="20210401 20:15:26.847" endtime="20210401 20:15:27.185"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:24.370" endtime="20210401 20:15:27.185"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:27.186" endtime="20210401 20:15:27.199"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${CODE}</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:27.199" endtime="20210401 20:15:27.211"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:24.369" endtime="20210401 20:15:27.211"></status>
+</kw>
+<kw name="Edit Section for tax formula" library="Tax_Formula_Resource">
+<arguments>
+<arg>${EDIT_NAME}</arg>
+<arg>${EDIT_TAX}</arg>
+<arg>${EDIT_VERIFY}</arg>
+</arguments>
+<kw name="Edit Tax Formula cycle" library="Tax_Formula_Resource">
+<kw name="Tax Formula Setup" library="Tax_Formula_Resource">
+<kw name="Setup" library="Common_Resource">
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210401 20:15:27.213" endtime="20210401 20:15:27.218"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:27.218" endtime="20210401 20:15:27.224"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONFIGURATION}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:27.225" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:27.224" endtime="20210401 20:15:28.341"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:27.212" endtime="20210401 20:15:28.341"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_TAX_FORMULA}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:28.342" level="INFO">Clicking element '//a[@translate="Tax Formula"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:28.341" endtime="20210401 20:15:28.977"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:27.212" endtime="20210401 20:15:28.978"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_FOR_EDIT}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:28.978" level="INFO">Clicking element '//a[@ng-class="{'rotate-right':item._meta.expanded}"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:28.978" endtime="20210401 20:15:29.807"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TAX_EDIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:29.808" level="INFO">Clicking element '//*[text()='Edit']'.</msg>
+<status status="PASS" starttime="20210401 20:15:29.808" endtime="20210401 20:15:30.064"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:27.212" endtime="20210401 20:15:30.064"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_EDIT_NAME_TAX_FORMULA}</arg>
+<arg>${EDIT_NAME}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:30.066" level="INFO">Typing text 'qP4lzh' into text field '//input[@ng-model="dialogParams.uuid.name"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:30.065" endtime="20210401 20:15:30.215"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_EDIT_TAX_FORMULA}</arg>
+<arg>${EDIT_TAX}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:30.216" level="INFO">Typing text 'x*0.23' into text field '//input[@placeholder="type Tax Plan formula here"]'.</msg>
+<status status="PASS" starttime="20210401 20:15:30.216" endtime="20210401 20:15:30.324"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SAVE}</arg>
+</arguments>
+<msg timestamp="20210401 20:15:30.324" level="INFO">Clicking element '//*[text()='Save']'.</msg>
+<status status="PASS" starttime="20210401 20:15:30.324" endtime="20210401 20:15:30.377"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${${EDIT_VERIFY}}</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:30.377" endtime="20210401 20:15:30.391"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:27.211" endtime="20210401 20:15:30.391"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${EDIT_VERIFY}'=='Pass'</arg>
+<arg>Edit Verification and Audit verifiction</arg>
+<arg>${CODE}</arg>
+<arg>${NAME}</arg>
+<arg>${TAX_PLAN}</arg>
+<arg>${EDIT_TAX}</arg>
+<arg>${EDIT_NAME}</arg>
+</arguments>
+<status status="PASS" starttime="20210401 20:15:30.391" endtime="20210401 20:15:30.392"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:21.371" endtime="20210401 20:15:30.392"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:21.370" endtime="20210401 20:15:30.392"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:21.370" endtime="20210401 20:15:30.392"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:18.275" endtime="20210401 20:15:30.392"></status>
+</kw>
+<status status="PASS" starttime="20210401 20:15:18.274" endtime="20210401 20:15:30.393" critical="yes"></status>
 </test>
 <kw name="Close Browsers" library="Common_Resource" type="teardown">
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20210401 14:41:11.944" endtime="20210401 14:41:14.179"></status>
+<status status="PASS" starttime="20210401 20:15:30.394" endtime="20210401 20:15:32.560"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:41:11.944" endtime="20210401 14:41:14.180"></status>
+<status status="PASS" starttime="20210401 20:15:30.394" endtime="20210401 20:15:32.560"></status>
 </kw>
-<status status="PASS" starttime="20210401 14:39:50.264" endtime="20210401 14:41:14.180"></status>
+<status status="PASS" starttime="20210401 20:14:46.417" endtime="20210401 20:15:32.560"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="Charges">Charges</stat>
+<stat pass="3" fail="0" id="s1" name="Tax Formula">Tax Formula</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210401 14:40:25.669" level="WARN">Multiple test cases with name 'Charges_Test' executed in test suite 'Charges'.</msg>
-<msg timestamp="20210401 14:40:46.764" level="WARN">Multiple test cases with name 'Charges_Test' executed in test suite 'Charges'.</msg>
-<msg timestamp="20210401 14:41:08.342" level="WARN">Multiple test cases with name 'Charges_Test' executed in test suite 'Charges'.</msg>
+<msg timestamp="20210401 20:15:15.142" level="WARN">Multiple test cases with name 'Tax Formula Test' executed in test suite 'Tax Formula'.</msg>
+<msg timestamp="20210401 20:15:18.274" level="WARN">Multiple test cases with name 'Tax Formula Test' executed in test suite 'Tax Formula'.</msg>
 </errors>
 </robot>

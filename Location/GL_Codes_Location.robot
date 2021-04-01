@@ -15,3 +15,6 @@ ${XPATH_TO_CODE_TEXTBOX}           //input[@class="form-control ng-pristine ng-u
 #edit input xpath
 ${XPATH_TO_NEW_NAME_TEXTBOX}        xpath=//input[@name='glName']
 
+#The pop up text to verify
+${Pass}     Your Request is Successfully Processed
+${Fail}     Error

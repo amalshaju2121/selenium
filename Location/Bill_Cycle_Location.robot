@@ -29,5 +29,8 @@ ${XPATH_TO_AUDIT_BUTTON}                //a[@ng-click="showAuditLog(item); $even
 ${EDIT_BUTTON}             //a[@is-allowed="ngb.fe.billingConfigurations.billCycle.edit"]
 
 
+#The pop up text to verify
+${Pass}     Your Request is Successfully Processed
+${Fail}     Error
 
 

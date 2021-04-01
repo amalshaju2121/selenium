@@ -15,20 +15,16 @@ Login To GL Codes Website
 #Required setup fuctions
 GL_Codes_Setup
          Setup
-
          click element                         ${XPATH_TO_GL_CODES_BUTTON}
 New GL Code cycle
          GL_Codes_Setup
-
          click element                         ${NEW_GL_CODES}
 Edit GL Code cycle
          GL_Codes_Setup
          click element                         ${XPATH_TO_EDIT_BUTTON}
 Audit click
          GL_Codes_Setup
-
          click element                         ${XPATH_TO AUDIT}
-
          click element                         ${XPATH_TO_DROPDOWN_BUTTON}
 
 

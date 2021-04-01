@@ -30,7 +30,7 @@ New Bill Generation
    Initialize Random Variables for Bill Cycle
    #inputing new data
    Give input to new bill cycle       ${NAME}   ${PERIODICITY}   ${DATE}   ${MONTH}   ${TYPE}    ${NEW_VERIFY}
-   #Verification of new bill cycle in case of new bill generation
+#   #Verification of new bill cycle in case of new bill generation
    Edit Verify &Audit   ${NAME}  ${PERIODICITY}  ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}   ${NEW_VERIFY}
 
 

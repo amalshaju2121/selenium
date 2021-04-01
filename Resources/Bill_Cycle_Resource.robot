@@ -104,7 +104,7 @@ Edit& Audit verifiction
 #main IF statement
 Edit Verify &Audit
          [Arguments]   ${NAME}  ${PERIODICITY}  ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}  ${NEW_VERIFY}
-         Run Keyword If  '${NEW_VERIFY}'=='Pass'  Edit Verify &Audit for IF   ${NAME}  ${PERIODICITY}  ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}
+         Run Keyword If  '${NEW_VERIFY}'=='Pass'   Edit Verify &Audit for IF   ${NAME}  ${PERIODICITY}  ${DATE}  ${TYPE}  ${EDIT_NAME}  ${EDIT_TYPE}  ${EDIT_VERIFY}
 
 
 #Test case arguments

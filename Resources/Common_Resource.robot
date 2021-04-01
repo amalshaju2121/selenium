@@ -9,6 +9,8 @@ Resource           ../Location/Bill_Cycle_Location.robot
 Login To website
          open browser                    ${URL}     ${browser}
          set selenium implicit wait      10s
+#         click element               //button[@id="details-button"]
+#         click element      //*[text()='Proceed to mtng.cluster1.devtestlab2.tecnotree.com (unsafe)']
          maximize browser window
          input text                      ${XPATH_TO_USERNAME_TEXTBOX}          ${USER_ID}
          input text                      ${XPATH_TO_PASSWORD_TEXTBOX}          ${PASSWORD}

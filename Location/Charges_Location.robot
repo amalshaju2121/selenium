@@ -23,10 +23,9 @@ ${XPATH_TO_DIS_APP_CODE}                    //input[@ng-model="dialogParams.disc
 
 
 #EDIT XPATH
-${XPATH_TO_DIS_GL_CODE_TEXTBOX}             //select[@class="form-control ng-pristine ng-valid ng-touched"]
-${XPATH_TO_DIS_APP_CODE_TEXTBOX}            //input[@ng-model="dialogParams.discountApportionChargeId"]
-${XPATH_TO_TAX_PLAN_TEXTBOX_EDIT}           //select[@ng-model="dialogParams.uuid.taxPlanId"]
-
+${XPATH_TO_EDIT_TAX_PLAN_TEXTBOX}                //select[@ng-model="dialogParams.uuid.taxPlanId"]
+${XPATH_TO_EDIT_DISCOUNT_GL_CODE}               xpath=//select[@name='discountApportionGlCode']
+${XPATH_TO_EDIT_DIS_APP_CODE}                   xpath=//input[@name='discountApportionChargeId']
 #The pop up text to verify
 ${Pass}     Your Request is Successfully Processed
 ${Fail}     Error

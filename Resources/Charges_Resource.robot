@@ -28,12 +28,14 @@ Edit Charges cycle
 
 #Fuction for generating random strings
 Initialize Random Variables for Charges cycle
-         ${RANDOM_NAME}=          Generate random string        12
-         Set global variable      ${RANDOM_NAME}
-         ${RANDOM_APP_CODE}=      Generate random string        7
-         Set global variable      ${RANDOM_APP_CODE}
-         ${RANDOM_EDIT_NAME}=     Generate random string        13
-         Set global variable      ${RANDOM_EDIT_NAME}
+         ${RANDOM_NAME}=            Generate random string        12
+         Set global variable        ${RANDOM_NAME}
+         ${RANDOM_APP_CODE}=        Generate random string        7
+         Set global variable        ${RANDOM_APP_CODE}
+         ${RANDOM_EDIT_NAME}=       Generate random string        13
+         Set global variable        ${RANDOM_EDIT_NAME}
+         ${RANDOM_EDIT_APP_CODE}=   Generate random string        8
+         Set global variable        ${RANDOM_EDIT_APP_CODE}
 
 
 #Fuctions to give to main test keyword
@@ -66,22 +68,27 @@ Auditing the new bill
          wait until page contains          ${DIS_GL_CODE}
          wait until page contains          ${DIS_APP_CODE}
 Edit section
-         [Arguments]   ${EDIT_NAME}   ${EDIT_VERIFY}   ${EDIT_GL_CODE}
+         [Arguments]    ${TYPE}  ${EDIT_NAME}   ${EDIT_VERIFY}   ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
          Edit Charges cycle
          input text                        ${XPATH_TO_CHARGE_NAME_TEXTBOX}               ${EDIT_NAME}
          Select From List By Label         ${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}           ${EDIT_GL_CODE}
+         Run Keyword If                   '${TYPE}'!='Deposit'    Tax plan edit if       ${EDIT_TAX_PLAN}
+         Select From List By Label         ${XPATH_TO_EDIT_DISCOUNT_GL_CODE}             ${EDIT_DIS_GL_CODE}
+         input text                        ${XPATH_TO_EDIT_DIS_APP_CODE}                 ${EDIT_DIS_APP_CODE}
          click element                     ${SAVE}
          wait until page contains          ${${EDIT_VERIFY}}
 Edit verification
-         [Arguments]           ${TYPE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}
+         [Arguments]           ${TYPE}  ${EDIT_NAME}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}   ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
          Charges_Setup
          wait until page contains          ${TYPE}
          wait until page contains          ${EDIT_GL_CODE}
-         wait until page contains          ${DIS_GL_CODE}
-         wait until page contains          ${DIS_APP_CODE}
          wait until page contains          ${EDIT_NAME}
+         wait until page contains          ${EDIT_DIS_APP_CODE}
+         wait until page contains          ${EDIT_DIS_GL_CODE}
+         Run Keyword If                   '${TYPE}'!='Deposit'   IF statement for tax      ${EDIT_TAX_PLAN}   ${TAX_PLAN}
+
 Audit verification
-         [Arguments]      ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}
+         [Arguments]      ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}  ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
          Audit click
          wait until page contains          ${NAME}
          wait until page contains          ${TYPE}
@@ -90,24 +97,36 @@ Audit verification
          wait until page contains          ${DIS_APP_CODE}
          wait until page contains          ${EDIT_NAME}
          wait until page contains          ${EDIT_GL_CODE}
+         wait until page contains          ${EDIT_DIS_APP_CODE}
+         wait until page contains          ${EDIT_DIS_GL_CODE}
+         Run Keyword If                   '${TYPE}'!='Deposit'   IF statement for tax      ${EDIT_TAX_PLAN}   ${TAX_PLAN}
+
+
 #fuctions for If Statements
 Edit Verify &Audit for IF
-         [Arguments]    ${NAME}     ${TYPE}     ${GL_CODE}    ${EDIT_NAME}  ${DIS_GL_CODE}   ${DIS_APP_CODE}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}
+         [Arguments]    ${NAME}     ${TYPE}     ${GL_CODE}    ${EDIT_NAME}  ${DIS_GL_CODE}   ${DIS_APP_CODE}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}   ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
          Verification               ${NAME}     ${TYPE}       ${GL_CODE}    ${DIS_GL_CODE}   ${DIS_APP_CODE}
          Auditing the new bill      ${NAME}     ${TYPE}       ${GL_CODE}    ${DIS_GL_CODE}   ${DIS_APP_CODE}
-         Edit section   ${EDIT_NAME}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}
-         Run Keyword If    '${EDIT_VERIFY}'=='Pass'    Edit &Audit Verification    ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}
+         Edit section      ${TYPE}  ${EDIT_NAME}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
+         Run Keyword If    '${EDIT_VERIFY}'=='Pass'    Edit &Audit Verification    ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}   ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
 
 Edit &Audit Verification
-         [Arguments]   ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}
-         Edit verification    ${TYPE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}
-         Audit verification   ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}
+         [Arguments]   ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}  ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
+         Edit verification    ${TYPE}  ${EDIT_NAME}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}   ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
+         Audit verification   ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}  ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
 Edit Verify & Audit
-         [Arguments]   ${NAME}     ${TYPE}     ${GL_CODE}    ${DIS_GL_CODE}   ${DIS_APP_CODE}  ${NEW_VERIFY}   ${EDIT_NAME}   ${EDIT_VERIFY}  ${EDIT_GL_CODE}
-         Run Keyword If    '${NEW_VERIFY}'=='Pass'    Edit Verify &Audit for IF    ${NAME}     ${TYPE}     ${GL_CODE}    ${EDIT_NAME}  ${DIS_GL_CODE}   ${DIS_APP_CODE}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}
+         [Arguments]   ${NAME}     ${TYPE}     ${GL_CODE}    ${DIS_GL_CODE}   ${DIS_APP_CODE}  ${NEW_VERIFY}   ${EDIT_NAME}   ${EDIT_VERIFY}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}   ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
+         Run Keyword If    '${NEW_VERIFY}'=='Pass'    Edit Verify &Audit for IF    ${NAME}     ${TYPE}     ${GL_CODE}    ${EDIT_NAME}  ${DIS_GL_CODE}   ${DIS_APP_CODE}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}   ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
 
 Tax plan IF
          [Arguments]    ${TAX_PLAN}
          Select From List By Label   ${XPATH_TO_TAX_PLAN_TEXTBOX}    ${TAX_PLAN}
+Tax plan edit if
+         [Arguments]    ${EDIT_TAX_PLAN}
+         Select From List By Label   ${XPATH_TO_EDIT_TAX_PLAN_TEXTBOX}    ${EDIT_TAX_PLAN}
+IF statement for tax
+         [Arguments]    ${EDIT_TAX_PLAN}   ${TAX_PLAN}
+         wait until page contains          ${TAX_PLAN}
+         wait until page contains          ${EDIT_TAX_PLAN}
 
-${ALL_CHARGER_ARGUMENTS}=   ${NAME}  ${GL_CODE}  ${TYPE}  ${TAX_PLAN}  ${NEW_VERIFY}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}
+${ALL_CHARGER_ARGUMENTS}=   ${NAME}  ${GL_CODE}  ${TYPE}  ${TAX_PLAN}  ${NEW_VERIFY}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}

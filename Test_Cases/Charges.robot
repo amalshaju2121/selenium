@@ -16,7 +16,7 @@ Charges_Test   ${ALL_CHARGER_ARGUMENTS}
 
 *** Keywords ***
 New Charges Generation
-    [Arguments]   ${NAME}  ${GL_CODE}  ${TYPE}  ${TAX_PLAN}  ${NEW_VERIFY}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}
+    [Arguments]   ${NAME}  ${GL_CODE}  ${TYPE}  ${TAX_PLAN}  ${NEW_VERIFY}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${EDIT_NAME}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
     #reachning  till the new cycle page
     New Charges cycle
     #Re-running the random string fuction for new set of values
@@ -24,6 +24,6 @@ New Charges Generation
     #inputing new data
     Give input to Charges cycle   ${NAME}  ${TYPE}  ${GL_CODE}  ${TAX_PLAN}  ${NEW_VERIFY}  ${DIS_GL_CODE}  ${DIS_APP_CODE}
     #Verification of new bill cycle in case of new bill generation
-    Edit Verify & Audit   ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${NEW_VERIFY}  ${EDIT_NAME}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}
+    Edit Verify & Audit   ${NAME}  ${TYPE}  ${GL_CODE}  ${DIS_GL_CODE}  ${DIS_APP_CODE}  ${NEW_VERIFY}  ${EDIT_NAME}  ${EDIT_VERIFY}  ${EDIT_GL_CODE}  ${EDIT_TAX_PLAN}  ${TAX_PLAN}  ${EDIT_DIS_GL_CODE}  ${EDIT_DIS_APP_CODE}
 
 

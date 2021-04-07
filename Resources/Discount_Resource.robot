@@ -14,6 +14,7 @@ Login To Discounts Website
 #Required setup fuctions
 Discounts Setup
       Setup
+      Wait Until Element Is Visible        ${XPATH_TO_DISCOUNTS}
       click element                        ${XPATH_TO_DISCOUNTS}
 New Discounts cycle
       Discounts Setup

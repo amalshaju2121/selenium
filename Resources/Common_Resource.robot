@@ -23,5 +23,6 @@ Close Browsers
 #Setup till config
 Setup
          Reload Page
+         set selenium implicit wait       20s
          Wait Until Element Is Visible    ${CONFIGURATION}
          click element                    ${CONFIGURATION}

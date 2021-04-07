@@ -41,6 +41,7 @@ Initialize Random Variables for GL Code cycle
 #Fuctions to give to main test keyword
 Give input to GL Code cycle
          [Arguments]             ${GL_NAME}       ${GL_CODE}     ${NEW_VERIFY}
+         Wait Until Element Is Visible            ${XPATH_TO_NAME_TEXTBOX}
          input text              ${XPATH_TO_NAME_TEXTBOX}          ${GL_NAME}
          input text              ${XPATH_TO_CODE_TEXTBOX}          ${GL_CODE}
          click element           ${SAVE}

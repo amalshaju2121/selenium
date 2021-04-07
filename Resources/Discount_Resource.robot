@@ -145,6 +145,10 @@ Edit Verify & Audit Discount
       [Arguments]   ${DIS_NAME}  ${APP_FOR}  ${DISC_GL_CODE}  ${DIS_ORIGIN}  ${EDIT_DIS_NAME}  ${EDIT_APP_FOR}  ${EDIT_DISC_GL_CODE}  ${EDIT_DIS_VERIFY}  ${NEW_DIS_VERIFY}
       Run Keyword If    '${NEW_DIS_VERIFY}'=='Success'   Edit Verify &Audit for Discount IF   ${DIS_NAME}  ${APP_FOR}  ${DISC_GL_CODE}  ${DIS_ORIGIN}  ${EDIT_DIS_NAME}  ${EDIT_APP_FOR}  ${EDIT_DISC_GL_CODE}  ${EDIT_DIS_VERIFY}
 
+View and Launch the cycle
+       [Arguments]        ${NEW_DIS_VERIFY}
+       Run Keyword If    '${NEW_DIS_VERIFY}'=='Success'   View and Launch the cycle for IF
+
 
 #IF statements for the input data
 Duration unit
@@ -162,9 +166,6 @@ Run the selected bills
        click element             ${XPATH_TO_DIS_SELECT_INVOICE}
        click element             ${XPATH_TO_DIS_SELECT_ALL}
 
-View and Launch the cycle
-       [Arguments]        ${NEW_DIS_VERIFY}
-       Run Keyword If    '${NEW_DIS_VERIFY}'=='Success'   View and Launch the cycle for IF
 
 
 

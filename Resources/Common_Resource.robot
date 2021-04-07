@@ -8,7 +8,7 @@ Resource           ../Location/Bill_Cycle_Location.robot
 #suit setup files & Teardown files
 Login To website
          open browser                    ${URL}     ${browser}
-         set selenium implicit wait      10s
+         set selenium implicit wait      20s
 #         click element               //button[@id="details-button"]
 #         click element      //*[text()='Proceed to mtng.cluster1.devtestlab2.tecnotree.com (unsafe)']
          maximize browser window
@@ -22,5 +22,5 @@ Close Browsers
 #Setup till config
 Setup
          Reload Page
-         set selenium implicit wait         10s
-         click element               ${CONFIGURATION}
+         Wait Until Element Is Visible    ${CONFIGURATION}
+         click element                    ${CONFIGURATION}

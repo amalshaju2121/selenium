@@ -24,6 +24,7 @@ ${SUBMIT_BUTTON}                   //button[@ng-click="submitData(discountData,d
 #Xpath to the select
 ${XPATH_TO_DIS_SELECT_INVOICE}     xpath=(//input[@name='selectedInvoices'])[2]
 ${XPATH_TO_DIS_SELECT_ALL}         //button[@class="btn btn-default ng-binding ng-scope"][1]
+${XPATH_TO_DIS_RANDOM_SELECT}      xpath=(//input[@name='category[]'])[2]
 
 #For audit section
 ${XPATH_TO_DIS_AUDIT_CLICK}        xpath=//td[10]/a
@@ -37,3 +38,11 @@ ${XPATH_TO_DIS_LAUNCH_CLICK}       xpath=//td[7]/button
 
 #for LAUNCHED verification
 ${LAUNCHED}                        LAUNCHED
+
+
+#Slab section
+${XPATH_TO_DIS_ADD_SLAB_CLICK}     //button[@ng-click="addSlab()"]
+${XPATH_TO_DIS_MAX_SLAB-2}         xpath=//input[@name='maxslab1']
+${XPATH_TO_DIS_DIS_SLAB-2}         xpath=//input[@name='discountslab1']
+${XPATH_TO_DIS_MAX_SLAB-3}         xpath=//input[@name='maxslab2']
+${XPATH_TO_DIS_DIS_SLAB-3}         xpath=//input[@name='discountslab2']

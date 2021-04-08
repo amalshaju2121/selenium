@@ -48,7 +48,7 @@ Initialize Random Variables for Discounts cycle
 
 #Fuctions to give to main test keyword
 Give input to Discounts cycle
-      [Arguments]   ${DIS_NAME}  ${DURATION}  ${DUR_VALUE}  ${DISC_GL_CODE}  ${DIS_ORIGIN}  ${TARGET}  ${APP_FOR}  ${COUNTED_TOWARDS}  ${SLAB_TYPE}  ${MIN_SLAB}  ${MAX_SLAB}  ${DIS_SLAB}  ${NEW_DIS_VERIFY}
+      [Arguments]   ${DIS_NAME}  ${DURATION}  ${DUR_VALUE}  ${DISC_GL_CODE}  ${DIS_ORIGIN}  ${TARGET}  ${APP_FOR}  ${COUNTED_TOWARDS}  ${SLAB_TYPE}  ${MIN_SLAB}  ${MAX_SLAB-1}  ${DIS_SLAB-1}  ${MAX_SLAB-2}    ${DIS_SLAB-2}  ${NO_SLABS}  ${MAX_SLAB-3}    ${DIS_SLAB-3}  ${NEW_DIS_VERIFY}
       Wait Until Element Is Visible  ${XPATH_TO_DISC_NAME}
       input text                     ${XPATH_TO_DISC_NAME}      ${DIS_NAME}
       Select From List By Label      ${XPATH_TO_DURATION}       ${DURATION}
@@ -59,10 +59,8 @@ Give input to Discounts cycle
       input text                     ${XPATH_TO_DIS_APP_FOR}    ${APP_FOR}
       Run Keyword If       '${COUNTED_TOWARDS}'=='SELECTED'     Run the selected bills
       Select From List By Label      ${XPATH_TO_DIS_SLAB_TYPE}  ${SLAB_TYPE}
-      Run Keyword If       '${SLAB_TYPE}'=='Tiered Fixed'       Slab mini fuction for If   ${MIN_SLAB}
-      Run Keyword If       '${SLAB_TYPE}'=='Volume Fixed'       Slab mini fuction for If   ${MIN_SLAB}
-      input text                     ${XPATH_TO_DIS_MAX_SLAB}   ${MAX_SLAB}
-      input text                     ${XPATH_TO_DIS_DIS_SLAB}   ${DIS_SLAB}
+      Input to slab value            ${MIN_SLAB}  ${SLAB_TYPE}   ${MAX_SLAB-1}  ${DIS_SLAB-1}
+      Add slabs if more than one     ${MAX_SLAB-2}    ${DIS_SLAB-2}  ${NO_SLABS}  ${MAX_SLAB-3}    ${DIS_SLAB-3}
       click element                  ${SUBMIT_BUTTON}
       wait until page contains       ${NEW_DIS_VERIFY}
 
@@ -127,6 +125,42 @@ View and Launch the cycle for IF
       Launch verification
 
 
+#slab section for the new bill
+#Type mentioning for alsb
+Slab type IF
+      [Arguments]     ${MIN_SLAB}  ${SLAB_TYPE}
+      Run Keyword If       '${SLAB_TYPE}'=='Tiered Fixed'       Slab mini fuction for If   ${MIN_SLAB}
+      Run Keyword If       '${SLAB_TYPE}'=='Volume Fixed'       Slab mini fuction for If   ${MIN_SLAB}
+
+#number of slabs adding
+Add slabs if more than one
+      [Arguments]  ${MAX_SLAB-2}    ${DIS_SLAB-2}  ${NO_SLABS}  ${MAX_SLAB-3}    ${DIS_SLAB-3}
+      Run Keyword If     '${NO_SLABS}'=='2'   Creat 2nd slab        ${MAX_SLAB-2}    ${DIS_SLAB-2}
+      Run Keyword If     '${NO_SLABS}'=='3'   Creat 2nd & 3rd slab    ${MAX_SLAB-2}  ${DIS_SLAB-2}  ${MAX_SLAB-3}    ${DIS_SLAB-3}
+
+Creat 2nd slab
+      [Arguments]   ${MAX_SLAB-2}    ${DIS_SLAB-2}
+      click element        ${XPATH_TO_DIS_ADD_SLAB_CLICK}
+      input text           ${XPATH_TO_DIS_MAX_SLAB-2}           ${MAX_SLAB-2}
+      input text           ${XPATH_TO_DIS_DIS_SLAB-2}           ${DIS_SLAB-2}
+
+Creat 3rd slab
+      [Arguments]   ${MAX_SLAB-3}    ${DIS_SLAB-3}
+      click element        ${XPATH_TO_DIS_ADD_SLAB_CLICK}
+      input text           ${XPATH_TO_DIS_MAX_SLAB-3}           ${MAX_SLAB-3}
+      input text           ${XPATH_TO_DIS_DIS_SLAB-3}           ${DIS_SLAB-3}
+
+Creat 2nd & 3rd slab
+      [Arguments]   ${MAX_SLAB-2}  ${DIS_SLAB-2}   ${MAX_SLAB-3}    ${DIS_SLAB-3}
+      Creat 2nd slab    ${MAX_SLAB-2}    ${DIS_SLAB-2}
+      Creat 3rd slab    ${MAX_SLAB-3}    ${DIS_SLAB-3}
+
+Input to slab value
+      [Arguments]   ${MIN_SLAB}  ${SLAB_TYPE}   ${MAX_SLAB-1}  ${DIS_SLAB-1}
+      Slab type IF                   ${MIN_SLAB}  ${SLAB_TYPE}
+      input text                     ${XPATH_TO_DIS_MAX_SLAB}   ${MAX_SLAB-1}
+      input text                     ${XPATH_TO_DIS_DIS_SLAB}   ${DIS_SLAB-1}
+
 #fuctions for If Statements
 Edit Verify &Audit for Discount IF
       [Arguments]   ${DIS_NAME}  ${APP_FOR}  ${DISC_GL_CODE}  ${DIS_ORIGIN}  ${EDIT_DIS_NAME}  ${EDIT_APP_FOR}  ${EDIT_DISC_GL_CODE}  ${EDIT_DIS_VERIFY}
@@ -162,13 +196,16 @@ Slab mini fuction for If
        [Arguments]    ${MIN_SLAB}
        input text                   ${XPATH_TO_DIS_MIN_SLAB}       ${MIN_SLAB}
 
+
+
+
 #IF its selected
 Run the selected bills
        click element             ${XPATH_TO_DIS_SELECT_INVOICE}
-       click element             ${XPATH_TO_DIS_SELECT_ALL}
+       click element             ${XPATH_TO_DIS_RANDOM_SELECT}
 
 
 
 
 #ALL the arguments needed for the *** test cases ***
-${ALL_DISCOUNT_ARGUMENTS}=     ${DIS_NAME}  ${DURATION}  ${DUR_VALUE}  ${DISC_GL_CODE}  ${DIS_ORIGIN}  ${TARGET}  ${APP_FOR}  ${COUNTED_TOWARDS}  ${SLAB_TYPE}  ${MIN_SLAB}  ${MAX_SLAB}   ${DIS_SLAB}  ${NEW_DIS_VERIFY}  ${EDIT_DIS_NAME}  ${EDIT_APP_FOR}  ${EDIT_DISC_GL_CODE}  ${EDIT_DIS_VERIFY}
+${ALL_DISCOUNT_ARGUMENTS}=     ${DIS_NAME}  ${DURATION}  ${DUR_VALUE}  ${DISC_GL_CODE}  ${DIS_ORIGIN}  ${TARGET}  ${APP_FOR}  ${COUNTED_TOWARDS}  ${SLAB_TYPE}  ${MIN_SLAB}  ${MAX_SLAB-1}  ${DIS_SLAB-1}  ${MAX_SLAB-2}  ${DIS_SLAB-2}  ${NO_SLABS}  ${MAX_SLAB-3}    ${DIS_SLAB-3}  ${NEW_DIS_VERIFY}  ${EDIT_DIS_NAME}  ${EDIT_APP_FOR}  ${EDIT_DISC_GL_CODE}  ${EDIT_DIS_VERIFY}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210408 15:24:41.520" rpa="false">
-<suite id="s1" name="Discount" source="C:\Users\shajuam\Music\Test_Cases\Discount.robot">
-<kw name="Login To Discounts Website" library="Discount_Resource" type="setup">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210408 16:37:36.461" rpa="false">
+<suite id="s1" name="Charges" source="C:\Users\shajuam\Music\Test_Cases\Charges.robot">
+<kw name="Login To Charges Website" library="Charges_Resource" type="setup">
 <kw name="Login To website" library="Common_Resource">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -9,26 +9,26 @@
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20210408 15:24:42.768" level="INFO">Opening browser 'gc' to base url 'http://dcbs.cluster1.devtestlab2.tecnotree.com/ngb-ui/#/system-configurations/billing-configurations/billing-cycles/'.</msg>
-<status status="PASS" starttime="20210408 15:24:42.768" endtime="20210408 15:25:03.744"></status>
+<msg timestamp="20210408 16:37:38.104" level="INFO">Opening browser 'gc' to base url 'http://dcbs.cluster1.devtestlab2.tecnotree.com/ngb-ui/#/system-configurations/billing-configurations/billing-cycles/'.</msg>
+<status status="PASS" starttime="20210408 16:37:38.104" endtime="20210408 16:37:48.043"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>20s</arg>
 </arguments>
-<status status="PASS" starttime="20210408 15:25:03.744" endtime="20210408 15:25:03.746"></status>
+<status status="PASS" starttime="20210408 16:37:48.043" endtime="20210408 16:37:48.045"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210408 15:25:03.746" endtime="20210408 15:25:03.881"></status>
+<status status="PASS" starttime="20210408 16:37:48.045" endtime="20210408 16:37:48.193"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${XPATH_TO_USERNAME_TEXTBOX}</arg>
 </arguments>
-<status status="PASS" starttime="20210408 15:25:03.881" endtime="20210408 15:25:07.918"></status>
+<status status="PASS" starttime="20210408 16:37:48.193" endtime="20210408 16:37:51.924"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -36,8 +36,8 @@
 <arg>${XPATH_TO_USERNAME_TEXTBOX}</arg>
 <arg>${USER_ID}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:07.919" level="INFO">Typing text 'collections' into text field 'username'.</msg>
-<status status="PASS" starttime="20210408 15:25:07.918" endtime="20210408 15:25:08.007"></status>
+<msg timestamp="20210408 16:37:51.926" level="INFO">Typing text 'collections' into text field 'username'.</msg>
+<status status="PASS" starttime="20210408 16:37:51.925" endtime="20210408 16:37:52.078"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -45,57 +45,38 @@
 <arg>${XPATH_TO_PASSWORD_TEXTBOX}</arg>
 <arg>${PASSWORD}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:08.008" level="INFO">Typing text 'Tecnotree@123' into text field 'password'.</msg>
-<status status="PASS" starttime="20210408 15:25:08.007" endtime="20210408 15:25:08.099"></status>
+<msg timestamp="20210408 16:37:52.079" level="INFO">Typing text 'Tecnotree@123' into text field 'password'.</msg>
+<status status="PASS" starttime="20210408 16:37:52.079" endtime="20210408 16:37:52.209"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${LOGIN_SUBMIT BUTTON}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:08.099" level="INFO">Clicking element '//input[@class="btn btn-primary"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:08.099" endtime="20210408 15:25:10.279"></status>
+<msg timestamp="20210408 16:37:52.210" level="INFO">Clicking element '//input[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20210408 16:37:52.209" endtime="20210408 16:37:54.991"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:24:42.768" endtime="20210408 15:25:10.279"></status>
+<status status="PASS" starttime="20210408 16:37:38.104" endtime="20210408 16:37:54.992"></status>
 </kw>
-<kw name="Initialize Random Variables for Discounts cycle" library="Discount_Resource">
+<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>5</arg>
+<arg>12</arg>
 </arguments>
 <assign>
-<var>${RANDOM_DIS_NAME}</var>
+<var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210408 15:25:10.280" level="INFO">${RANDOM_DIS_NAME} = TYdi2</msg>
-<status status="PASS" starttime="20210408 15:25:10.279" endtime="20210408 15:25:10.280"></status>
+<msg timestamp="20210408 16:37:54.993" level="INFO">${RANDOM_NAME} = qXnohm1dSS5n</msg>
+<status status="PASS" starttime="20210408 16:37:54.992" endtime="20210408 16:37:54.993"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_DIS_NAME}</arg>
+<arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:10.281" level="INFO">${RANDOM_DIS_NAME} = TYdi2</msg>
-<status status="PASS" starttime="20210408 15:25:10.281" endtime="20210408 15:25:10.281"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<assign>
-<var>${RANDOM_EDIT_DIS_NAME}</var>
-</assign>
-<msg timestamp="20210408 15:25:10.282" level="INFO">${RANDOM_EDIT_DIS_NAME} = f3iH</msg>
-<status status="PASS" starttime="20210408 15:25:10.281" endtime="20210408 15:25:10.282"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_EDIT_DIS_NAME}</arg>
-</arguments>
-<msg timestamp="20210408 15:25:10.284" level="INFO">${RANDOM_EDIT_DIS_NAME} = f3iH</msg>
-<status status="PASS" starttime="20210408 15:25:10.282" endtime="20210408 15:25:10.284"></status>
+<msg timestamp="20210408 16:37:54.994" level="INFO">${RANDOM_NAME} = qXnohm1dSS5n</msg>
+<status status="PASS" starttime="20210408 16:37:54.993" endtime="20210408 16:37:54.994"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -103,18 +84,37 @@
 <arg>7</arg>
 </arguments>
 <assign>
-<var>${RANDOM_APP_FOR}</var>
+<var>${RANDOM_APP_CODE}</var>
 </assign>
-<msg timestamp="20210408 15:25:10.285" level="INFO">${RANDOM_APP_FOR} = YEVCzAy</msg>
-<status status="PASS" starttime="20210408 15:25:10.284" endtime="20210408 15:25:10.285"></status>
+<msg timestamp="20210408 16:37:54.997" level="INFO">${RANDOM_APP_CODE} = NyElyF4</msg>
+<status status="PASS" starttime="20210408 16:37:54.995" endtime="20210408 16:37:54.997"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_APP_FOR}</arg>
+<arg>${RANDOM_APP_CODE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:10.286" level="INFO">${RANDOM_APP_FOR} = YEVCzAy</msg>
-<status status="PASS" starttime="20210408 15:25:10.285" endtime="20210408 15:25:10.286"></status>
+<msg timestamp="20210408 16:37:54.998" level="INFO">${RANDOM_APP_CODE} = NyElyF4</msg>
+<status status="PASS" starttime="20210408 16:37:54.997" endtime="20210408 16:37:54.999"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>13</arg>
+</arguments>
+<assign>
+<var>${RANDOM_EDIT_NAME}</var>
+</assign>
+<msg timestamp="20210408 16:37:55.000" level="INFO">${RANDOM_EDIT_NAME} = KQToeSkvkYUWv</msg>
+<status status="PASS" starttime="20210408 16:37:55.000" endtime="20210408 16:37:55.000"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${RANDOM_EDIT_NAME}</arg>
+</arguments>
+<msg timestamp="20210408 16:37:55.002" level="INFO">${RANDOM_EDIT_NAME} = KQToeSkvkYUWv</msg>
+<status status="PASS" starttime="20210408 16:37:55.001" endtime="20210408 16:37:55.003"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -122,144 +122,108 @@
 <arg>8</arg>
 </arguments>
 <assign>
-<var>${RANDOM_EDIT_APP_FOR}</var>
+<var>${RANDOM_EDIT_APP_CODE}</var>
 </assign>
-<msg timestamp="20210408 15:25:10.286" level="INFO">${RANDOM_EDIT_APP_FOR} = wkWm80Kp</msg>
-<status status="PASS" starttime="20210408 15:25:10.286" endtime="20210408 15:25:10.287"></status>
+<msg timestamp="20210408 16:37:55.004" level="INFO">${RANDOM_EDIT_APP_CODE} = 2YPRZovo</msg>
+<status status="PASS" starttime="20210408 16:37:55.003" endtime="20210408 16:37:55.004"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_EDIT_APP_FOR}</arg>
+<arg>${RANDOM_EDIT_APP_CODE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:10.288" level="INFO">${RANDOM_EDIT_APP_FOR} = wkWm80Kp</msg>
-<status status="PASS" starttime="20210408 15:25:10.287" endtime="20210408 15:25:10.288"></status>
+<msg timestamp="20210408 16:37:55.006" level="INFO">${RANDOM_EDIT_APP_CODE} = 2YPRZovo</msg>
+<status status="PASS" starttime="20210408 16:37:55.004" endtime="20210408 16:37:55.006"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:10.279" endtime="20210408 15:25:10.288"></status>
+<status status="PASS" starttime="20210408 16:37:54.992" endtime="20210408 16:37:55.006"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:24:42.767" endtime="20210408 15:25:10.289"></status>
+<status status="PASS" starttime="20210408 16:37:38.103" endtime="20210408 16:37:55.007"></status>
 </kw>
-<test id="s1-t1" name="Discounts Test">
-<kw name="New Discount Generation">
+<test id="s1-t1" name="Charges_Test">
+<kw name="New Charges Generation">
 <arguments>
-<arg>${RANDOM_DIS_NAME}</arg>
-<arg>Life Time</arg>
+<arg>${RANDOM_NAME}</arg>
 <arg>GL_2124</arg>
-<arg>Offering</arg>
-<arg>Entire Invoice</arg>
-<arg>${RANDOM_APP_FOR}</arg>
-<arg>ENTIRE</arg>
-<arg>Volume Percentage</arg>
-<arg>1</arg>
-<arg>200</arg>
-<arg>3</arg>
-<arg>2000</arg>
-<arg>6</arg>
-<arg>1</arg>
-<arg>20000</arg>
-<arg>9</arg>
-<arg>Success</arg>
-<arg>${RANDOM_EDIT_DIS_NAME}</arg>
-<arg>${RANDOM_EDIT_APP_FOR}</arg>
+<arg>Deposit</arg>
+<arg>Pass</arg>
 <arg>GL_212427</arg>
-<arg>Success</arg>
+<arg>${RANDOM_APP_CODE}</arg>
+<arg>${RANDOM_EDIT_NAME}</arg>
+<arg>Pass</arg>
+<arg>GL_212427</arg>
+<arg>GL_212121</arg>
+<arg>${RANDOM_EDIT_APP_CODE}</arg>
 </arguments>
-<kw name="New Discounts cycle" library="Discount_Resource">
-<kw name="Discounts Setup" library="Discount_Resource">
+<kw name="New Charges cycle" library="Charges_Resource">
+<kw name="Charges_Setup" library="Charges_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210408 15:25:10.296" endtime="20210408 15:25:10.835"></status>
+<status status="PASS" starttime="20210408 16:37:55.013" endtime="20210408 16:37:55.561"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>20s</arg>
 </arguments>
-<status status="PASS" starttime="20210408 15:25:10.835" endtime="20210408 15:25:10.837"></status>
+<status status="PASS" starttime="20210408 16:37:55.562" endtime="20210408 16:37:55.565"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<status status="PASS" starttime="20210408 15:25:10.837" endtime="20210408 15:25:11.869"></status>
+<status status="PASS" starttime="20210408 16:37:55.565" endtime="20210408 16:37:57.155"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:11.869" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:11.869" endtime="20210408 15:25:12.193"></status>
+<msg timestamp="20210408 16:37:57.156" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210408 16:37:57.155" endtime="20210408 16:37:57.579"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:10.295" endtime="20210408 15:25:12.193"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${XPATH_TO_DISCOUNTS}</arg>
-</arguments>
-<status status="PASS" starttime="20210408 15:25:12.193" endtime="20210408 15:25:13.988"></status>
+<status status="PASS" starttime="20210408 16:37:55.012" endtime="20210408 16:37:57.581"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DISCOUNTS}</arg>
+<arg>${XPATH_TO_CHARGERS}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:13.988" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.discounts')"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:13.988" endtime="20210408 15:25:14.060"></status>
+<msg timestamp="20210408 16:37:57.583" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
+<status status="PASS" starttime="20210408 16:37:57.581" endtime="20210408 16:37:59.704"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:10.294" endtime="20210408 15:25:14.060"></status>
+<status status="PASS" starttime="20210408 16:37:55.011" endtime="20210408 16:37:59.704"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_NEW_CYCLE_DISCoUNT}</arg>
+<arg>${NEW_BILL_BUTTON_CHARGER}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:14.061" level="INFO">Clicking element '//button[@is-allowed="ngb.fe.billingConfigurations.discounts.add"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:14.060" endtime="20210408 15:25:14.660"></status>
+<msg timestamp="20210408 16:37:59.705" level="INFO">Clicking element '//*[text()='New Charge']'.</msg>
+<status status="PASS" starttime="20210408 16:37:59.704" endtime="20210408 16:38:00.346"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:10.293" endtime="20210408 15:25:14.661"></status>
+<status status="PASS" starttime="20210408 16:37:55.010" endtime="20210408 16:38:00.346"></status>
 </kw>
-<kw name="Initialize Random Variables for Discounts cycle" library="Discount_Resource">
+<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>5</arg>
+<arg>12</arg>
 </arguments>
 <assign>
-<var>${RANDOM_DIS_NAME}</var>
+<var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210408 15:25:14.664" level="INFO">${RANDOM_DIS_NAME} = H8gJb</msg>
-<status status="PASS" starttime="20210408 15:25:14.662" endtime="20210408 15:25:14.664"></status>
+<msg timestamp="20210408 16:38:00.349" level="INFO">${RANDOM_NAME} = ipKq6aNQSY0Y</msg>
+<status status="PASS" starttime="20210408 16:38:00.348" endtime="20210408 16:38:00.349"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_DIS_NAME}</arg>
+<arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:14.665" level="INFO">${RANDOM_DIS_NAME} = H8gJb</msg>
-<status status="PASS" starttime="20210408 15:25:14.664" endtime="20210408 15:25:14.665"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<assign>
-<var>${RANDOM_EDIT_DIS_NAME}</var>
-</assign>
-<msg timestamp="20210408 15:25:14.666" level="INFO">${RANDOM_EDIT_DIS_NAME} = q5N7</msg>
-<status status="PASS" starttime="20210408 15:25:14.666" endtime="20210408 15:25:14.667"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_EDIT_DIS_NAME}</arg>
-</arguments>
-<msg timestamp="20210408 15:25:14.668" level="INFO">${RANDOM_EDIT_DIS_NAME} = q5N7</msg>
-<status status="PASS" starttime="20210408 15:25:14.667" endtime="20210408 15:25:14.669"></status>
+<msg timestamp="20210408 16:38:00.350" level="INFO">${RANDOM_NAME} = ipKq6aNQSY0Y</msg>
+<status status="PASS" starttime="20210408 16:38:00.349" endtime="20210408 16:38:00.350"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -267,18 +231,37 @@
 <arg>7</arg>
 </arguments>
 <assign>
-<var>${RANDOM_APP_FOR}</var>
+<var>${RANDOM_APP_CODE}</var>
 </assign>
-<msg timestamp="20210408 15:25:14.669" level="INFO">${RANDOM_APP_FOR} = svcRKAv</msg>
-<status status="PASS" starttime="20210408 15:25:14.669" endtime="20210408 15:25:14.670"></status>
+<msg timestamp="20210408 16:38:00.351" level="INFO">${RANDOM_APP_CODE} = 6XzSB2y</msg>
+<status status="PASS" starttime="20210408 16:38:00.350" endtime="20210408 16:38:00.351"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_APP_FOR}</arg>
+<arg>${RANDOM_APP_CODE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:14.671" level="INFO">${RANDOM_APP_FOR} = svcRKAv</msg>
-<status status="PASS" starttime="20210408 15:25:14.670" endtime="20210408 15:25:14.671"></status>
+<msg timestamp="20210408 16:38:00.352" level="INFO">${RANDOM_APP_CODE} = 6XzSB2y</msg>
+<status status="PASS" starttime="20210408 16:38:00.351" endtime="20210408 16:38:00.352"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>13</arg>
+</arguments>
+<assign>
+<var>${RANDOM_EDIT_NAME}</var>
+</assign>
+<msg timestamp="20210408 16:38:00.353" level="INFO">${RANDOM_EDIT_NAME} = iUjq2ZrE9tUTM</msg>
+<status status="PASS" starttime="20210408 16:38:00.353" endtime="20210408 16:38:00.354"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${RANDOM_EDIT_NAME}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:00.355" level="INFO">${RANDOM_EDIT_NAME} = iUjq2ZrE9tUTM</msg>
+<status status="PASS" starttime="20210408 16:38:00.354" endtime="20210408 16:38:00.355"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -286,220 +269,159 @@
 <arg>8</arg>
 </arguments>
 <assign>
-<var>${RANDOM_EDIT_APP_FOR}</var>
+<var>${RANDOM_EDIT_APP_CODE}</var>
 </assign>
-<msg timestamp="20210408 15:25:14.672" level="INFO">${RANDOM_EDIT_APP_FOR} = iXaRcRx4</msg>
-<status status="PASS" starttime="20210408 15:25:14.671" endtime="20210408 15:25:14.672"></status>
+<msg timestamp="20210408 16:38:00.356" level="INFO">${RANDOM_EDIT_APP_CODE} = o0SUg5Ci</msg>
+<status status="PASS" starttime="20210408 16:38:00.355" endtime="20210408 16:38:00.356"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_EDIT_APP_FOR}</arg>
+<arg>${RANDOM_EDIT_APP_CODE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:14.672" level="INFO">${RANDOM_EDIT_APP_FOR} = iXaRcRx4</msg>
-<status status="PASS" starttime="20210408 15:25:14.672" endtime="20210408 15:25:14.673"></status>
+<msg timestamp="20210408 16:38:00.357" level="INFO">${RANDOM_EDIT_APP_CODE} = o0SUg5Ci</msg>
+<status status="PASS" starttime="20210408 16:38:00.356" endtime="20210408 16:38:00.358"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:14.661" endtime="20210408 15:25:14.673"></status>
+<status status="PASS" starttime="20210408 16:38:00.347" endtime="20210408 16:38:00.358"></status>
 </kw>
-<kw name="Give input to Discounts cycle" library="Discount_Resource">
+<kw name="Give input to Charges cycle" library="Charges_Resource">
 <arguments>
-<arg>${DIS_NAME}</arg>
-<arg>${DURATION}</arg>
-<arg>${DUR_VALUE}</arg>
-<arg>${DISC_GL_CODE}</arg>
-<arg>${DIS_ORIGIN}</arg>
-<arg>${TARGET}</arg>
-<arg>${APP_FOR}</arg>
-<arg>${COUNTED_TOWARDS}</arg>
-<arg>${SLAB_TYPE}</arg>
-<arg>${MIN_SLAB}</arg>
-<arg>${MAX_SLAB-1}</arg>
-<arg>${DIS_SLAB-1}</arg>
-<arg>${MAX_SLAB-2}</arg>
-<arg>${DIS_SLAB-2}</arg>
-<arg>${NO_SLABS}</arg>
-<arg>${MAX_SLAB-3}</arg>
-<arg>${DIS_SLAB-3}</arg>
-<arg>${NEW_DIS_VERIFY}</arg>
+<arg>${NAME}</arg>
+<arg>${TYPE}</arg>
+<arg>${GL_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
+<arg>${NEW_VERIFY}</arg>
+<arg>${DIS_GL_CODE}</arg>
+<arg>${DIS_APP_CODE}</arg>
 </arguments>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${XPATH_TO_DISC_NAME}</arg>
-</arguments>
-<status status="PASS" starttime="20210408 15:25:14.677" endtime="20210408 15:25:15.296"></status>
-</kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DISC_NAME}</arg>
-<arg>${DIS_NAME}</arg>
+<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
+<arg>${NAME}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:15.297" level="INFO">Typing text 'TYdi2' into text field '//input[@placeholder="Discount Name"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:15.297" endtime="20210408 15:25:15.546"></status>
+<msg timestamp="20210408 16:38:00.361" level="INFO">Typing text 'qXnohm1dSS5n' into text field '//input[@placeholder="type Charge name here"]'.</msg>
+<status status="PASS" starttime="20210408 16:38:00.360" endtime="20210408 16:38:01.248"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>${XPATH_TO_DURATION}</arg>
-<arg>${DURATION}</arg>
+<arg>${XPATH_TO_TYPE_TEXTBOX}</arg>
+<arg>${TYPE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:15.547" level="INFO">Selecting options from selection list 'xpath=//select[@name='duration']' by label Life Time.</msg>
-<status status="PASS" starttime="20210408 15:25:15.546" endtime="20210408 15:25:15.677"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${DURATION}'=='Fixed Period'</arg>
-<arg>Duration unit</arg>
-<arg>${DUR_VALUE}</arg>
-</arguments>
-<status status="PASS" starttime="20210408 15:25:15.677" endtime="20210408 15:25:15.677"></status>
+<msg timestamp="20210408 16:38:01.249" level="INFO">Selecting options from selection list '//select[@ng-change="resetcharge(dialogParams.chargeClass)"]' by label Deposit.</msg>
+<status status="PASS" starttime="20210408 16:38:01.249" endtime="20210408 16:38:01.393"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>${XPATH_TO_DIS_GL_CODE}</arg>
-<arg>${DISC_GL_CODE}</arg>
+<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
+<arg>${GL_CODE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:15.677" level="INFO">Selecting options from selection list 'xpath=//select[@name='glCode']' by label GL_2124.</msg>
+<msg timestamp="20210408 16:38:01.394" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_2124.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210408 15:25:36.159" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210408 15:25:35.774" endtime="20210408 15:25:36.159"></status>
+<msg timestamp="20210408 16:38:22.018" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210408 16:38:21.475" endtime="20210408 16:38:22.019"></status>
 </kw>
-<msg timestamp="20210408 15:25:36.163" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: GL_2124
+<msg timestamp="20210408 16:38:22.024" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: GL_2124
 </msg>
-<status status="FAIL" starttime="20210408 15:25:15.677" endtime="20210408 15:25:36.164"></status>
+<status status="FAIL" starttime="20210408 16:38:01.393" endtime="20210408 16:38:22.024"></status>
 </kw>
-<status status="FAIL" starttime="20210408 15:25:14.674" endtime="20210408 15:25:36.164"></status>
+<status status="FAIL" starttime="20210408 16:38:00.358" endtime="20210408 16:38:22.024"></status>
 </kw>
-<status status="FAIL" starttime="20210408 15:25:10.291" endtime="20210408 15:25:36.165"></status>
+<status status="FAIL" starttime="20210408 16:37:55.009" endtime="20210408 16:38:22.025"></status>
 </kw>
-<status status="FAIL" starttime="20210408 15:25:10.289" endtime="20210408 15:25:36.166" critical="yes">NoSuchElementException: Message: Could not locate element with visible text: GL_2124
+<status status="FAIL" starttime="20210408 16:37:55.008" endtime="20210408 16:38:22.026" critical="yes">NoSuchElementException: Message: Could not locate element with visible text: GL_2124
 </status>
 </test>
-<test id="s1-t2" name="Discounts Test">
-<kw name="New Discount Generation">
+<test id="s1-t2" name="Charges_Test">
+<kw name="New Charges Generation">
 <arguments>
-<arg>${RANDOM_DIS_NAME}</arg>
-<arg>Life Time</arg>
+<arg>DISCOUNT_2124</arg>
 <arg>GL_2124</arg>
-<arg>Offering</arg>
-<arg>Entire Invoice</arg>
-<arg>${RANDOM_APP_FOR}</arg>
-<arg>SELECTED</arg>
-<arg>Volume Percentage</arg>
-<arg>1</arg>
-<arg>200</arg>
-<arg>3</arg>
-<arg>2000</arg>
-<arg>6</arg>
-<arg>3</arg>
-<arg>20000</arg>
-<arg>9</arg>
-<arg>Success</arg>
-<arg>${RANDOM_EDIT_DIS_NAME}</arg>
-<arg>${RANDOM_EDIT_APP_FOR}</arg>
+<arg>OneTime</arg>
+<arg>TAX_PLAN_2124</arg>
+<arg>Fail</arg>
 <arg>GL_212427</arg>
-<arg>Success</arg>
+<arg>${RANDOM_APP_CODE}</arg>
+<arg>DISCOUNT_212427</arg>
+<arg>Pass</arg>
+<arg>GL-212427</arg>
+<arg>TAX_PLAN_212427</arg>
+<arg>GL_212121</arg>
+<arg>${RANDOM_EDIT_APP_CODE}</arg>
 </arguments>
-<kw name="New Discounts cycle" library="Discount_Resource">
-<kw name="Discounts Setup" library="Discount_Resource">
+<kw name="New Charges cycle" library="Charges_Resource">
+<kw name="Charges_Setup" library="Charges_Resource">
 <kw name="Setup" library="Common_Resource">
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20210408 15:25:36.175" endtime="20210408 15:25:36.219"></status>
+<status status="PASS" starttime="20210408 16:38:22.039" endtime="20210408 16:38:22.088"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>20s</arg>
 </arguments>
-<status status="PASS" starttime="20210408 15:25:36.220" endtime="20210408 15:25:36.222"></status>
+<status status="PASS" starttime="20210408 16:38:22.088" endtime="20210408 16:38:22.093"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<status status="PASS" starttime="20210408 15:25:36.222" endtime="20210408 15:25:37.712"></status>
+<status status="PASS" starttime="20210408 16:38:22.093" endtime="20210408 16:38:24.201"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONFIGURATION}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:37.713" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:37.713" endtime="20210408 15:25:37.811"></status>
+<msg timestamp="20210408 16:38:24.202" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210408 16:38:24.201" endtime="20210408 16:38:24.299"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:36.175" endtime="20210408 15:25:37.811"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${XPATH_TO_DISCOUNTS}</arg>
-</arguments>
-<status status="PASS" starttime="20210408 15:25:37.812" endtime="20210408 15:25:39.944"></status>
+<status status="PASS" starttime="20210408 16:38:22.038" endtime="20210408 16:38:24.299"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DISCOUNTS}</arg>
+<arg>${XPATH_TO_CHARGERS}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:39.944" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.discounts')"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:39.944" endtime="20210408 15:25:40.028"></status>
+<msg timestamp="20210408 16:38:24.300" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
+<status status="PASS" starttime="20210408 16:38:24.299" endtime="20210408 16:38:25.439"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:36.174" endtime="20210408 15:25:40.028"></status>
+<status status="PASS" starttime="20210408 16:38:22.038" endtime="20210408 16:38:25.439"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_NEW_CYCLE_DISCoUNT}</arg>
+<arg>${NEW_BILL_BUTTON_CHARGER}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:40.029" level="INFO">Clicking element '//button[@is-allowed="ngb.fe.billingConfigurations.discounts.add"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:40.028" endtime="20210408 15:25:41.124"></status>
+<msg timestamp="20210408 16:38:25.440" level="INFO">Clicking element '//*[text()='New Charge']'.</msg>
+<status status="PASS" starttime="20210408 16:38:25.439" endtime="20210408 16:38:26.195"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:36.174" endtime="20210408 15:25:41.124"></status>
+<status status="PASS" starttime="20210408 16:38:22.036" endtime="20210408 16:38:26.196"></status>
 </kw>
-<kw name="Initialize Random Variables for Discounts cycle" library="Discount_Resource">
+<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <arguments>
-<arg>5</arg>
+<arg>12</arg>
 </arguments>
 <assign>
-<var>${RANDOM_DIS_NAME}</var>
+<var>${RANDOM_NAME}</var>
 </assign>
-<msg timestamp="20210408 15:25:41.125" level="INFO">${RANDOM_DIS_NAME} = MlGWj</msg>
-<status status="PASS" starttime="20210408 15:25:41.125" endtime="20210408 15:25:41.125"></status>
+<msg timestamp="20210408 16:38:26.199" level="INFO">${RANDOM_NAME} = dY00QZqipXyc</msg>
+<status status="PASS" starttime="20210408 16:38:26.198" endtime="20210408 16:38:26.200"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_DIS_NAME}</arg>
+<arg>${RANDOM_NAME}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:41.126" level="INFO">${RANDOM_DIS_NAME} = MlGWj</msg>
-<status status="PASS" starttime="20210408 15:25:41.125" endtime="20210408 15:25:41.126"></status>
-</kw>
-<kw name="Generate Random String" library="String">
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<assign>
-<var>${RANDOM_EDIT_DIS_NAME}</var>
-</assign>
-<msg timestamp="20210408 15:25:41.126" level="INFO">${RANDOM_EDIT_DIS_NAME} = kmNq</msg>
-<status status="PASS" starttime="20210408 15:25:41.126" endtime="20210408 15:25:41.126"></status>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<arguments>
-<arg>${RANDOM_EDIT_DIS_NAME}</arg>
-</arguments>
-<msg timestamp="20210408 15:25:41.126" level="INFO">${RANDOM_EDIT_DIS_NAME} = kmNq</msg>
-<status status="PASS" starttime="20210408 15:25:41.126" endtime="20210408 15:25:41.126"></status>
+<msg timestamp="20210408 16:38:26.201" level="INFO">${RANDOM_NAME} = dY00QZqipXyc</msg>
+<status status="PASS" starttime="20210408 16:38:26.200" endtime="20210408 16:38:26.202"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -507,18 +429,37 @@
 <arg>7</arg>
 </arguments>
 <assign>
-<var>${RANDOM_APP_FOR}</var>
+<var>${RANDOM_APP_CODE}</var>
 </assign>
-<msg timestamp="20210408 15:25:41.127" level="INFO">${RANDOM_APP_FOR} = HCEuJho</msg>
-<status status="PASS" starttime="20210408 15:25:41.126" endtime="20210408 15:25:41.127"></status>
+<msg timestamp="20210408 16:38:26.205" level="INFO">${RANDOM_APP_CODE} = qmM15r2</msg>
+<status status="PASS" starttime="20210408 16:38:26.202" endtime="20210408 16:38:26.205"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_APP_FOR}</arg>
+<arg>${RANDOM_APP_CODE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:41.127" level="INFO">${RANDOM_APP_FOR} = HCEuJho</msg>
-<status status="PASS" starttime="20210408 15:25:41.127" endtime="20210408 15:25:41.127"></status>
+<msg timestamp="20210408 16:38:26.208" level="INFO">${RANDOM_APP_CODE} = qmM15r2</msg>
+<status status="PASS" starttime="20210408 16:38:26.206" endtime="20210408 16:38:26.209"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>13</arg>
+</arguments>
+<assign>
+<var>${RANDOM_EDIT_NAME}</var>
+</assign>
+<msg timestamp="20210408 16:38:26.210" level="INFO">${RANDOM_EDIT_NAME} = Ot8omD357T07t</msg>
+<status status="PASS" starttime="20210408 16:38:26.209" endtime="20210408 16:38:26.210"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${RANDOM_EDIT_NAME}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:26.213" level="INFO">${RANDOM_EDIT_NAME} = Ot8omD357T07t</msg>
+<status status="PASS" starttime="20210408 16:38:26.211" endtime="20210408 16:38:26.214"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -526,121 +467,359 @@
 <arg>8</arg>
 </arguments>
 <assign>
-<var>${RANDOM_EDIT_APP_FOR}</var>
+<var>${RANDOM_EDIT_APP_CODE}</var>
 </assign>
-<msg timestamp="20210408 15:25:41.127" level="INFO">${RANDOM_EDIT_APP_FOR} = 7dE3e19R</msg>
-<status status="PASS" starttime="20210408 15:25:41.127" endtime="20210408 15:25:41.127"></status>
+<msg timestamp="20210408 16:38:26.215" level="INFO">${RANDOM_EDIT_APP_CODE} = fY9RMAfE</msg>
+<status status="PASS" starttime="20210408 16:38:26.214" endtime="20210408 16:38:26.215"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
-<arg>${RANDOM_EDIT_APP_FOR}</arg>
+<arg>${RANDOM_EDIT_APP_CODE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:41.128" level="INFO">${RANDOM_EDIT_APP_FOR} = 7dE3e19R</msg>
-<status status="PASS" starttime="20210408 15:25:41.128" endtime="20210408 15:25:41.128"></status>
+<msg timestamp="20210408 16:38:26.217" level="INFO">${RANDOM_EDIT_APP_CODE} = fY9RMAfE</msg>
+<status status="PASS" starttime="20210408 16:38:26.216" endtime="20210408 16:38:26.217"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:25:41.125" endtime="20210408 15:25:41.128"></status>
+<status status="PASS" starttime="20210408 16:38:26.197" endtime="20210408 16:38:26.218"></status>
 </kw>
-<kw name="Give input to Discounts cycle" library="Discount_Resource">
+<kw name="Give input to Charges cycle" library="Charges_Resource">
 <arguments>
-<arg>${DIS_NAME}</arg>
-<arg>${DURATION}</arg>
-<arg>${DUR_VALUE}</arg>
-<arg>${DISC_GL_CODE}</arg>
-<arg>${DIS_ORIGIN}</arg>
-<arg>${TARGET}</arg>
-<arg>${APP_FOR}</arg>
-<arg>${COUNTED_TOWARDS}</arg>
-<arg>${SLAB_TYPE}</arg>
-<arg>${MIN_SLAB}</arg>
-<arg>${MAX_SLAB-1}</arg>
-<arg>${DIS_SLAB-1}</arg>
-<arg>${MAX_SLAB-2}</arg>
-<arg>${DIS_SLAB-2}</arg>
-<arg>${NO_SLABS}</arg>
-<arg>${MAX_SLAB-3}</arg>
-<arg>${DIS_SLAB-3}</arg>
-<arg>${NEW_DIS_VERIFY}</arg>
+<arg>${NAME}</arg>
+<arg>${TYPE}</arg>
+<arg>${GL_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
+<arg>${NEW_VERIFY}</arg>
+<arg>${DIS_GL_CODE}</arg>
+<arg>${DIS_APP_CODE}</arg>
 </arguments>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${XPATH_TO_DISC_NAME}</arg>
-</arguments>
-<msg timestamp="20210408 15:25:41.228" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
-<status status="PASS" starttime="20210408 15:25:41.129" endtime="20210408 15:25:41.480"></status>
-</kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${XPATH_TO_DISC_NAME}</arg>
-<arg>${DIS_NAME}</arg>
+<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
+<arg>${NAME}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:41.481" level="INFO">Typing text 'H8gJb' into text field '//input[@placeholder="Discount Name"]'.</msg>
-<status status="PASS" starttime="20210408 15:25:41.480" endtime="20210408 15:25:41.685"></status>
+<msg timestamp="20210408 16:38:26.224" level="INFO">Typing text 'DISCOUNT_2124' into text field '//input[@placeholder="type Charge name here"]'.</msg>
+<status status="PASS" starttime="20210408 16:38:26.222" endtime="20210408 16:38:26.630"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>${XPATH_TO_DURATION}</arg>
-<arg>${DURATION}</arg>
+<arg>${XPATH_TO_TYPE_TEXTBOX}</arg>
+<arg>${TYPE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:41.685" level="INFO">Selecting options from selection list 'xpath=//select[@name='duration']' by label Life Time.</msg>
-<status status="PASS" starttime="20210408 15:25:41.685" endtime="20210408 15:25:41.802"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${DURATION}'=='Fixed Period'</arg>
-<arg>Duration unit</arg>
-<arg>${DUR_VALUE}</arg>
-</arguments>
-<status status="PASS" starttime="20210408 15:25:41.802" endtime="20210408 15:25:41.802"></status>
+<msg timestamp="20210408 16:38:26.632" level="INFO">Selecting options from selection list '//select[@ng-change="resetcharge(dialogParams.chargeClass)"]' by label OneTime.</msg>
+<status status="PASS" starttime="20210408 16:38:26.631" endtime="20210408 16:38:26.801"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>${XPATH_TO_DIS_GL_CODE}</arg>
-<arg>${DISC_GL_CODE}</arg>
+<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
+<arg>${GL_CODE}</arg>
 </arguments>
-<msg timestamp="20210408 15:25:41.802" level="INFO">Selecting options from selection list 'xpath=//select[@name='glCode']' by label GL_2124.</msg>
+<msg timestamp="20210408 16:38:26.802" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_2124.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210408 15:26:02.292" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210408 15:26:01.916" endtime="20210408 15:26:02.293"></status>
+<msg timestamp="20210408 16:38:47.403" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210408 16:38:46.917" endtime="20210408 16:38:47.403"></status>
 </kw>
-<msg timestamp="20210408 15:26:02.294" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: GL_2124
+<msg timestamp="20210408 16:38:47.404" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: GL_2124
 </msg>
-<status status="FAIL" starttime="20210408 15:25:41.802" endtime="20210408 15:26:02.294"></status>
+<status status="FAIL" starttime="20210408 16:38:26.801" endtime="20210408 16:38:47.405"></status>
 </kw>
-<status status="FAIL" starttime="20210408 15:25:41.128" endtime="20210408 15:26:02.295"></status>
+<status status="FAIL" starttime="20210408 16:38:26.218" endtime="20210408 16:38:47.405"></status>
 </kw>
-<status status="FAIL" starttime="20210408 15:25:36.171" endtime="20210408 15:26:02.295"></status>
+<status status="FAIL" starttime="20210408 16:38:22.034" endtime="20210408 16:38:47.405"></status>
 </kw>
-<status status="FAIL" starttime="20210408 15:25:36.169" endtime="20210408 15:26:02.296" critical="yes">NoSuchElementException: Message: Could not locate element with visible text: GL_2124
+<status status="FAIL" starttime="20210408 16:38:22.033" endtime="20210408 16:38:47.406" critical="yes">NoSuchElementException: Message: Could not locate element with visible text: GL_2124
+</status>
+</test>
+<test id="s1-t3" name="Charges_Test">
+<kw name="New Charges Generation">
+<arguments>
+<arg>DISCOUNT_212427</arg>
+<arg>GL_2124</arg>
+<arg>UsageDiscount</arg>
+<arg>TAX_PLAN_2124</arg>
+<arg>Fail</arg>
+<arg>GL_212427</arg>
+<arg>${RANDOM_APP_CODE}</arg>
+<arg>DISCOUNT_2124</arg>
+<arg>Pass</arg>
+<arg>GL_212427</arg>
+<arg>TAX_PLAN_212427</arg>
+<arg>GL_212121</arg>
+<arg>${RANDOM_EDIT_APP_CODE}</arg>
+</arguments>
+<kw name="New Charges cycle" library="Charges_Resource">
+<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="Setup" library="Common_Resource">
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210408 16:38:47.415" endtime="20210408 16:38:47.466"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210408 16:38:47.467" endtime="20210408 16:38:47.470"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${CONFIGURATION}</arg>
+</arguments>
+<status status="PASS" starttime="20210408 16:38:47.470" endtime="20210408 16:38:50.338"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONFIGURATION}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:50.339" level="INFO">Clicking element '//a[@class="ng-scope"]'.</msg>
+<status status="PASS" starttime="20210408 16:38:50.339" endtime="20210408 16:38:50.420"></status>
+</kw>
+<status status="PASS" starttime="20210408 16:38:47.414" endtime="20210408 16:38:50.420"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_CHARGERS}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:50.421" level="INFO">Clicking element '//a[@ng-click="redirectTo('billing-configurations.charges')"]'.</msg>
+<status status="PASS" starttime="20210408 16:38:50.420" endtime="20210408 16:38:52.173"></status>
+</kw>
+<status status="PASS" starttime="20210408 16:38:47.414" endtime="20210408 16:38:52.174"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEW_BILL_BUTTON_CHARGER}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:52.175" level="INFO">Clicking element '//*[text()='New Charge']'.</msg>
+<status status="PASS" starttime="20210408 16:38:52.174" endtime="20210408 16:38:52.728"></status>
+</kw>
+<status status="PASS" starttime="20210408 16:38:47.413" endtime="20210408 16:38:52.728"></status>
+</kw>
+<kw name="Initialize Random Variables for Charges cycle" library="Charges_Resource">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${RANDOM_NAME}</var>
+</assign>
+<msg timestamp="20210408 16:38:52.730" level="INFO">${RANDOM_NAME} = EqVHQM255pJc</msg>
+<status status="PASS" starttime="20210408 16:38:52.729" endtime="20210408 16:38:52.730"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${RANDOM_NAME}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:52.732" level="INFO">${RANDOM_NAME} = EqVHQM255pJc</msg>
+<status status="PASS" starttime="20210408 16:38:52.730" endtime="20210408 16:38:52.732"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>7</arg>
+</arguments>
+<assign>
+<var>${RANDOM_APP_CODE}</var>
+</assign>
+<msg timestamp="20210408 16:38:52.733" level="INFO">${RANDOM_APP_CODE} = lJseqH9</msg>
+<status status="PASS" starttime="20210408 16:38:52.732" endtime="20210408 16:38:52.733"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${RANDOM_APP_CODE}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:52.735" level="INFO">${RANDOM_APP_CODE} = lJseqH9</msg>
+<status status="PASS" starttime="20210408 16:38:52.733" endtime="20210408 16:38:52.735"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>13</arg>
+</arguments>
+<assign>
+<var>${RANDOM_EDIT_NAME}</var>
+</assign>
+<msg timestamp="20210408 16:38:52.737" level="INFO">${RANDOM_EDIT_NAME} = 5ktVFAHifQory</msg>
+<status status="PASS" starttime="20210408 16:38:52.736" endtime="20210408 16:38:52.737"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${RANDOM_EDIT_NAME}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:52.738" level="INFO">${RANDOM_EDIT_NAME} = 5ktVFAHifQory</msg>
+<status status="PASS" starttime="20210408 16:38:52.737" endtime="20210408 16:38:52.739"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${RANDOM_EDIT_APP_CODE}</var>
+</assign>
+<msg timestamp="20210408 16:38:52.741" level="INFO">${RANDOM_EDIT_APP_CODE} = lUwTHEAK</msg>
+<status status="PASS" starttime="20210408 16:38:52.740" endtime="20210408 16:38:52.741"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${RANDOM_EDIT_APP_CODE}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:52.743" level="INFO">${RANDOM_EDIT_APP_CODE} = lUwTHEAK</msg>
+<status status="PASS" starttime="20210408 16:38:52.742" endtime="20210408 16:38:52.743"></status>
+</kw>
+<status status="PASS" starttime="20210408 16:38:52.728" endtime="20210408 16:38:52.743"></status>
+</kw>
+<kw name="Give input to Charges cycle" library="Charges_Resource">
+<arguments>
+<arg>${NAME}</arg>
+<arg>${TYPE}</arg>
+<arg>${GL_CODE}</arg>
+<arg>${TAX_PLAN}</arg>
+<arg>${NEW_VERIFY}</arg>
+<arg>${DIS_GL_CODE}</arg>
+<arg>${DIS_APP_CODE}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_TO_CHARGE_NAME_TEXTBOX}</arg>
+<arg>${NAME}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:52.745" level="INFO">Typing text 'DISCOUNT_212427' into text field '//input[@placeholder="type Charge name here"]'.</msg>
+<status status="PASS" starttime="20210408 16:38:52.745" endtime="20210408 16:38:53.096"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_TYPE_TEXTBOX}</arg>
+<arg>${TYPE}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:53.097" level="INFO">Selecting options from selection list '//select[@ng-change="resetcharge(dialogParams.chargeClass)"]' by label UsageDiscount.</msg>
+<status status="PASS" starttime="20210408 16:38:53.096" endtime="20210408 16:38:53.232"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${XPATH_TO_GL_CODE_TEXTBOX_CHARGER}</arg>
+<arg>${GL_CODE}</arg>
+</arguments>
+<msg timestamp="20210408 16:38:53.233" level="INFO">Selecting options from selection list '//select[@data-role="charge-config-gl-code"]' by label GL_2124.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210408 16:39:01.295" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+</msg>
+<status status="FAIL" starttime="20210408 16:39:01.287" endtime="20210408 16:39:01.295"></status>
+</kw>
+<msg timestamp="20210408 16:39:01.295" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+</msg>
+<msg timestamp="20210408 16:39:01.298" level="FAIL">TypeError: 'NoneType' object is not iterable</msg>
+<status status="FAIL" starttime="20210408 16:38:53.233" endtime="20210408 16:39:01.298"></status>
+</kw>
+<status status="FAIL" starttime="20210408 16:38:52.743" endtime="20210408 16:39:01.299"></status>
+</kw>
+<status status="FAIL" starttime="20210408 16:38:47.412" endtime="20210408 16:39:01.299"></status>
+</kw>
+<status status="FAIL" starttime="20210408 16:38:47.411" endtime="20210408 16:39:01.299" critical="yes">TypeError: 'NoneType' object is not iterable</status>
+</test>
+<test id="s1-t4" name="Charges_Test">
+<kw name="New Charges Generation">
+<arguments>
+<arg>${RANDOM_NAME}</arg>
+<arg>GL_212427</arg>
+<arg>Recurring</arg>
+<arg>TAX_PLAN_2124</arg>
+<arg>Pass</arg>
+<arg>GL_2124</arg>
+<arg>${RANDOM_APP_CODE}</arg>
+<arg>${RANDOM_EDIT_NAME}</arg>
+<arg>Pass</arg>
+<arg>GL_2124</arg>
+<arg>TAX_PLAN_212427</arg>
+<arg>GL_212121</arg>
+<arg>${RANDOM_EDIT_APP_CODE}</arg>
+</arguments>
+<kw name="New Charges cycle" library="Charges_Resource">
+<kw name="Charges_Setup" library="Charges_Resource">
+<kw name="Setup" library="Common_Resource">
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210408 16:39:01.314" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+</msg>
+<status status="FAIL" starttime="20210408 16:39:01.309" endtime="20210408 16:39:01.314"></status>
+</kw>
+<msg timestamp="20210408 16:39:01.314" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+</msg>
+<msg timestamp="20210408 16:39:01.317" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+</msg>
+<status status="FAIL" starttime="20210408 16:39:01.305" endtime="20210408 16:39:01.318"></status>
+</kw>
+<status status="FAIL" starttime="20210408 16:39:01.305" endtime="20210408 16:39:01.318"></status>
+</kw>
+<status status="FAIL" starttime="20210408 16:39:01.304" endtime="20210408 16:39:01.318"></status>
+</kw>
+<status status="FAIL" starttime="20210408 16:39:01.304" endtime="20210408 16:39:01.318"></status>
+</kw>
+<status status="FAIL" starttime="20210408 16:39:01.303" endtime="20210408 16:39:01.318"></status>
+</kw>
+<status status="FAIL" starttime="20210408 16:39:01.302" endtime="20210408 16:39:01.319" critical="yes">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
 </status>
 </test>
 <kw name="Close Browsers" library="Common_Resource" type="teardown">
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20210408 15:26:02.299" endtime="20210408 15:26:04.532"></status>
+<status status="PASS" starttime="20210408 16:39:01.326" endtime="20210408 16:39:03.528"></status>
 </kw>
-<status status="PASS" starttime="20210408 15:26:02.299" endtime="20210408 15:26:04.533"></status>
+<status status="PASS" starttime="20210408 16:39:01.325" endtime="20210408 16:39:03.528"></status>
 </kw>
-<status status="FAIL" starttime="20210408 15:24:41.523" endtime="20210408 15:26:04.533"></status>
+<status status="FAIL" starttime="20210408 16:37:36.464" endtime="20210408 16:39:03.528"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2">Critical Tests</stat>
-<stat pass="0" fail="2">All Tests</stat>
+<stat pass="0" fail="4">Critical Tests</stat>
+<stat pass="0" fail="4">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="2" id="s1" name="Discount">Discount</stat>
+<stat pass="0" fail="4" id="s1" name="Charges">Charges</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210408 15:25:36.168" level="WARN">Multiple test cases with name 'Discounts Test' executed in test suite 'Discount'.</msg>
+<msg timestamp="20210408 16:38:22.031" level="WARN">Multiple test cases with name 'Charges_Test' executed in test suite 'Charges'.</msg>
+<msg timestamp="20210408 16:38:47.409" level="WARN">Multiple test cases with name 'Charges_Test' executed in test suite 'Charges'.</msg>
+<msg timestamp="20210408 16:39:01.295" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+</msg>
+<msg timestamp="20210408 16:39:01.300" level="WARN">Multiple test cases with name 'Charges_Test' executed in test suite 'Charges'.</msg>
+<msg timestamp="20210408 16:39:01.314" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=89.0.4389.114)
+</msg>
 </errors>
 </robot>

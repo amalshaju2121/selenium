@@ -86,7 +86,11 @@ Verify,audit and edit for IF new
          Run Keyword If  '${EDIT_VERIFY}'=='Pass'   Edit verify &Audit    ${EDIT_NAME}  ${NAME}
 
 Add tax formula
-         [Arguments]   ${TAX_FORMULA}  ${EDIT_VERIFY}
+         [Arguments]   ${TAX_FORMULA}  ${EDIT_VERIFY}  ${NEW_VERIFY}
+         Run Keyword If  '${NEW_VERIFY}'=='Pass'   IF for the tax formula      ${TAX_FORMULA}  ${EDIT_VERIFY}
+
+IF for the tax formula
+         [Arguments]     ${TAX_FORMULA}  ${EDIT_VERIFY}
          Run Keyword If  '${EDIT_VERIFY}'=='Pass'   Adding formula        ${TAX_FORMULA}
 
 #edit verification and audit verifiction

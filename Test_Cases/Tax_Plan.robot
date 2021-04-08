@@ -30,4 +30,4 @@ New Tax Plan Generation
       #Verify edit and Audit
       Edit,Verify&Audit Tax Plan    ${NAME}    ${EDIT_NAME}  ${EDIT_VERIFY}  ${NEW_VERIFY}
       #Adding tax formula
-      Add tax formula   ${TAX_FORMULA}  ${EDIT_VERIFY}
+      Add tax formula   ${TAX_FORMULA}  ${EDIT_VERIFY}  ${NEW_VERIFY}
